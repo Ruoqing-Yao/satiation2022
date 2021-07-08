@@ -1,10 +1,12 @@
 current_list = 1;
 var order = 1;
 
-
-
 all_stimuli = all_stimuli.filter(function (e){
   return e.list == current_list;
+});
+
+all_stimuli = all_stimuli.filter(function (e){
+  return e.condition !== "CNPC";
 });
 
 // function to shuffle an array. I don't know why they wrote their own
@@ -101,6 +103,18 @@ shuffled_blocks = shuffle([block_1, block_2, block_3, block_4, block_5, block_6,
 for (var i = 0; i < 15; i++){
   for (var j in shuffled_blocks[i]){
     shuffled_blocks[i][j]["new_block_sequence"] = i+1;
+  };
+};
+
+// divide into phases
+for (var i = 0; i < 15; i++){
+  for (var j in shuffled_blocks[i]){
+    var phase;
+    if(i < 3) phase = "PRE";
+    else if(i < 12) phase = "EXP";
+    else phase = "TEST";
+
+    shuffled_blocks[i][j]["phase"] = phase;
   };
 };
 
@@ -322,7 +336,8 @@ function make_slides(f) {
         "block_sequence": this.stim.new_block_sequence,
         "item_number": this.stim.item,
         "list_number": this.stim.list,
-        "trial_sequence_total": order
+        "trial_sequence_total": order,
+        "phase": this.stim.phase
       });
       order = order + 1;
     }

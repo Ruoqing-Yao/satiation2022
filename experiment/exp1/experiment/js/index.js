@@ -250,38 +250,19 @@ function make_slides(f) {
     present : [{"a": 1}],
     //this gets run only at the beginning of the block
     present_handle : function(stim) {
-      var name = 'John';
       $(".err").hide();
       $(".errgood").hide();
-      $(".errbad").hide();
-      $(".target").hide();
-      $(".slider_table").hide();
-      $(".button_2").hide()
       this.stim = stim;
-    
-      var init_image = '<img src="images/'+ name + '.png" style="height:150px" class="center">';
-      $(".image").html(init_image)
-      $(".figure_intro").html("This is <b>"+name+"<\/b.")
-      $(".context").html("Context: The boy saw an apple on the table.");
-      $(".target").html(name +" asks: <b> What did the boy see on the table? <\/b>");
-      $(".button_1").html("Click here to see what <b>" +name+ "<\/b> asks about the context.")
+      $(".prompt").html("Context: The boy saw an apple on the table. <p>  Target: <b> What did the boy see on the table? <\/b>");
       this.init_sliders();
       exp.sliderPost = null; //erase current slider value
       exp.first_response_wrong = 0;
       exp.first_response_value = null;
       exp.attempts = 0;
     },
-    button_1 : function() {
-      $(".target").show();
-      $(".slider_table").show();
-      $(".button_2").show()
-      $(".button_1").hide()
-    },
-    button_2 : function() {
- 
+    button : function() {
       if (exp.sliderPost == null) {
         $(".err").show();
-
       } 
       else if (exp.sliderPost < 0.5) {
         exp.first_response_wrong = 1;
@@ -316,12 +297,171 @@ function make_slides(f) {
     }
   });
 
+  // from the old version with characters:
+
+  // slides.practice_slider = slide({
+  //   name : "practice_slider",
+
+  //   /* trial information for this block
+  //    (the variable 'stim' will change between each of these values,
+  //     and for each of these, present_handle will be run.) */
+  //   present : [{"a": 1}],
+  //   //this gets run only at the beginning of the block
+  //   present_handle : function(stim) {
+  //     var name = 'John';
+  //     $(".err").hide();
+  //     $(".errgood").hide();
+  //     $(".errbad").hide();
+  //     $(".target").hide();
+  //     $(".slider_table").hide();
+  //     $(".button_2").hide()
+  //     this.stim = stim;
+    
+  //     // var init_image = '<img src="images/'+ name + '.png" style="height:150px" class="center">';
+  //     // $(".image").html(init_image)
+  //     // $(".figure_intro").html("This is <b>"+name+"<\/b.")
+  //     $(".context").html("Context: The boy saw an apple on the table.");
+  //     $(".target").html(name " asks: <b> What did the boy see on the table? <\/b>");
+  //     $(".button_1").html("Click here to see what <b>" +name+ "<\/b> asks about the context.")
+  //     this.init_sliders();
+  //     exp.sliderPost = null; //erase current slider value
+  //     exp.first_response_wrong = 0;
+  //     exp.first_response_value = null;
+  //     exp.attempts = 0;
+  //   },
+  //   button_1 : function() {
+  //     $(".target").show();
+  //     $(".slider_table").show();
+  //     $(".button_2").show()
+  //     $(".button_1").hide()
+  //   },
+  //   button_2 : function() {
+ 
+  //     if (exp.sliderPost == null) {
+  //       $(".err").show();
+
+  //     } 
+  //     else if (exp.sliderPost < 0.5) {
+  //       exp.first_response_wrong = 1;
+  //       exp.first_response_value =exp.sliderPost;
+  //       exp.attempts = exp.attempts + 1;
+  //       $(".errgood").show();
+  //     }
+  //     else {
+  //       this.log_responses();
+  //       /* use _stream.apply(this); if and only if there is
+  //       "present" data. (and only *after* responses are logged) */
+  //       _stream.apply(this);
+  //     }
+  //   },
+  //   init_sliders : function() {
+  //     utils.make_slider("#practice_slider_1", function(event, ui) {
+  //       exp.sliderPost = ui.value;
+  //     });
+  //   },
+  //   log_responses : function() {
+  //     exp.data_trials.push({
+  //       "response" : exp.sliderPost,
+  //       "first_response_value": exp.first_response_value,
+  //       "wrong_attempts": exp.attempts,
+  //       "condition" : "practice_good",
+  //       "block_sequence": "practice",
+  //       "item_number": "practice_good",
+  //       "list_number": "practice",
+  //       "trial_sequence_total": 0
+  //     });
+
+  //   }
+  // });
+
   slides.post_practice_1 = slide({
     name : "post_practice_1",
     button : function() {
       exp.go(); //use exp.go() if and only if there is no "present" data.
     }
   });
+
+
+  // from the old version with characters:
+
+  // slides.practice_slider_bad = slide({
+  //   name : "practice_slider_bad",
+
+  //   /* trial information for this block
+  //    (the variable 'stim' will change between each of these values,
+  //     and for each of these, present_handle will be run.) */
+  //   present : [1],
+
+  
+  //   //this gets run only at the beginning of the block
+  //   present_handle : function(stim) {
+  //     var name = 'Mary';
+  //     $(".button_1").show()
+  //     $(".err").hide();
+  //     $(".errgood").hide();
+  //     $(".errbad").hide();
+  //     $(".target").hide();
+  //     $(".slider_table").hide();
+  //     $(".button_2").hide()
+  //     this.stim = stim;
+    
+  //     // var init_image = '<img src="images/'+ name + '.png" style="height:150px" class="center">';
+  //     // $(".image").html(init_image)
+  //     // $(".figure_intro").html("This is <b>"+name+"<\/b.")
+  //     $(".context").html("Context: The girl slept under the bed.");
+  //     $(".target").html(name + " asks: <b> Who the bed was slept under? <\/b>")
+  //     $(".button_1").html("Click here to see what <b>" +name+ "<\/b> asks about the context.")
+  //     this.init_sliders();
+  //     exp.sliderPost = null; //erase current slider value
+  //     exp.first_response_wrong = 0;
+  //     exp.first_response_value = null;
+  //     exp.attempts = 0;
+  //   },
+  //   button_1 : function() {
+  //     $(".target").show();
+  //     $(".slider_table").show();
+  //     $(".button_2").show()
+  //     $(".button_1").hide()
+  //   },
+  //   button_2 : function() {
+ 
+  //     if (exp.sliderPost == null) {
+  //       $(".err").show();
+        
+  //     } 
+  //     else if (exp.sliderPost > 0.5) {
+  //       exp.first_response_wrong = 1;
+  //       exp.first_response_value = exp.sliderPost;
+  //       exp.attempts = exp.attempts + 1;
+  //       $(".errbad").show();
+  //     }
+  //     else {
+  //       this.log_responses();
+  //       /* use _stream.apply(this); if and only if there is
+  //       "present" data. (and only *after* responses are logged) */
+  //       _stream.apply(this);
+  //     }
+  //   },
+  //   init_sliders : function() {
+  //     utils.make_slider("#practice_slider_2", function(event, ui) {
+  //       exp.sliderPost = ui.value;
+        
+  //     });
+  //   },
+  //   log_responses : function() {
+  //     exp.data_trials.push({
+  //       "response" : exp.sliderPost,
+  //       "first_response_value": exp.first_response_value,
+  //       "wrong_attempts": exp.attempts,
+  //       "condition" : "practice_bad",
+  //       "block_sequence": "practice",
+  //       "item_number": "practice_bad",
+  //       "list_number": "practice",
+  //       "trial_sequence_total": 0
+  //     });
+
+  //   }
+  // });
 
   slides.practice_slider_bad = slide({
     name : "practice_slider_bad",
@@ -334,39 +474,18 @@ function make_slides(f) {
   
     //this gets run only at the beginning of the block
     present_handle : function(stim) {
-      var name = 'Mary';
-      $(".button_1").show()
       $(".err").hide();
-      $(".errgood").hide();
       $(".errbad").hide();
-      $(".target").hide();
-      $(".slider_table").hide();
-      $(".button_2").hide()
-      this.stim = stim;
-    
-      var init_image = '<img src="images/'+ name + '.png" style="height:150px" class="center">';
-      $(".image").html(init_image)
-      $(".figure_intro").html("This is <b>"+name+"<\/b.")
-      $(".context").html("Context: The girl slept under the bed.");
-      $(".target").html(name +" asks: <b> Who the bed was slept under? <\/b>")
-      $(".button_1").html("Click here to see what <b>" +name+ "<\/b> asks about the context.")
+      $(".prompt").html("Context: The girl slept under the bed. <p>  Target: <b> Who the bed was slept under? <\/b>");
       this.init_sliders();
       exp.sliderPost = null; //erase current slider value
       exp.first_response_wrong = 0;
       exp.first_response_value = null;
       exp.attempts = 0;
     },
-    button_1 : function() {
-      $(".target").show();
-      $(".slider_table").show();
-      $(".button_2").show()
-      $(".button_1").hide()
-    },
-    button_2 : function() {
- 
+    button : function() {
       if (exp.sliderPost == null) {
         $(".err").show();
-        
       } 
       else if (exp.sliderPost > 0.5) {
         exp.first_response_wrong = 1;
@@ -475,6 +594,110 @@ function make_slides(f) {
     
   });
 
+  // slides.one_slider = slide({
+  //   name : "one_slider",
+
+  //   /* trial information for this block
+  //    (the variable 'stim' will change between each of these values,
+  //     and for each of these, present_handle will be run.) */
+  //   present : latin_squared,
+    
+    
+  //   //this gets run only at the beginning of the block
+  //   present_handle : function(stim) {
+  //     $(".err").hide();
+  //     $(".target").hide();
+  //     $(".slider_table").hide();
+  //     $(".button_2").hide()
+  //     $(".button_3").hide()
+  //     $(".speaker_question").hide()
+  //     $(".context").show();
+  //     $(".button_1").show();
+  //     $(".image").show();
+  //     $(".figure_intro").show();
+  //     comp_question_exist = 0;
+  
+  //     this.stim = stim; //I like to store this information in the slide so I can record it later.
+  //     $(".context").html(stim.presented_context);
+  //     var init_image = '<img src="images/'+ stim.name + '.png" style="height:150px" class="center">';
+  //     $(".image").html(init_image)
+  //     $(".button_1").html("Click here to see what <b>"+ stim.name + "<\/b> asks about the context.")
+  //     $(".figure_intro").html("This is <b>"+stim.name+"<\/b.")
+  //     $(".target").html(stim.name + " asks: " + stim.presented_target);
+
+  //     this.init_sliders()
+  //     exp.sliderPost = null; //erase current slider value
+  //     resetSelectElement(comp_q);
+  //   },
+  //   button_1 : function() {
+  //     $(".target").show();
+  //     $(".button_1").hide();
+  //     $(".slider_table").show();
+  //     if (Math.random() > 0.75){
+  //       comp_question_exist = 1
+  //       $(".button_3").show()
+  //     }
+  //     else{
+  //     comp_question_exist = 0
+  //     $(".button_2").show()
+  //     }
+  //   },
+
+  //   button_3 : function() {
+  //     if (exp.sliderPost == null) {
+  //       $(".err").show();
+  //     }
+  //     else {
+  //     $(".target").hide();
+  //     $(".context").hide();
+  //     $(".slider_table").hide();
+  //     $(".button_1").hide();
+  //     $(".image").hide();
+  //     $(".figure_intro").hide()
+  //     $(".speaker_question").show();
+  //     $(".button_3").hide()
+  //     $(".button_2").show()
+  //     }
+  //   },
+
+  //   button_2 : function() {
+  //     if (exp.sliderPost == null) {
+  //       $(".err").show();
+  //     }
+  //     else {
+  //       this.log_responses();
+  //       /* use _stream.apply(this); if and only if there is
+  //       "present" data. (and only *after* responses are logged) */
+  //       _stream.apply(this);
+  //     }
+    
+  // },
+    
+  //   init_sliders : function() {
+  //     utils.make_slider("#single_slider", function(event, ui) {
+  //       exp.sliderPost = ui.value;
+  //     });
+  //   },
+
+  //   log_responses : function() {
+  //     exp.data_trials.push({
+  //       "response" : exp.sliderPost,
+  //       "island_tested": this.stim.island_tested,
+  //       "test_match_cond":this.stim.test_match_cond,
+  //       "condition" : this.stim.condition,
+  //       "block_sequence": this.stim.new_block_sequence,
+  //       "item_number": this.stim.item,
+  //       "list_number": this.stim.list,
+  //       "trial_sequence_total": order,
+  //       "speaker_identity":this.stim.name,
+  //       "comp_question_exist": comp_question_exist,
+  //       "comp_answer": $("#comp_q").val(),
+  //       "phase": this.stim.phase
+  //     });
+  //     order = order + 1;
+  //   }
+  // });
+
   slides.one_slider = slide({
     name : "one_slider",
 
@@ -483,77 +706,28 @@ function make_slides(f) {
       and for each of these, present_handle will be run.) */
     present : latin_squared,
     
-    
     //this gets run only at the beginning of the block
     present_handle : function(stim) {
       $(".err").hide();
-      $(".target").hide();
-      $(".slider_table").hide();
-      $(".button_2").hide()
-      $(".button_3").hide()
-      $(".speaker_question").hide()
-      $(".context").show();
-      $(".button_1").show();
-      $(".image").show();
-      $(".figure_intro").show();
-      comp_question_exist = 0;
-  
       this.stim = stim; //I like to store this information in the slide so I can record it later.
       $(".context").html(stim.presented_context);
-      var init_image = '<img src="images/'+ stim.name + '.png" style="height:150px" class="center">';
-      $(".image").html(init_image)
-      $(".button_1").html("Click here to see what <b>"+ stim.name + "<\/b> asks about the context.")
-      $(".figure_intro").html("This is <b>"+stim.name+"<\/b.")
-      $(".target").html(stim.name + " asks: " + stim.presented_target);
-
+      $(".target").html("Target: " + stim.presented_target);
       this.init_sliders()
       exp.sliderPost = null; //erase current slider value
-      resetSelectElement(comp_q);
-    },
-    button_1 : function() {
-      $(".target").show();
-      $(".button_1").hide();
-      $(".slider_table").show();
-      if (Math.random() > 0.75){
-        comp_question_exist = 1
-        $(".button_3").show()
-      }
-      else{
-      comp_question_exist = 0
-      $(".button_2").show()
-      }
     },
 
-    button_3 : function() {
+    button : function() {
       if (exp.sliderPost == null) {
         $(".err").show();
-      }
-      else {
-      $(".target").hide();
-      $(".context").hide();
-      $(".slider_table").hide();
-      $(".button_1").hide();
-      $(".image").hide();
-      $(".figure_intro").hide()
-      $(".speaker_question").show();
-      $(".button_3").hide()
-      $(".button_2").show()
-      }
-    },
-
-    button_2 : function() {
-      if (exp.sliderPost == null) {
-        $(".err").show();
-      }
-      else {
+      } else {
         this.log_responses();
+
         /* use _stream.apply(this); if and only if there is
         "present" data. (and only *after* responses are logged) */
         _stream.apply(this);
       }
-    
-  },
-    
+    },
+
     init_sliders : function() {
       utils.make_slider("#single_slider", function(event, ui) {
         exp.sliderPost = ui.value;
@@ -563,23 +737,16 @@ function make_slides(f) {
     log_responses : function() {
       exp.data_trials.push({
         "response" : exp.sliderPost,
-        "island_tested": this.stim.island_tested,
-        "test_match_cond":this.stim.test_match_cond,
         "condition" : this.stim.condition,
         "block_sequence": this.stim.new_block_sequence,
         "item_number": this.stim.item,
         "list_number": this.stim.list,
         "trial_sequence_total": order,
-        "speaker_identity":this.stim.name,
-        "comp_question_exist": comp_question_exist,
-        "comp_answer": $("#comp_q").val(),
         "phase": this.stim.phase
       });
       order = order + 1;
     }
   });
-
-
 
   slides.subj_info =  slide({
     name : "subj_info",
@@ -632,7 +799,8 @@ function init() {
       screenUW: exp.width
     };
   //blocks of the experiment:
-  exp.structure=["i0", "instructions", "practice_slider", "post_practice_1", "practice_slider_bad", "post_practice_2", "speaker_intro1","speaker_intro2","speaker_intro5","speaker_intro_final", "last_reminder", 'one_slider', 'subj_info', 'thanks'];
+  // exp.structure=["i0", "instructions", "practice_slider", "post_practice_1", "practice_slider_bad", "post_practice_2", "speaker_intro1","speaker_intro2","speaker_intro5","speaker_intro_final", "last_reminder", 'one_slider', 'subj_info', 'thanks'];
+  exp.structure=["i0", "instructions", "practice_slider", "post_practice_1", "practice_slider_bad", "post_practice_2", "last_reminder", 'one_slider', 'subj_info', 'thanks'];
 
   exp.data_trials = [];
   //make corresponding slides:
