@@ -6,6 +6,9 @@ exposure_stimuli = all_stimuli.filter(function (e){
 test_stimuli = all_stimuli.filter(function (e){
   return e.list == 2;
 });
+pre_exposure_stimuli = all_stimuli.filter(function (e){
+  return e.list == 3;
+});
 
 var shuffle = function (array) {
 
@@ -28,9 +31,21 @@ var shuffle = function (array) {
 
 };
 
-exp_cond = shuffle(["CNPC","SUBJ","WH"])[0];
-test_match_cond = shuffle(["match", "mismatch"])[0];
 
+// choose experimental condition
+shuffled_conditions = shuffle(["CNPC","SUBJ","WH"]);
+exp_cond = shuffled_conditions[0];
+test_cond = shuffled_conditions[0];
+
+
+// for pilot, we're just doing whether and subject
+exp_cond = "WH";
+test_cond = "SUBJ";
+
+console.log("exposure condition: ", exp_cond);
+console.log("exposure condition: ", test_cond);
+
+test_match_cond = shuffle(["match", "mismatch"])[0];
 
 block_1 = exposure_stimuli.filter(function (e) {
   return e.block == 1;
@@ -97,6 +112,25 @@ test_6 = test_stimuli.filter(function (e) {
   return e.block == 6;
 });
 
+preexp_1 = pre_exposure_stimuli.filter(function (e) {
+  return e.block == 1;
+});
+preexp_2 = pre_exposure_stimuli.filter(function (e) {
+  return e.block == 2;
+});
+preexp_3 = pre_exposure_stimuli.filter(function (e) {
+  return e.block == 3;
+});
+preexp_4 = pre_exposure_stimuli.filter(function (e) {
+  return e.block == 4;
+});
+preexp_5 = pre_exposure_stimuli.filter(function (e) {
+  return e.block == 5;
+});
+preexp_6 = pre_exposure_stimuli.filter(function (e) {
+  return e.block == 6;
+});
+
 
 
 block_1 = shuffle(block_1);
@@ -114,35 +148,44 @@ block_12 = shuffle(block_12);
 block_13 = shuffle(block_13);
 block_14 = shuffle(block_14);
 block_15 = shuffle(block_15);
-test1 = shuffle(test_1);
-test2 = shuffle(test_2);
-test3 = shuffle(test_3);
-test4 = shuffle(test_4);
-test5 = shuffle(test_5);
-test6 = shuffle(test_6);
+test_1 = shuffle(test_1);
+test_2 = shuffle(test_2);
+test_3 = shuffle(test_3);
+test_4 = shuffle(test_4);
+test_5 = shuffle(test_5);
+test_6 = shuffle(test_6);
+preexp_1 = shuffle(preexp_1);
+preexp_2 = shuffle(preexp_2);
+preexp_3 = shuffle(preexp_3);
+preexp_4 = shuffle(preexp_4);
+preexp_5 = shuffle(preexp_5);
+preexp_6 = shuffle(preexp_6);
 
-shuffled_blocks = shuffle([block_1, block_2, block_3, block_4, block_5, block_6, block_7, block_8, block_9, block_10, block_11, block_12, block_13, block_14, block_15]);
+shuffled_exp = shuffle([block_1, block_2, block_3, block_4, block_5, block_6, block_7, block_8]);//, block_9, block_10, block_11, block_12, block_13, block_14, block_15]);
 shuffled_tests = shuffle([test_1, test_2, test_3, test_4, test_5, test_6]);
-
+shuffled_preexp = shuffle([preexp_1, preexp_2, preexp_3, preexp_4, preexp_5, preexp_6]);
 //uncomment to shorten experiment for debugging
-//shuffled_blocks = shuffle([block_1]);
-name_list = shuffle(["Gregory", "Emily", "Jessy", "Thomas"]);
+shuffled_exp = shuffle([block_1]);
+// name_list = shuffle(["Gregory", "Emily", "Jessy", "Thomas"]);
 
-for (var i = 0; i < 15; i++){
-  for (var j in shuffled_blocks[i]){
+//for (var i = 0; i < 15; i++){
+for(var i = 0; i < 8; i++){
+  for (var j in shuffled_exp[i]){
 
-    shuffled_blocks[i][j]["new_block_sequence"] = i+1;
-    shuffled_blocks[i][j]["island_tested"] = exp_cond;
-    shuffled_blocks[i][j]["phase"] = "exposure"
-    shuffled_blocks[i][j]["test_match_cond"] = test_match_cond;
-    if (shuffled_blocks[i][j]["condition"] == exp_cond){
-        shuffled_blocks[i][j]["name"] = name_list[0];}
-    else if (shuffled_blocks[i][j]["condition"] == "FILL"){
-        shuffled_blocks[i][j]["name"] = name_list[1]}
-    else if (shuffled_blocks[i][j]["condition"] == "UNGRAM"){
-        shuffled_blocks[i][j]["name"] = "Iron-Head";}
+    shuffled_exp[i][j]["new_block_sequence"] = i+1;
+    shuffled_exp[i][j]["island_tested"] = exp_cond;
+    shuffled_exp[i][j]["phase"] = "exposure";
+    shuffled_exp[i][j]["test_match_cond"] = test_match_cond;
+
+    // tag sentences to be filtered out (not in the right condition)
+    if (shuffled_exp[i][j]["condition"] == exp_cond){
+        shuffled_exp[i][j]["name"] = "good";}
+    else if (shuffled_exp[i][j]["condition"] == "FILL"){
+        shuffled_exp[i][j]["name"] = "good"}
+    else if (shuffled_exp[i][j]["condition"] == "UNGRAM"){
+        shuffled_exp[i][j]["name"] = "good";}
     else {
-      shuffled_blocks[i][j]["name"] = "delete";}
+      shuffled_exp[i][j]["name"] = "delete";}
       
   };
 };
@@ -151,40 +194,54 @@ for (var i = 0; i < 6; i++){
   for (var j in shuffled_tests[i]){
 
     shuffled_tests[i][j]["new_block_sequence"] = i+101;
-    shuffled_tests[i][j]["phase"] = "test"
+    shuffled_tests[i][j]["phase"] = "test";
     shuffled_tests[i][j]["island_tested"] = exp_cond;
     shuffled_tests[i][j]["test_match_cond"] = test_match_cond;
-      if (test_match_cond == "mismatch"){
+      // if (test_match_cond == "mismatch"){
           
-        if (shuffled_tests[i][j]["condition"] == exp_cond){
-            shuffled_tests[i][j]["name"] = name_list[1];}
-        else if (shuffled_tests[i][j]["condition"] == "FILL"){
-            shuffled_tests[i][j]["name"] = name_list[0]}
-        else if (shuffled_tests[i][j]["condition"] == "UNGRAM"){
-            shuffled_tests[i][j]["name"] = "Iron-Head";}
-        else {
-          shuffled_tests[i][j]["name"] = "delete";}
+      //   if (shuffled_tests[i][j]["condition"] == exp_cond){
+      //       shuffled_tests[i][j]["name"] = name_list[1];}
+      //   else if (shuffled_tests[i][j]["condition"] == "FILL"){
+      //       shuffled_tests[i][j]["name"] = name_list[0]}
+      //   else if (shuffled_tests[i][j]["condition"] == "UNGRAM"){
+      //       shuffled_tests[i][j]["name"] = "Iron-Head";}
+      //   else {
+      //     shuffled_tests[i][j]["name"] = "delete";}
           
-      } 
-      else {
+      // } 
+      // else {
       
-        if (shuffled_tests[i][j]["condition"] == exp_cond){
-          shuffled_tests[i][j]["name"] = name_list[0];}
-      else if (shuffled_tests[i][j]["condition"] == "FILL"){
-          shuffled_tests[i][j]["name"] = name_list[1]}
-      else if (shuffled_tests[i][j]["condition"] == "UNGRAM"){
-          shuffled_tests[i][j]["name"] = "Iron-Head";}
-      else {
-        shuffled_tests[i][j]["name"] = "delete";}
+      //   if (shuffled_tests[i][j]["condition"] == exp_cond){
+      //     shuffled_tests[i][j]["name"] = name_list[0];}
+      // else if (shuffled_tests[i][j]["condition"] == "FILL"){
+      //     shuffled_tests[i][j]["name"] = name_list[1]}
+      // else if (shuffled_tests[i][j]["condition"] == "UNGRAM"){
+      //     shuffled_tests[i][j]["name"] = "Iron-Head";}
+      // else {
+      //   shuffled_tests[i][j]["name"] = "delete";}
 
 
-      };
+      // };
 
     };
 };
 
-latin_squared = [shuffled_blocks, shuffled_tests].flat().flat();
-console.log(latin_squared)
+for (var i = 0; i < 6; i++){
+  for (var j in shuffled_tests[i]){
+
+    shuffled_preexp[i][j]["new_block_sequence"] = i+101;
+    shuffled_preexp[i][j]["phase"] = "pre-exposure";
+    shuffled_preexp[i][j]["island_tested"] = exp_cond;
+    shuffled_preexp[i][j]["test_match_cond"] = test_match_cond;
+      
+    };
+};
+
+
+// create one list of all the items
+latin_squared = [shuffled_preexp, shuffled_exp, shuffled_tests].flat().flat();
+console.log(latin_squared);
+// filter out items not in this condition
 latin_squared = latin_squared.filter(i => i["name"] != "delete");
 
 //shuffle name-condition coorelation
@@ -528,62 +585,62 @@ function make_slides(f) {
     }
   });
 
-  slides.speaker_intro1 = slide({
-    name : "speaker_intro1",
-    //this gets run only at the beginning of the block
-    start : function(){
-      var init_image = '<img src="images/'+ name_list[0] + '.png" style="height:150px" class="center">';
+  // slides.speaker_intro1 = slide({
+  //   name : "speaker_intro1",
+  //   //this gets run only at the beginning of the block
+  //   start : function(){
+  //     var init_image = '<img src="images/'+ name_list[0] + '.png" style="height:150px" class="center">';
 
-      $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
-      $(".speaker_image").html(init_image)
-      $(".specific_speaker_intro_line").html("This is "+name_list[0]+"!")
-    },
-    button : function() {
-      exp.go(); //use exp.go() if and only if there is no "present" data.
-    }
+  //     $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
+  //     $(".speaker_image").html(init_image)
+  //     $(".specific_speaker_intro_line").html("This is "+name_list[0]+"!")
+  //   },
+  //   button : function() {
+  //     exp.go(); //use exp.go() if and only if there is no "present" data.
+  //   }
 
-  });
+  // });
 
-  slides.speaker_intro2 = slide({
-    name : "speaker_intro2",
-    //this gets run only at the beginning of the block
-    start : function(){
-      var init_image = '<img src="images/'+ name_list[1] + '.png" style="height:150px" class="center">';
+  // slides.speaker_intro2 = slide({
+  //   name : "speaker_intro2",
+  //   //this gets run only at the beginning of the block
+  //   start : function(){
+  //     var init_image = '<img src="images/'+ name_list[1] + '.png" style="height:150px" class="center">';
 
-      $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
-      $(".speaker_image").html(init_image)
-      $(".specific_speaker_intro_line").html("This is "+name_list[1]+"!")
-    },
-    button : function() {
-      exp.go(); //use exp.go() if and only if there is no "present" data.
-    }
+  //     $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
+  //     $(".speaker_image").html(init_image)
+  //     $(".specific_speaker_intro_line").html("This is "+name_list[1]+"!")
+  //   },
+  //   button : function() {
+  //     exp.go(); //use exp.go() if and only if there is no "present" data.
+  //   }
 
-  });
+  // });
 
-  slides.speaker_intro5 = slide({
-    name : "speaker_intro5",
-    //this gets run only at the beginning of the block
-    start : function(){
-      var init_image = '<img src="images/Iron-Head.png" style="height:150px" class="center">';
+  // slides.speaker_intro5 = slide({
+  //   name : "speaker_intro5",
+  //   //this gets run only at the beginning of the block
+  //   start : function(){
+  //     var init_image = '<img src="images/Iron-Head.png" style="height:150px" class="center">';
 
-      $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
-      $(".speaker_image").html(init_image)
-      $(".specific_speaker_intro_line").html("This is <b>Iron-Head<\/b>! Iron-Head is a robot!")
-    },
-    button : function() {
-      exp.go(); //use exp.go() if and only if there is no "present" data.
-    }
+  //     $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
+  //     $(".speaker_image").html(init_image)
+  //     $(".specific_speaker_intro_line").html("This is <b>Iron-Head<\/b>! Iron-Head is a robot!")
+  //   },
+  //   button : function() {
+  //     exp.go(); //use exp.go() if and only if there is no "present" data.
+  //   }
 
-  });
+  // });
 
   
-  slides.speaker_intro_final = slide({
-    name : "speaker_intro_final",
-    button : function() {
-      exp.go(); //use exp.go() if and only if there is no "present" data.
-    }
+  // slides.speaker_intro_final = slide({
+  //   name : "speaker_intro_final",
+  //   button : function() {
+  //     exp.go(); //use exp.go() if and only if there is no "present" data.
+  //   }
 
-  });
+  // });
 
 
   slides.last_reminder = slide({
@@ -738,6 +795,7 @@ function make_slides(f) {
       exp.data_trials.push({
         "response" : exp.sliderPost,
         "condition" : this.stim.condition,
+        "island_tested": this.stim.island_tested,
         "block_sequence": this.stim.new_block_sequence,
         "item_number": this.stim.item,
         "list_number": this.stim.list,
