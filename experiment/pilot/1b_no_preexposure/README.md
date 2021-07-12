@@ -1,5 +1,5 @@
 
-## Satiation Baseline (replication of Snyder (2000)), treating island items as ungrammatical in terms of balancing ##
+## Satiation Generalization Experiment Pilot: No pre-exposure
 
 We are using a template for web-based experiments developed and used in Noah Goodman's CoCoLab.
 
