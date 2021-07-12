@@ -42,8 +42,8 @@ test_cond = shuffled_conditions[0];
 exp_cond = "WH";
 test_cond = "SUBJ";
 
-console.log("exposure condition: ", exp_cond);
-console.log("test condition: ", test_cond);
+// console.log("exposure condition: ", exp_cond);
+// console.log("test condition: ", test_cond);
 
 
 // 7 blocks = 14 stimuli, 14 fillers
@@ -145,15 +145,14 @@ preexp_1 = shuffle(preexp_1);
 preexp_2 = shuffle(preexp_2);
 preexp_3 = shuffle(preexp_3);
 
-console.log(block_1)
-
 shuffled_exp = shuffle([block_1, block_2, block_3, block_4, block_5, block_6, block_7]);//, block_8, block_9, block_10, block_11, block_12, block_13, block_14, block_15]);
 shuffled_tests = shuffle([test_1, test_2, test_3]);
 shuffled_preexp = shuffle([preexp_1, preexp_2, preexp_3]);
+
 //uncomment to shorten experiment for debugging
-shuffled_exp = shuffle([block_1]);
-shuffled_tests = shuffle([test_1]);
-shuffled_preexp = shuffle([preexp_1]);
+// shuffled_exp = shuffle([block_1]);
+// shuffled_tests = shuffle([test_1]);
+// shuffled_preexp = shuffle([preexp_1]);
 
 var num_exp_blocks = 7;
 var num_test_blocks = 3;
@@ -162,11 +161,11 @@ var num_preexp_blocks = 3;
 for(var i = 0; i < num_exp_blocks; i++){
   for (var j in shuffled_exp[i]){
 
-    shuffled_exp[i][j]["new_block_sequence"] = i+1;
-    shuffled_exp[i][j]["island_tested"] = exp_cond;
+    shuffled_exp[i][j]["new_block_sequence"] = i+101;
+    shuffled_exp[i][j]["exposure_condition"] = exp_cond;
+    shuffled_exp[i][j]["test_condition"] = test_cond;
     shuffled_exp[i][j]["phase"] = "exposure";
- 
-
+    
     // tag sentences to be filtered out (not in the right condition)
     if (shuffled_exp[i][j]["condition"] == exp_cond){
         shuffled_exp[i][j]["name"] = "good";}
@@ -183,11 +182,11 @@ for(var i = 0; i < num_exp_blocks; i++){
 for (var i = 0; i < num_test_blocks; i++){
   for (var j in shuffled_tests[i]){
 
-    shuffled_tests[i][j]["new_block_sequence"] = i+101;
+    shuffled_tests[i][j]["new_block_sequence"] = i+201;
     shuffled_tests[i][j]["phase"] = "test";
-    shuffled_tests[i][j]["island_tested"] = exp_cond;
- 
-
+    shuffled_tests[i][j]["exposure_condition"] = exp_cond;
+    shuffled_tests[i][j]["test_condition"] = test_cond;
+    
     // tag sentences to be filtered out (not in the right condition)
     if (shuffled_tests[i][j]["condition"] == test_cond){
         shuffled_tests[i][j]["name"] = "good";}
@@ -204,11 +203,11 @@ for (var i = 0; i < num_test_blocks; i++){
 for (var i = 0; i < num_preexp_blocks; i++){
   for (var j in shuffled_preexp[i]){
 
-    shuffled_preexp[i][j]["new_block_sequence"] = i+101;
+    shuffled_preexp[i][j]["new_block_sequence"] = i+1;
     shuffled_preexp[i][j]["phase"] = "pre-exposure";
-    shuffled_preexp[i][j]["island_tested"] = exp_cond;
- 
-
+    shuffled_preexp[i][j]["exposure_condition"] = exp_cond;
+    shuffled_preexp[i][j]["test_condition"] = test_cond;
+   
     // tag sentences to be filtered out (not in the right condition)
     if (shuffled_preexp[i][j]["condition"] == test_cond) {
       shuffled_preexp[i][j]["name"] = "good";
@@ -226,15 +225,10 @@ for (var i = 0; i < num_preexp_blocks; i++){
     };
 };
 
-
-console.log("blocks");
-console.log(shuffled_preexp[0]);
-console.log(shuffled_exp[0]);
-console.log(shuffled_tests[0]);
-
 // create one list of all the items
 latin_squared = [shuffled_preexp, shuffled_exp, shuffled_tests].flat().flat();
-console.log(latin_squared);
+// console.log(latin_squared);
+
 // filter out items not in this condition
 latin_squared = latin_squared.filter(i => i["name"] != "delete");
 
@@ -475,7 +469,8 @@ function make_slides(f) {
       exp.data_trials.push({
         "response" : exp.sliderPost,
         "condition" : this.stim.condition,
-        "island_tested": this.stim.island_tested,
+        "exposure_condition": this.stim.exposure_condition,
+        "test_condition": this.stim.test_condition,
         "block_sequence": this.stim.new_block_sequence,
         "item_number": this.stim.item,
         "list_number": this.stim.list,
