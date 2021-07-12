@@ -1,3 +1,4 @@
+// note: for FILL/UNGRAM, the ordering isn't what you'd expect
 var all_stimuli = [
     { "item": 1, "block": 1, "list": 1, "condition": "CNPC", "Context": "The teacher believes the claim that the boy found a box of diamonds.", "Target": "What does the teacher believe the claim that the boy found?", "presented_context": "Context: The teacher believes the claim that the boy found a box of diamonds.", "presented_target": "<b> What does the teacher believe the claim that the boy found?<\/b>" },
     { "item": 1, "block": 1, "list": 2, "condition": "WH", "Context": "The teacher wonders whether the boy found a box of diamonds.", "Target": "What does the teacher wonder whether the boy found?", "presented_context": "Context: The teacher wonders whether the boy found a box of diamonds.", "presented_target": "<b> What does the teacher wonder whether the boy found?<\/b>" },
