@@ -43,10 +43,10 @@ exp_cond = "WH";
 test_cond = "SUBJ";
 
 console.log("exposure condition: ", exp_cond);
-console.log("exposure condition: ", test_cond);
+console.log("test condition: ", test_cond);
 
-test_match_cond = shuffle(["match", "mismatch"])[0];
 
+// 7 blocks = 14 stimuli, 14 fillers
 block_1 = exposure_stimuli.filter(function (e) {
   return e.block == 1;
 });
@@ -68,31 +68,37 @@ block_6 = exposure_stimuli.filter(function (e) {
 block_7 = exposure_stimuli.filter(function (e) {
   return e.block == 7;
 });
-block_8 = exposure_stimuli.filter(function (e) {
-  return e.block == 8;
-});
-block_9 = exposure_stimuli.filter(function (e) {
-  return e.block == 9;
-});
-block_10 = exposure_stimuli.filter(function (e) {
-  return e.block == 10;
-});
-block_11 = exposure_stimuli.filter(function (e) {
-  return e.block == 11;
-});
-block_12 = exposure_stimuli.filter(function (e) {
-  return e.block == 12;
-});
-block_13 = exposure_stimuli.filter(function (e) {
-  return e.block == 13;
-});
-block_14 = exposure_stimuli.filter(function (e) {
-  return e.block == 14;
-});
-block_15 = exposure_stimuli.filter(function (e) {
-  return e.block == 15;
-});
 
+// changed stimuli to have twice as many stimuli items,
+// so we have half as many blocks
+
+// block_8 = exposure_stimuli.filter(function (e) {
+//   return e.block == 8;
+// });
+// block_9 = exposure_stimuli.filter(function (e) {
+//   return e.block == 9;
+// });
+// block_10 = exposure_stimuli.filter(function (e) {
+//   return e.block == 10;
+// });
+// block_11 = exposure_stimuli.filter(function (e) {
+//   return e.block == 11;
+// });
+// block_12 = exposure_stimuli.filter(function (e) {
+//   return e.block == 12;
+// });
+// block_13 = exposure_stimuli.filter(function (e) {
+//   return e.block == 13;
+// });
+// block_14 = exposure_stimuli.filter(function (e) {
+//   return e.block == 14;
+// });
+// block_15 = exposure_stimuli.filter(function (e) {
+//   return e.block == 15;
+// });
+
+
+// 3 blocks = 6 stimuli, 6 fillers
 test_1 = test_stimuli.filter(function (e) {
   return e.block == 1;
 });
@@ -102,16 +108,9 @@ test_2 = test_stimuli.filter(function (e) {
 test_3 = test_stimuli.filter(function (e) {
   return e.block == 3;
 });
-test_4 = test_stimuli.filter(function (e) {
-  return e.block == 4;
-});
-test_5 = test_stimuli.filter(function (e) {
-  return e.block == 5;
-});
-test_6 = test_stimuli.filter(function (e) {
-  return e.block == 6;
-});
 
+
+// 3 blocks = 6 stimul, 6 fillers
 preexp_1 = pre_exposure_stimuli.filter(function (e) {
   return e.block == 1;
 });
@@ -121,16 +120,6 @@ preexp_2 = pre_exposure_stimuli.filter(function (e) {
 preexp_3 = pre_exposure_stimuli.filter(function (e) {
   return e.block == 3;
 });
-preexp_4 = pre_exposure_stimuli.filter(function (e) {
-  return e.block == 4;
-});
-preexp_5 = pre_exposure_stimuli.filter(function (e) {
-  return e.block == 5;
-});
-preexp_6 = pre_exposure_stimuli.filter(function (e) {
-  return e.block == 6;
-});
-
 
 
 block_1 = shuffle(block_1);
@@ -140,42 +129,43 @@ block_4 = shuffle(block_4);
 block_5 = shuffle(block_5);
 block_6 = shuffle(block_6);
 block_7 = shuffle(block_7);
-block_8 = shuffle(block_8);
-block_9 = shuffle(block_9);
-block_10 = shuffle(block_10);
-block_11 = shuffle(block_11);
-block_12 = shuffle(block_12);
-block_13 = shuffle(block_13);
-block_14 = shuffle(block_14);
-block_15 = shuffle(block_15);
+// block_8 = shuffle(block_8);
+// block_9 = shuffle(block_9);
+// block_10 = shuffle(block_10);
+// block_11 = shuffle(block_11);
+// block_12 = shuffle(block_12);
+// block_13 = shuffle(block_13);
+// block_14 = shuffle(block_14);
+// block_15 = shuffle(block_15);
 test_1 = shuffle(test_1);
 test_2 = shuffle(test_2);
 test_3 = shuffle(test_3);
-test_4 = shuffle(test_4);
-test_5 = shuffle(test_5);
-test_6 = shuffle(test_6);
+
 preexp_1 = shuffle(preexp_1);
 preexp_2 = shuffle(preexp_2);
 preexp_3 = shuffle(preexp_3);
-preexp_4 = shuffle(preexp_4);
-preexp_5 = shuffle(preexp_5);
-preexp_6 = shuffle(preexp_6);
 
-shuffled_exp = shuffle([block_1, block_2, block_3, block_4, block_5, block_6, block_7, block_8]);//, block_9, block_10, block_11, block_12, block_13, block_14, block_15]);
-shuffled_tests = shuffle([test_1, test_2, test_3, test_4, test_5, test_6]);
-shuffled_preexp = shuffle([preexp_1, preexp_2, preexp_3, preexp_4, preexp_5, preexp_6]);
+console.log(block_1)
+
+shuffled_exp = shuffle([block_1, block_2, block_3, block_4, block_5, block_6, block_7]);//, block_8, block_9, block_10, block_11, block_12, block_13, block_14, block_15]);
+shuffled_tests = shuffle([test_1, test_2, test_3]);
+shuffled_preexp = shuffle([preexp_1, preexp_2, preexp_3]);
 //uncomment to shorten experiment for debugging
 shuffled_exp = shuffle([block_1]);
-// name_list = shuffle(["Gregory", "Emily", "Jessy", "Thomas"]);
+shuffled_tests = shuffle([test_1]);
+shuffled_preexp = shuffle([preexp_1]);
 
-//for (var i = 0; i < 15; i++){
-for(var i = 0; i < 8; i++){
+var num_exp_blocks = 7;
+var num_test_blocks = 3;
+var num_preexp_blocks = 3;
+
+for(var i = 0; i < num_exp_blocks; i++){
   for (var j in shuffled_exp[i]){
 
     shuffled_exp[i][j]["new_block_sequence"] = i+1;
     shuffled_exp[i][j]["island_tested"] = exp_cond;
     shuffled_exp[i][j]["phase"] = "exposure";
-    shuffled_exp[i][j]["test_match_cond"] = test_match_cond;
+ 
 
     // tag sentences to be filtered out (not in the right condition)
     if (shuffled_exp[i][j]["condition"] == exp_cond){
@@ -190,53 +180,57 @@ for(var i = 0; i < 8; i++){
   };
 };
 
-for (var i = 0; i < 6; i++){
+for (var i = 0; i < num_test_blocks; i++){
   for (var j in shuffled_tests[i]){
 
     shuffled_tests[i][j]["new_block_sequence"] = i+101;
     shuffled_tests[i][j]["phase"] = "test";
     shuffled_tests[i][j]["island_tested"] = exp_cond;
-    shuffled_tests[i][j]["test_match_cond"] = test_match_cond;
-      // if (test_match_cond == "mismatch"){
-          
-      //   if (shuffled_tests[i][j]["condition"] == exp_cond){
-      //       shuffled_tests[i][j]["name"] = name_list[1];}
-      //   else if (shuffled_tests[i][j]["condition"] == "FILL"){
-      //       shuffled_tests[i][j]["name"] = name_list[0]}
-      //   else if (shuffled_tests[i][j]["condition"] == "UNGRAM"){
-      //       shuffled_tests[i][j]["name"] = "Iron-Head";}
-      //   else {
-      //     shuffled_tests[i][j]["name"] = "delete";}
-          
-      // } 
-      // else {
-      
-      //   if (shuffled_tests[i][j]["condition"] == exp_cond){
-      //     shuffled_tests[i][j]["name"] = name_list[0];}
-      // else if (shuffled_tests[i][j]["condition"] == "FILL"){
-      //     shuffled_tests[i][j]["name"] = name_list[1]}
-      // else if (shuffled_tests[i][j]["condition"] == "UNGRAM"){
-      //     shuffled_tests[i][j]["name"] = "Iron-Head";}
-      // else {
-      //   shuffled_tests[i][j]["name"] = "delete";}
+ 
 
-
-      // };
+    // tag sentences to be filtered out (not in the right condition)
+    if (shuffled_tests[i][j]["condition"] == test_cond){
+        shuffled_tests[i][j]["name"] = "good";}
+    else if (shuffled_tests[i][j]["condition"] == "FILL"){
+        shuffled_tests[i][j]["name"] = "good"}
+    else if (shuffled_tests[i][j]["condition"] == "UNGRAM"){
+        shuffled_tests[i][j]["name"] = "good";}
+    else {
+      shuffled_tests[i][j]["name"] = "delete";}
 
     };
 };
 
-for (var i = 0; i < 6; i++){
-  for (var j in shuffled_tests[i]){
+for (var i = 0; i < num_preexp_blocks; i++){
+  for (var j in shuffled_preexp[i]){
 
     shuffled_preexp[i][j]["new_block_sequence"] = i+101;
     shuffled_preexp[i][j]["phase"] = "pre-exposure";
     shuffled_preexp[i][j]["island_tested"] = exp_cond;
-    shuffled_preexp[i][j]["test_match_cond"] = test_match_cond;
-      
+ 
+
+    // tag sentences to be filtered out (not in the right condition)
+    if (shuffled_preexp[i][j]["condition"] == test_cond) {
+      shuffled_preexp[i][j]["name"] = "good";
+    }
+    else if (shuffled_preexp[i][j]["condition"] == "FILL") {
+      shuffled_preexp[i][j]["name"] = "good"
+    }
+    else if (shuffled_preexp[i][j]["condition"] == "UNGRAM") {
+      shuffled_preexp[i][j]["name"] = "good";
+    }
+    else {
+      shuffled_preexp[i][j]["name"] = "delete";
+    }
+
     };
 };
 
+
+console.log("blocks");
+console.log(shuffled_preexp[0]);
+console.log(shuffled_exp[0]);
+console.log(shuffled_tests[0]);
 
 // create one list of all the items
 latin_squared = [shuffled_preexp, shuffled_exp, shuffled_tests].flat().flat();
@@ -354,82 +348,6 @@ function make_slides(f) {
     }
   });
 
-  // from the old version with characters:
-
-  // slides.practice_slider = slide({
-  //   name : "practice_slider",
-
-  //   /* trial information for this block
-  //    (the variable 'stim' will change between each of these values,
-  //     and for each of these, present_handle will be run.) */
-  //   present : [{"a": 1}],
-  //   //this gets run only at the beginning of the block
-  //   present_handle : function(stim) {
-  //     var name = 'John';
-  //     $(".err").hide();
-  //     $(".errgood").hide();
-  //     $(".errbad").hide();
-  //     $(".target").hide();
-  //     $(".slider_table").hide();
-  //     $(".button_2").hide()
-  //     this.stim = stim;
-    
-  //     // var init_image = '<img src="images/'+ name + '.png" style="height:150px" class="center">';
-  //     // $(".image").html(init_image)
-  //     // $(".figure_intro").html("This is <b>"+name+"<\/b.")
-  //     $(".context").html("Context: The boy saw an apple on the table.");
-  //     $(".target").html(name " asks: <b> What did the boy see on the table? <\/b>");
-  //     $(".button_1").html("Click here to see what <b>" +name+ "<\/b> asks about the context.")
-  //     this.init_sliders();
-  //     exp.sliderPost = null; //erase current slider value
-  //     exp.first_response_wrong = 0;
-  //     exp.first_response_value = null;
-  //     exp.attempts = 0;
-  //   },
-  //   button_1 : function() {
-  //     $(".target").show();
-  //     $(".slider_table").show();
-  //     $(".button_2").show()
-  //     $(".button_1").hide()
-  //   },
-  //   button_2 : function() {
- 
-  //     if (exp.sliderPost == null) {
-  //       $(".err").show();
-
-  //     } 
-  //     else if (exp.sliderPost < 0.5) {
-  //       exp.first_response_wrong = 1;
-  //       exp.first_response_value =exp.sliderPost;
-  //       exp.attempts = exp.attempts + 1;
-  //       $(".errgood").show();
-  //     }
-  //     else {
-  //       this.log_responses();
-  //       /* use _stream.apply(this); if and only if there is
-  //       "present" data. (and only *after* responses are logged) */
-  //       _stream.apply(this);
-  //     }
-  //   },
-  //   init_sliders : function() {
-  //     utils.make_slider("#practice_slider_1", function(event, ui) {
-  //       exp.sliderPost = ui.value;
-  //     });
-  //   },
-  //   log_responses : function() {
-  //     exp.data_trials.push({
-  //       "response" : exp.sliderPost,
-  //       "first_response_value": exp.first_response_value,
-  //       "wrong_attempts": exp.attempts,
-  //       "condition" : "practice_good",
-  //       "block_sequence": "practice",
-  //       "item_number": "practice_good",
-  //       "list_number": "practice",
-  //       "trial_sequence_total": 0
-  //     });
-
-  //   }
-  // });
 
   slides.post_practice_1 = slide({
     name : "post_practice_1",
@@ -439,86 +357,7 @@ function make_slides(f) {
   });
 
 
-  // from the old version with characters:
-
-  // slides.practice_slider_bad = slide({
-  //   name : "practice_slider_bad",
-
-  //   /* trial information for this block
-  //    (the variable 'stim' will change between each of these values,
-  //     and for each of these, present_handle will be run.) */
-  //   present : [1],
-
-  
-  //   //this gets run only at the beginning of the block
-  //   present_handle : function(stim) {
-  //     var name = 'Mary';
-  //     $(".button_1").show()
-  //     $(".err").hide();
-  //     $(".errgood").hide();
-  //     $(".errbad").hide();
-  //     $(".target").hide();
-  //     $(".slider_table").hide();
-  //     $(".button_2").hide()
-  //     this.stim = stim;
-    
-  //     // var init_image = '<img src="images/'+ name + '.png" style="height:150px" class="center">';
-  //     // $(".image").html(init_image)
-  //     // $(".figure_intro").html("This is <b>"+name+"<\/b.")
-  //     $(".context").html("Context: The girl slept under the bed.");
-  //     $(".target").html(name + " asks: <b> Who the bed was slept under? <\/b>")
-  //     $(".button_1").html("Click here to see what <b>" +name+ "<\/b> asks about the context.")
-  //     this.init_sliders();
-  //     exp.sliderPost = null; //erase current slider value
-  //     exp.first_response_wrong = 0;
-  //     exp.first_response_value = null;
-  //     exp.attempts = 0;
-  //   },
-  //   button_1 : function() {
-  //     $(".target").show();
-  //     $(".slider_table").show();
-  //     $(".button_2").show()
-  //     $(".button_1").hide()
-  //   },
-  //   button_2 : function() {
  
-  //     if (exp.sliderPost == null) {
-  //       $(".err").show();
-        
-  //     } 
-  //     else if (exp.sliderPost > 0.5) {
-  //       exp.first_response_wrong = 1;
-  //       exp.first_response_value = exp.sliderPost;
-  //       exp.attempts = exp.attempts + 1;
-  //       $(".errbad").show();
-  //     }
-  //     else {
-  //       this.log_responses();
-  //       /* use _stream.apply(this); if and only if there is
-  //       "present" data. (and only *after* responses are logged) */
-  //       _stream.apply(this);
-  //     }
-  //   },
-  //   init_sliders : function() {
-  //     utils.make_slider("#practice_slider_2", function(event, ui) {
-  //       exp.sliderPost = ui.value;
-        
-  //     });
-  //   },
-  //   log_responses : function() {
-  //     exp.data_trials.push({
-  //       "response" : exp.sliderPost,
-  //       "first_response_value": exp.first_response_value,
-  //       "wrong_attempts": exp.attempts,
-  //       "condition" : "practice_bad",
-  //       "block_sequence": "practice",
-  //       "item_number": "practice_bad",
-  //       "list_number": "practice",
-  //       "trial_sequence_total": 0
-  //     });
-
-  //   }
-  // });
 
   slides.practice_slider_bad = slide({
     name : "practice_slider_bad",
@@ -585,63 +424,6 @@ function make_slides(f) {
     }
   });
 
-  // slides.speaker_intro1 = slide({
-  //   name : "speaker_intro1",
-  //   //this gets run only at the beginning of the block
-  //   start : function(){
-  //     var init_image = '<img src="images/'+ name_list[0] + '.png" style="height:150px" class="center">';
-
-  //     $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
-  //     $(".speaker_image").html(init_image)
-  //     $(".specific_speaker_intro_line").html("This is "+name_list[0]+"!")
-  //   },
-  //   button : function() {
-  //     exp.go(); //use exp.go() if and only if there is no "present" data.
-  //   }
-
-  // });
-
-  // slides.speaker_intro2 = slide({
-  //   name : "speaker_intro2",
-  //   //this gets run only at the beginning of the block
-  //   start : function(){
-  //     var init_image = '<img src="images/'+ name_list[1] + '.png" style="height:150px" class="center">';
-
-  //     $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
-  //     $(".speaker_image").html(init_image)
-  //     $(".specific_speaker_intro_line").html("This is "+name_list[1]+"!")
-  //   },
-  //   button : function() {
-  //     exp.go(); //use exp.go() if and only if there is no "present" data.
-  //   }
-
-  // });
-
-  // slides.speaker_intro5 = slide({
-  //   name : "speaker_intro5",
-  //   //this gets run only at the beginning of the block
-  //   start : function(){
-  //     var init_image = '<img src="images/Iron-Head.png" style="height:150px" class="center">';
-
-  //     $(".speaker_intro_line").html("Let me introduce you to "+name_list[0]+", "+name_list[1]+", and Iron-Head! They will be asking some questions during this experiment, and you will be rating how acceptable their questions sound!")
-  //     $(".speaker_image").html(init_image)
-  //     $(".specific_speaker_intro_line").html("This is <b>Iron-Head<\/b>! Iron-Head is a robot!")
-  //   },
-  //   button : function() {
-  //     exp.go(); //use exp.go() if and only if there is no "present" data.
-  //   }
-
-  // });
-
-  
-  // slides.speaker_intro_final = slide({
-  //   name : "speaker_intro_final",
-  //   button : function() {
-  //     exp.go(); //use exp.go() if and only if there is no "present" data.
-  //   }
-
-  // });
-
 
   slides.last_reminder = slide({
     name : "last_reminder",
@@ -651,109 +433,7 @@ function make_slides(f) {
     
   });
 
-  // slides.one_slider = slide({
-  //   name : "one_slider",
-
-  //   /* trial information for this block
-  //    (the variable 'stim' will change between each of these values,
-  //     and for each of these, present_handle will be run.) */
-  //   present : latin_squared,
-    
-    
-  //   //this gets run only at the beginning of the block
-  //   present_handle : function(stim) {
-  //     $(".err").hide();
-  //     $(".target").hide();
-  //     $(".slider_table").hide();
-  //     $(".button_2").hide()
-  //     $(".button_3").hide()
-  //     $(".speaker_question").hide()
-  //     $(".context").show();
-  //     $(".button_1").show();
-  //     $(".image").show();
-  //     $(".figure_intro").show();
-  //     comp_question_exist = 0;
-  
-  //     this.stim = stim; //I like to store this information in the slide so I can record it later.
-  //     $(".context").html(stim.presented_context);
-  //     var init_image = '<img src="images/'+ stim.name + '.png" style="height:150px" class="center">';
-  //     $(".image").html(init_image)
-  //     $(".button_1").html("Click here to see what <b>"+ stim.name + "<\/b> asks about the context.")
-  //     $(".figure_intro").html("This is <b>"+stim.name+"<\/b.")
-  //     $(".target").html(stim.name + " asks: " + stim.presented_target);
-
-  //     this.init_sliders()
-  //     exp.sliderPost = null; //erase current slider value
-  //     resetSelectElement(comp_q);
-  //   },
-  //   button_1 : function() {
-  //     $(".target").show();
-  //     $(".button_1").hide();
-  //     $(".slider_table").show();
-  //     if (Math.random() > 0.75){
-  //       comp_question_exist = 1
-  //       $(".button_3").show()
-  //     }
-  //     else{
-  //     comp_question_exist = 0
-  //     $(".button_2").show()
-  //     }
-  //   },
-
-  //   button_3 : function() {
-  //     if (exp.sliderPost == null) {
-  //       $(".err").show();
-  //     }
-  //     else {
-  //     $(".target").hide();
-  //     $(".context").hide();
-  //     $(".slider_table").hide();
-  //     $(".button_1").hide();
-  //     $(".image").hide();
-  //     $(".figure_intro").hide()
-  //     $(".speaker_question").show();
-  //     $(".button_3").hide()
-  //     $(".button_2").show()
-  //     }
-  //   },
-
-  //   button_2 : function() {
-  //     if (exp.sliderPost == null) {
-  //       $(".err").show();
-  //     }
-  //     else {
-  //       this.log_responses();
-  //       /* use _stream.apply(this); if and only if there is
-  //       "present" data. (and only *after* responses are logged) */
-  //       _stream.apply(this);
-  //     }
-    
-  // },
-    
-  //   init_sliders : function() {
-  //     utils.make_slider("#single_slider", function(event, ui) {
-  //       exp.sliderPost = ui.value;
-  //     });
-  //   },
-
-  //   log_responses : function() {
-  //     exp.data_trials.push({
-  //       "response" : exp.sliderPost,
-  //       "island_tested": this.stim.island_tested,
-  //       "test_match_cond":this.stim.test_match_cond,
-  //       "condition" : this.stim.condition,
-  //       "block_sequence": this.stim.new_block_sequence,
-  //       "item_number": this.stim.item,
-  //       "list_number": this.stim.list,
-  //       "trial_sequence_total": order,
-  //       "speaker_identity":this.stim.name,
-  //       "comp_question_exist": comp_question_exist,
-  //       "comp_answer": $("#comp_q").val(),
-  //       "phase": this.stim.phase
-  //     });
-  //     order = order + 1;
-  //   }
-  // });
+ 
 
   slides.one_slider = slide({
     name : "one_slider",
