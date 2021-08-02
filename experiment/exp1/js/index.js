@@ -39,20 +39,19 @@ num_pre_exposure_blocks = num_pre_exposure_items/2; // 2 items per block
 // match sees the same condition throughout
 // mismatch sees different conditions on exposure and test
 experiment_group = shuffle(["match", "mismatch"])[0];
-console.log(experiment_group);
 
 // choose experimental condition
-shuffled_conditions = shuffle(["CNPC","SUBJ","WH"]);
+shuffled_conditions = shuffle(["SUBJ","WH"]);
 exposure_cond = shuffled_conditions[0];
-test_cond = shuffled_conditions[0];
-
-// for pilot, we're just doing whether and subject
-exposure_cond = "SUBJ";
-test_cond = "WH";
+test_cond = shuffled_conditions[1];
 
 if(experiment_group == "match"){
   exposure_cond = test_cond;
 }
+
+console.log(experiment_group);
+console.log("exp", exposure_cond);
+console.log("test", test_cond);
 
 
 // sort items into pools we can sample from
