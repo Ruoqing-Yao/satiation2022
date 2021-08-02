@@ -74,13 +74,13 @@ data = subset(data, workerid %in% eligible_subjects)
 # Step 3: exclude non-English speakers
 #############################
 
-non_Eng <- c("119")
+non_Eng <- c("235")
 
 data = subset(data, workerid %notin% non_Eng)
 
 
 # how many excluded participants?
-n_participants <- 80 
+n_participants <- 240 
 exclusion_rate <- (n_participants - length(unique(data$workerid)))/n_participants
 
 
@@ -124,8 +124,8 @@ d$item_type <- factor(d$item_type, levels = c("FILL", "WH","SUBJ","UNGRAM"))
 d$phase <- factor(d$phase, levels = c("pre-exposure", "exposure", "test"))
 
 # split data by exposure condition
-d_whether <- subset(d, exposure_condition == "WH")
-d_subject <- subset(d, exposure_condition == "SUBJ")
+d_whether <- subset(d, test_condition == "WH")
+d_subject <- subset(d, test_condition == "SUBJ")
 
 
 # models for whether-exposure
@@ -233,13 +233,32 @@ d$phase <- factor(d$phase, levels = c("pre-exposure", "exposure", "test"))
 d = subset(d, block_sequence != "practice")
 #d <- subset(d, group == "mismatch")
 
-d_no_ungram <- subset(d, item_type != "UNGRAM")
-d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "SUBJ", "WH") )
-d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
-d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ"))
+# split data by exposure condition
+d_whether <- subset(d, test_condition == "WH")
+d_subject <- subset(d, test_condition == "SUBJ")
 
-d_no_fillers_mismatch <- subset(d_no_fillers, group == "mismatch")
-d_no_fillers_control <- subset(d_no_fillers, group == "match")
+d_no_ungram_w <- subset(d_whether, item_type != "UNGRAM")
+d_no_fillers_w <- subset(d_no_ungram_w, item_type != "FILL")
+d_no_fillers_w$item_type <- factor(d_no_fillers_w$item_type, c("SUBJ", "WH"))
+d_no_fillers_w$exposure_condition <- factor(d_no_fillers_w$exposure_condition, c("SUBJ", "WH"))
+
+d_no_ungram_s <- subset(d_subject, item_type != "UNGRAM")
+d_no_fillers_s <- subset(d_no_ungram_s, item_type != "FILL")
+d_no_fillers_s$item_type <- factor(d_no_fillers_s$item_type, c("SUBJ", "WH"))
+d_no_fillers_s$exposure_condition <- factor(d_no_fillers_s$exposure_condition, c("SUBJ", "WH"))
+
+
+d <- d_whether
+# d <- d_subject
+
+
+# d_no_ungram <- subset(d, item_type != "UNGRAM")
+# d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "SUBJ", "WH") )
+# d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
+# d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ"))
+# 
+# d_no_fillers_mismatch <- subset(d_no_fillers, group == "mismatch")
+# d_no_fillers_control <- subset(d_no_fillers, group == "match")
 
 
 #calculate and plot trial/cumulative average with all sentence types
@@ -285,7 +304,10 @@ ci.low <- function(x,na.rm=T) {
 ci.high <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
 
-phase_avg = d_no_fillers %>%
+# new_d = d_no_fillers_w
+new_d = d_no_fillers_s
+
+phase_avg = new_d %>%
   group_by(phase,exposure_condition) %>%
   mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) %>% 
   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
@@ -296,7 +318,7 @@ phase_avg = subset(phase_avg, phase != "exposure")
 phase_graph<- ggplot(phase_avg, aes(x=exposure_condition,y=Mean, fill=exposure_condition)) +
   geom_bar(data=phase_avg, stat="identity", position="dodge", aes(alpha=phase)) +
   geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
-  scale_fill_manual(values=cbPalette, guide=FALSE) +
+  scale_fill_manual(values=cbPalette, guide="none") +
   scale_alpha_manual(values=c(0.6,1)) +
   xlab("exposure type") +
   ylab("average acceptability of whether islands") +
@@ -308,30 +330,30 @@ ggsave("../graphs/exp1_phase_bars.png",plot=phase_graph,width=10,height=5)
 
 # satiation curves
 
-#calculate and plot trial/cumulative average for non-filler items
-trial_avg_control <- aggregate(d_no_fillers_control[,"response"],list(d_no_fillers_control$trial_sequence_total), mean)
-names(trial_avg_control)[names(trial_avg_control) == "Group.1"] <- "trial"
-names(trial_avg_control)[names(trial_avg_control) == "x"] <- "avg"
+# #calculate and plot trial/cumulative average for non-filler items
+# trial_avg_control <- aggregate(d_no_fillers_control[,"response"],list(d_no_fillers_control$trial_sequence_total), mean)
+# names(trial_avg_control)[names(trial_avg_control) == "Group.1"] <- "trial"
+# names(trial_avg_control)[names(trial_avg_control) == "x"] <- "avg"
+# 
+# trial_avg_mismatch <- aggregate(d_no_fillers_mismatch[,"response"],list(d_no_fillers_mismatch$trial_sequence_total), mean)
+# names(trial_avg_mismatch)[names(trial_avg_mismatch) == "Group.1"] <- "trial"
+# names(trial_avg_mismatch)[names(trial_avg_mismatch) == "x"] <- "avg"
+# 
+# #trial_average plot
+# 
+# trial_avg_control <- trial_avg_control[order(trial_avg_control$trial),]
+# # cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
+# # trial_avg$cum <- cum
+# 
+# curve= ggplot(trial_avg_control, aes(x=trial, y=avg)) +
+#   geom_smooth(method = lm, se = F) + geom_point()+  
+#   xlab("Trial Sequence") +
+#   ylab("Average acceptability rating")+
+#   theme_bw()
+# 
+# curve
 
-trial_avg_mismatch <- aggregate(d_no_fillers_mismatch[,"response"],list(d_no_fillers_mismatch$trial_sequence_total), mean)
-names(trial_avg_mismatch)[names(trial_avg_mismatch) == "Group.1"] <- "trial"
-names(trial_avg_mismatch)[names(trial_avg_mismatch) == "x"] <- "avg"
 
-#trial_average plot
-
-trial_avg_control <- trial_avg_control[order(trial_avg_control$trial),]
-# cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
-# trial_avg$cum <- cum
-
-curve= ggplot(trial_avg_control, aes(x=trial, y=avg)) +
-  geom_smooth(method = lm, se = F) + geom_point()+  
-  xlab("Trial Sequence") +
-  ylab("Average acceptability rating")+
-  theme_bw()
-
-curve
-
-new_d = d_no_fillers
 trial_means = new_d %>%
   group_by(exposure_condition, phase,trial_sequence_total) %>%
   summarize(response = mean(response)) %>%
@@ -415,7 +437,7 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = item_type, shape=expo
     ) +
   
   scale_color_manual(name="item type", values=cbPalette) +
-  scale_fill_manual(name="exposure condition", values=cbPalette, guide=FALSE) +
+  scale_fill_manual(name="exposure condition", values=cbPalette, guide="none") +
   scale_shape(name="exposure condition") +
   theme_bw()
 
