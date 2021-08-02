@@ -14,7 +14,7 @@ library(brms)
 library(bootstrap)
 library(ggpubr)
 `%notin%` <- Negate(`%in%`)
-raw_data_path <- "../data/pilot1_raw.csv"
+raw_data_path <- "../data/exp1_raw.csv"
 data<-read.csv(raw_data_path)
 cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
 
@@ -84,6 +84,18 @@ n_participants <- 80
 exclusion_rate <- (n_participants - length(unique(data$workerid)))/n_participants
 
 
+
+# average experiment length
+mean(data$time_in_minutes)
+
+
+ggplot(data, aes(x=time_in_minutes)) +
+  geom_histogram(binwidth=1)
+theme_bw()
+
+
+
+
 #############################
 # save cleaned data
 #############################
@@ -96,7 +108,7 @@ data$item_type <- factor(d$item_type, levels = c("FILL", "UNGRAM","SUBJ","WH"))
 #data = subset(data, condition != "CNPC")
 #data = subset(data, condition != "SUBJ")
 d=transform(data, block_sequence = as.numeric(block_sequence))
-write.csv(d,"../data/pilot1_cleaned.csv", row.names = FALSE)
+write.csv(d,"../data/exp1_cleaned.csv", row.names = FALSE)
 
 
 
@@ -106,68 +118,103 @@ write.csv(d,"../data/pilot1_cleaned.csv", row.names = FALSE)
 # Step 6: Statistics
 #############################
 
-#model_block <- lmer(response~block_sequence*condition + (1+block_sequence*condition|workerid)+(1+condition|item_number), data = d)
-#summary(model_block)
 
-# model_global2 <- lmer(response~trial_sequence_total*item_type +
-#                         (1+trial_sequence_total*item_type|workerid)+(1|item_number), data = d, verbose = 100)
-#   summary(model_global2)
-#   anova(model_global2)
-
-d <- read.csv("../data/pilot1_cleaned.csv")
+d <- read.csv("../data/exp1_cleaned.csv")
 d$item_type <- factor(d$item_type, levels = c("FILL", "WH","SUBJ","UNGRAM"))
 d$phase <- factor(d$phase, levels = c("pre-exposure", "exposure", "test"))
 
-d_no_ungram <- subset(d, item_type != "UNGRAM")
-d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "SUBJ", "WH") )
+# split data by exposure condition
+d_whether <- subset(d, exposure_condition == "WH")
+d_subject <- subset(d, exposure_condition == "SUBJ")
 
-d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
-d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("SUBJ", "WH"))
 
-d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("SUBJ", "WH"))
-# d_no_fillers$exposure_condition <- relevel(d_no_fillers$exposure_condition, ref="SUBJ")
+# models for whether-exposure
+#############################
+
+d_no_ungram_w <- subset(d_whether, item_type != "UNGRAM")
+d_no_fillers_w <- subset(d_no_ungram_w, item_type != "FILL")
+d_no_fillers_w$item_type <- factor(d_no_fillers_w$item_type, c("SUBJ", "WH"))
+d_no_fillers_w$exposure_condition <- factor(d_no_fillers_w$exposure_condition, c("SUBJ", "WH"))
 
 # phase model
-d_pre_post <- subset(d_no_fillers, phase != "exposure")
-d_pre_post$phase <- factor(d_pre_post$phase, levels = c("pre-exposure", "test"))
-phase_model <- lmer(
+d_pre_post_w <- subset(d_no_fillers_w, phase != "exposure")
+d_pre_post_w$phase <- factor(d_pre_post_w$phase, levels = c("pre-exposure", "test"))
+phase_model_whether <- lmer(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
-  data = d_pre_post,
+  data = d_pre_post_w,
   # verbose = 100
 )
 
-summary(phase_model)
+summary(phase_model_whether)
 # save output to a txt file
-sink(file="generalization_model.txt")
-summary(phase_model)
+sink(file="generalization_model_whether.txt")
+summary(phase_model_whether)
 sink(file=NULL)
 
 # satiation models
 
-d_exposure <- subset(d_no_ungram, phase == "exposure")
-trial_model <- lmer(
+d_exposure_w <- subset(d_no_ungram_w, phase == "exposure")
+trial_model_whether <- lmer(
   response ~ trial_sequence_total * item_type +
     (1 + trial_sequence_total*item_type | workerid) +
     (1 + trial_sequence_total*item_type | item_number),
-  data = d_exposure,
+  data = d_exposure_w,
   # verbose = 100
 )
 
-summary(trial_model)
+summary(trial_model_whether)
 # save output to a file
-sink(file="satiation_model.txt")
-summary(trial_model)
+sink(file="satiation_model_whether.txt")
+summary(trial_model_whether)
 sink(file=NULL)
 
-#power analysis
-#model_ext_class <- extend(model_global2, along="workerid", n=150)
 
-#model_ext_class
-#p_curve_treat <- powerCurve(model_ext_class, nsim=10, test = fcompare(response~trial_sequence_total*condition), along="workerid", breaks=c(50,100,150))
-#plot(p_curve_treat)
-#powerSim(model_global2, test=fcompare(response~trial_sequence_total*condition))
+# models for subject-exposure
+#############################
+
+
+d_no_ungram_s <- subset(d_subject, item_type != "UNGRAM")
+d_no_fillers_s <- subset(d_no_ungram_s, item_type != "FILL")
+d_no_fillers_s$item_type <- factor(d_no_fillers_s$item_type, c("SUBJ", "WH"))
+d_no_fillers_s$exposure_condition <- factor(d_no_fillers_s$exposure_condition, c("SUBJ", "WH"))
+
+
+# phase model
+d_pre_post_s <- subset(d_no_fillers_s, phase != "exposure")
+d_pre_post_s$phase <- factor(d_pre_post_s$phase, levels = c("pre-exposure", "test"))
+phase_model_subject <- lmer(
+  response ~ phase * exposure_condition +
+    (1 + phase | workerid) +
+    (1 + exposure_condition*phase | item_number),
+  data = d_pre_post_s,
+  # verbose = 100
+)
+
+summary(phase_model_subject)
+# save output to a txt file
+sink(file="generalization_model_subject.txt")
+summary(phase_model_subject)
+sink(file=NULL)
+
+# satiation models
+
+d_exposure_s <- subset(d_no_ungram_s, phase == "exposure")
+trial_model_subject <- lmer(
+  response ~ trial_sequence_total * item_type +
+    (1 + trial_sequence_total*item_type | workerid) +
+    (1 + trial_sequence_total*item_type | item_number),
+  data = d_exposure_s,
+  # verbose = 100
+)
+
+summary(trial_model_subject)
+# save output to a file
+sink(file="satiation_model_subject.txt")
+summary(trial_model_subject)
+sink(file=NULL)
+
 
 
 #############################
@@ -179,7 +226,7 @@ setwd(this.dir)
 cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
 
 
-d <- read.csv("../data/pilot1_cleaned.csv")
+d <- read.csv("../data/exp1_cleaned.csv")
 d$item_type <- factor(d$item_type, levels = c("FILL", "WH","SUBJ","UNGRAM"))
 d$phase <- factor(d$phase, levels = c("pre-exposure", "exposure", "test"))
 
@@ -256,8 +303,8 @@ phase_graph<- ggplot(phase_avg, aes(x=exposure_condition,y=Mean, fill=exposure_c
   theme_bw() 
 
 phase_graph
-ggsave("../graphs/pilot1_phase_bars.pdf",plot=phase_graph,width=10,height=5)
-ggsave("../graphs/pilot1_phase_bars.png",plot=phase_graph,width=10,height=5)
+ggsave("../graphs/exp1_phase_bars.pdf",plot=phase_graph,width=10,height=5)
+ggsave("../graphs/exp1_phase_bars.png",plot=phase_graph,width=10,height=5)
 
 # satiation curves
 
@@ -304,8 +351,8 @@ curve_split <- ggplot(new_d, aes(x=trial_sequence_total, y=response, color = exp
              size=1)+
   theme_bw()
 
-ggsave("../graphs/pilot1_phase_curves.pdf",width=10,height=5)
-ggsave("../graphs/pilot1_phase_curves.png",width=10,height=5)
+ggsave("../graphs/exp1_phase_curves.pdf",width=10,height=5)
+ggsave("../graphs/exp1_phase_curves.png",width=10,height=5)
 
 curve_grouped <- ggplot(new_d, aes(x=trial_sequence_total, y=response, color = exposure_condition)) +
   geom_point(data=trial_means,alpha=.9) +
@@ -319,8 +366,8 @@ curve_grouped <- ggplot(new_d, aes(x=trial_sequence_total, y=response, color = e
              size=1)+
   theme_bw()
 
-ggsave("../graphs/pilot1_curves.pdf",width=10,height=5)
-ggsave("../graphs/pilot1_curves.png",width=10,height=5)
+ggsave("../graphs/exp1_curves.pdf",width=10,height=5)
+ggsave("../graphs/exp1_curves.png",width=10,height=5)
 
 curve_split
 curve_grouped
@@ -373,12 +420,12 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = item_type, shape=expo
   theme_bw()
 
 
-ggsave("../graphs/satiation_pilot1_plot.pdf",width=10,height=5)
-ggsave("../graphs/satiation_pilot1_plot.png",width=10,height=5)
+ggsave("../graphs/satiation_exp1_plot.pdf",width=10,height=5)
+ggsave("../graphs/satiation_exp1_plot.png",width=10,height=5)
 
 #by-subject Plot
 ggplot(d, aes(x=trial_sequence_total, y=response, color = item_type, shape = item_type)) +
   geom_point() +
   geom_smooth(method=lm, aes(fill=item_type))+facet_wrap(~workerid)
-ggsave("../graphs/subject_variability_pilot1.pdf", width=20, height = 25)
-ggsave("../graphs/subject_variability_pilot1.png", width=20, height = 25)
+ggsave("../graphs/subject_variability_exp1.pdf", width=20, height = 25)
+ggsave("../graphs/subject_variability_exp1.png", width=20, height = 25)
