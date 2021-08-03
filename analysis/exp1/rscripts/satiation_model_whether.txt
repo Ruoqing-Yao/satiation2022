@@ -1,0 +1,49 @@
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: response ~ trial_sequence_total * item_type + (1 + trial_sequence_total *  
+    item_type | workerid) + (1 + trial_sequence_total * item_type |      item_number)
+   Data: d_exposure
+
+REML criterion at convergence: -421.7
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.2062 -0.3976  0.1055  0.5097  3.7210 
+
+Random effects:
+ Groups      Name                               Variance  Std.Dev.  Corr                         
+ workerid    (Intercept)                        8.664e-03 0.0930794                              
+             trial_sequence_total               8.606e-07 0.0009277 -0.35                        
+             item_typeWH                        6.336e-02 0.2517172  0.51 -0.10                  
+             item_typeSUBJ                      8.257e-02 0.2873475 -0.32  0.12 -0.30            
+             trial_sequence_total:item_typeWH   2.923e-05 0.0054062  0.14 -0.72 -0.57  0.00      
+             trial_sequence_total:item_typeSUBJ 1.717e-05 0.0041438  0.23  0.40  0.16 -0.68 -0.30
+ item_number (Intercept)                        9.055e-03 0.0951602                              
+             trial_sequence_total               2.067e-06 0.0014377 -0.95                        
+             item_typeWH                        2.118e-02 0.1455501 -0.75  0.85                  
+             item_typeSUBJ                      1.947e-02 0.1395459 -0.86  0.86  0.63            
+             trial_sequence_total:item_typeWH   6.206e-06 0.0024913  0.54 -0.71 -0.95 -0.39      
+             trial_sequence_total:item_typeSUBJ 3.163e-06 0.0017786  0.23 -0.42 -0.41 -0.28  0.50
+ Residual                                       4.148e-02 0.2036722                              
+Number of obs: 3450, groups:  workerid, 115; item_number, 48
+
+Fixed effects:
+                                     Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                         0.8605051  0.0310946 15.9907783  27.674 6.18e-15 ***
+trial_sequence_total                0.0008965  0.0006398 13.6621854   1.401    0.183    
+item_typeWH                        -0.3121430  0.0510319 60.1693916  -6.117 7.77e-08 ***
+item_typeSUBJ                      -0.4999395  0.0530491 60.7442709  -9.424 1.71e-13 ***
+trial_sequence_total:item_typeWH    0.0007245  0.0011007 53.5574575   0.658    0.513    
+trial_sequence_total:item_typeSUBJ  0.0023868  0.0010583 44.9887542   2.255    0.029 *  
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) trl_s_ itm_WH i_SUBJ t__:_W
+trl_sqnc_tt -0.867                            
+item_typeWH -0.496  0.513                     
+itm_typSUBJ -0.586  0.509  0.292              
+trl_sq_:_WH  0.514 -0.615 -0.773 -0.281       
+trl__:_SUBJ  0.540 -0.573 -0.296 -0.709  0.365
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+

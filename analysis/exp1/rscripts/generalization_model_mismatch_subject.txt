@@ -1,0 +1,38 @@
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: response ~ phase * exposure_condition + (1 + phase | workerid) +      (1 + exposure_condition * phase | item_number)
+   Data: d_pre_post
+
+REML criterion at convergence: 352.6
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-3.3378 -0.5608 -0.0261  0.5858  3.3207 
+
+Random effects:
+ Groups      Name                             Variance  Std.Dev. Corr             
+ workerid    (Intercept)                      0.0310218 0.17613                   
+             phasetest                        0.0288204 0.16977  -0.18            
+ item_number (Intercept)                      0.0102654 0.10132                   
+             exposure_conditionSUBJ           0.0011951 0.03457  -1.00            
+             phasetest                        0.0019232 0.04385  -0.76  0.76      
+             exposure_conditionSUBJ:phasetest 0.0008816 0.02969  -0.61  0.61  0.98
+ Residual                                     0.0567802 0.23829                   
+Number of obs: 1320, groups:  workerid, 110; item_number, 32
+
+Fixed effects:
+                                  Estimate Std. Error        df t value Pr(>|t|)    
+(Intercept)                       0.323571   0.036237 52.656391   8.929 4.00e-12 ***
+phasetest                         0.199630   0.039149 73.035285   5.099 2.59e-06 ***
+exposure_conditionSUBJ            0.002822   0.039340 97.412904   0.072    0.943    
+phasetest:exposure_conditionSUBJ  0.046525   0.044060 99.548856   1.056    0.294    
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phstst e_SUBJ
+phasetest   -0.494              
+expsr_cSUBJ -0.690  0.283       
+phsts:_SUBJ  0.251 -0.680 -0.336
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
