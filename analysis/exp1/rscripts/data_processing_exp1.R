@@ -199,5 +199,5 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = item_type, shape=expo
   
   scale_color_manual(name="item type", values=cbPalette) +
   scale_fill_manual(name="exposure condition", values=cbPalette) +
-  scale_shape(name="exposure condition") +
+  scale_shape(name="exposure condition ") +
   theme_bw()

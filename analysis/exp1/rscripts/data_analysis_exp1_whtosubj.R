@@ -219,15 +219,17 @@ ggsave("../graphs/exp1_phase_bars_subject.png",plot=phase_graph,width=10,height=
 ######################
 
 trial_means = d_no_fillers %>%
-  group_by(exposure_condition, phase,item_type, trial_sequence_total) %>%
+  mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) %>%
+  mutate(item_type = fct_recode(item_type,"subject island"="SUBJ", "whether island"="WH")) %>%
+  group_by(exposure_condition, phase, item_type,trial_sequence_total) %>%
   summarize(response = mean(response)) %>%
   ungroup()
-trial_means$exposure_condition <- factor(trial_means$exposure_condition, levels=c("WH", "SUBJ"))
-trial_means$item_type <- factor(trial_means$item_type, levels=c("WH", "SUBJ"))
-curve_split <- ggplot(d_no_fillers, aes(x=trial_sequence_total, y=response, color = item_type)) +
+trial_means$exposure_condition <- factor(trial_means$exposure_condition, levels=c("subject island", "whether island"))
+trial_means$item_type <- factor(trial_means$item_type, levels=c("subject island", "whether island"))
+curve_split <- ggplot(d_no_fillers, aes(x=trial_sequence_total, y=response, color = item_type, shape=exposure_condition)) +
   geom_point(data=trial_means,alpha=.9) +
-  scale_color_manual(values=cbPalette) +
-  scale_fill_manual(values=cbPalette) +
+  scale_color_manual(name="item type",values=cbPalette) +
+  scale_fill_manual(name="exposure condition",values=cbPalette) +
   xlab("Trial Sequence") +
   ylab("Acceptability rating")+
   geom_smooth(data=subset(trial_means, phase=="exposure"),method=lm, aes(fill=exposure_condition))+
@@ -236,8 +238,8 @@ curve_split <- ggplot(d_no_fillers, aes(x=trial_sequence_total, y=response, colo
   geom_vline(xintercept=12, linetype="dashed", size=1) +
   geom_vline(xintercept=52, linetype="dashed",
              size=1)+
+  scale_shape(name="exposure condition ") +
   theme_bw()
-
 
 curve_split
 ggsave("../graphs/exp1_phase_curves_subject.pdf",width=10,height=5)
@@ -246,7 +248,12 @@ ggsave("../graphs/exp1_phase_curves_subject.png",width=10,height=5)
 
 # overall curves
 #################
-
+trial_means = d_no_fillers %>%
+  #mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) %>%
+  #mutate(item_type = fct_recode(item_type,"subject island"="SUBJ", "whether island"="WH")) %>%
+  group_by(exposure_condition, phase, item_type,trial_sequence_total) %>%
+  summarize(response = mean(response)) %>%
+  ungroup()
 curve_grouped <- ggplot(d_no_fillers, aes(x=trial_sequence_total, y=response, color = exposure_condition)) +
   geom_point(data=trial_means,alpha=.9) +
   scale_color_manual(values=cbPalette) +
