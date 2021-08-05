@@ -201,3 +201,110 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = item_type, shape=expo
   scale_fill_manual(name="exposure condition", values=cbPalette) +
   scale_shape(name="exposure condition ") +
   theme_bw()
+
+
+###################################################
+# CUMULATIVE AVERAGE
+###################################################
+
+
+# get trial/cummulative averages for each condition
+# I'm sure there's a much better way to do this
+
+# whole experiment
+trial_avg <- aggregate(d[,"response"],list(d$trial_sequence_total), mean)
+names(trial_avg)[names(trial_avg) == "Group.1"] <- "trial"
+names(trial_avg)[names(trial_avg) == "x"] <- "avg"
+trial_avg <- trial_avg[order(trial_avg$trial),]
+cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
+trial_avg$cum <- cum
+trial_avg$grp <- "all"
+
+# no fillers
+trial_avg_NOFILL <- aggregate(d_no_fillers[,"response"],list(d_no_fillers$trial_sequence_total), mean)
+names(trial_avg_NOFILL)[names(trial_avg_NOFILL) == "Group.1"] <- "trial"
+names(trial_avg_NOFILL)[names(trial_avg_NOFILL) == "x"] <- "avg"
+trial_avg_NOFILL <- trial_avg_NOFILL[order(trial_avg_NOFILL$trial),]
+cum <- cumsum(trial_avg_NOFILL$avg) / seq_along(trial_avg_NOFILL$avg)
+trial_avg_NOFILL$cum <- cum
+trial_avg_NOFILL$grp <- "all conditions"
+
+trial_avg <- trial_avg_NOFILL#rbind(trial_avg, trial_avg_NOFILL)
+
+# whether within-condition
+whwh <- subset(d_no_fillers, exposure_condition=="WH" & group=="match")
+trial_avg2 <- aggregate(whwh[,"response"],list(whwh$trial_sequence_total), mean)
+names(trial_avg2)[names(trial_avg2) == "Group.1"] <- "trial"
+names(trial_avg2)[names(trial_avg2) == "x"] <- "avg"
+trial_avg2 <- trial_avg2[order(trial_avg2$trial),]
+cum <- cumsum(trial_avg2$avg) / seq_along(trial_avg2$avg)
+trial_avg2$cum <- cum
+trial_avg2$grp <- "whether islands"
+
+trial_avg <- rbind(trial_avg, trial_avg2)
+
+# subject within-condition
+subjsubj <- subset(d_no_fillers, exposure_condition=="SUBJ" & group=="match")
+trial_avg2 <- aggregate(subjsubj[,"response"],list(subjsubj$trial_sequence_total), mean)
+names(trial_avg2)[names(trial_avg2) == "Group.1"] <- "trial"
+names(trial_avg2)[names(trial_avg2) == "x"] <- "avg"
+trial_avg2 <- trial_avg2[order(trial_avg2$trial),]
+cum <- cumsum(trial_avg2$avg) / seq_along(trial_avg2$avg)
+trial_avg2$cum <- cum
+trial_avg2$grp <- "subject islands"
+
+trial_avg <- rbind(trial_avg, trial_avg2)
+
+# whether between-condition
+whsubj <- subset(d_no_fillers, exposure_condition=="WH" & group=="mismatch")
+trial_avg2 <- aggregate(whsubj[,"response"],list(whsubj$trial_sequence_total), mean)
+names(trial_avg2)[names(trial_avg2) == "Group.1"] <- "trial"
+names(trial_avg2)[names(trial_avg2) == "x"] <- "avg"
+trial_avg2 <- trial_avg2[order(trial_avg2$trial),]
+cum <- cumsum(trial_avg2$avg) / seq_along(trial_avg2$avg)
+trial_avg2$cum <- cum
+trial_avg2$grp <- "whether to subject"
+
+trial_avg <- rbind(trial_avg, trial_avg2)
+
+# subject between-condition
+subjwh <- subset(d_no_fillers, exposure_condition=="SUBJ" & group=="mismatch")
+trial_avg2 <- aggregate(subjwh[,"response"],list(subjwh$trial_sequence_total), mean)
+names(trial_avg2)[names(trial_avg2) == "Group.1"] <- "trial"
+names(trial_avg2)[names(trial_avg2) == "x"] <- "avg"
+trial_avg2 <- trial_avg2[order(trial_avg2$trial),]
+cum <- cumsum(trial_avg2$avg) / seq_along(trial_avg2$avg)
+trial_avg2$cum <- cum
+trial_avg2$grp <- "subject to whether"
+
+trial_avg <- rbind(trial_avg, trial_avg2)
+
+my_colors <- cbPalette
+names(my_colors) <- levels(trial_avg$grp)
+#cum_average plot
+cum_avg_plt=ggplot(trial_avg, aes(x=trial, y=cum, color=grp)) +
+  
+  
+  # geom_smooth (data=subset(trial_avg, grp="all"),se = F) + 
+  # geom_point(data=subset(trial_avg, grp="all"))+
+  geom_smooth (se = F) + 
+  geom_point()+
+  # geom_smooth (data=subset(trial_avg, grp="whether islands"),se = F) + 
+  # geom_point(data=subset(trial_avg, grp="whether islands"))+
+  # geom_smooth (data=subset(trial_avg, grp="subject islands"),se = F) + 
+  # geom_point(data=subset(trial_avg, grp="subject islands"))+
+  # geom_smooth (data=subset(trial_avg, grp="whether to subject"),se = F) + 
+  # geom_point(data=subset(trial_avg, grp="whether to subject"))+
+  # geom_smooth (data=subset(trial_avg, grp="subject to whether"),se = F) + 
+  # geom_point(data=subset(trial_avg, grp="subject to whether"))+
+  # 
+  xlab("Trial number") +
+  ylab("Cumulative average acceptability rating")+
+  geom_hline(yintercept=0.5, linetype="dashed",
+             size=1)+
+  theme( plot.margin = margin(0, 0, 0, 0, "cm"))+
+  scale_color_manual(name="Condition", values=my_colors) +
+  theme_bw()
+cum_avg_plt
+
+ggsave("../graphs/exp1_cumavg5.png",width=10,height=5)
