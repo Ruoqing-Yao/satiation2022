@@ -279,31 +279,21 @@ trial_avg2$grp <- "subject to whether"
 
 trial_avg <- rbind(trial_avg, trial_avg2)
 
-my_colors <- cbPalette
-names(my_colors) <- levels(trial_avg$grp)
+
+trial_avg$grp <- factor(trial_avg$grp, levels = c("all conditions", "whether islands", "subject islands", "subject to whether", "whether to subject"))
+
 #cum_average plot
 cum_avg_plt=ggplot(trial_avg, aes(x=trial, y=cum, color=grp)) +
   
-  
-  # geom_smooth (data=subset(trial_avg, grp="all"),se = F) + 
-  # geom_point(data=subset(trial_avg, grp="all"))+
   geom_smooth (se = F) + 
   geom_point()+
-  # geom_smooth (data=subset(trial_avg, grp="whether islands"),se = F) + 
-  # geom_point(data=subset(trial_avg, grp="whether islands"))+
-  # geom_smooth (data=subset(trial_avg, grp="subject islands"),se = F) + 
-  # geom_point(data=subset(trial_avg, grp="subject islands"))+
-  # geom_smooth (data=subset(trial_avg, grp="whether to subject"),se = F) + 
-  # geom_point(data=subset(trial_avg, grp="whether to subject"))+
-  # geom_smooth (data=subset(trial_avg, grp="subject to whether"),se = F) + 
-  # geom_point(data=subset(trial_avg, grp="subject to whether"))+
-  # 
+
   xlab("Trial number") +
   ylab("Cumulative average acceptability rating")+
   geom_hline(yintercept=0.5, linetype="dashed",
              size=1)+
   theme( plot.margin = margin(0, 0, 0, 0, "cm"))+
-  scale_color_manual(name="Condition", values=my_colors) +
+  scale_color_manual(name="Condition", values=cbPalette) +
   theme_bw()
 cum_avg_plt
 
