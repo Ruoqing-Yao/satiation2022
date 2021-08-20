@@ -1,4 +1,4 @@
-*.RData
-*.Rhistory
-*.log
+**.RData
+**.Rhistory
+**.log
 proliferate/
