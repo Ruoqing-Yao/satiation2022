@@ -110,7 +110,7 @@ write.csv(d,"../data/exp1b_cleaned.csv", row.names = FALSE)
 
 
 #############################
-# Step 6: Statistics
+# Statistics
 #############################
 
 #model_block <- lmer(response~block_sequence*condition + (1+block_sequence*condition|workerid)+(1+condition|item_number), data = d)
@@ -146,13 +146,17 @@ d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("PO
 #
 # What does the interaction term tell us?
 
+
+# Subject test condition
+##############################
+
 d_subj <- subset(d_no_fillers, test_condition=="SUBJ")
 
 # set reference level to test and polar
 d_subj$phase <- factor(d_subj$phase, c("test", "exposure"))
 d_subj$exposure_condition <- factor(d_subj$exposure_condition, c("POLAR", "SUBJ", "WH"))
 
-phase_model1 <- lmer(
+phase_model_subj1 <- lmer(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
@@ -160,19 +164,16 @@ phase_model1 <- lmer(
   # verbose = 100
 )
 
-summary(phase_model1)
+summary(phase_model_subj1)
 # save output to a txt file
-sink(file="generalization_model1.txt")
-summary(phase_model1)
+sink(file="generalization_subj_neg.txt")
+summary(phase_model_subj1)
 sink(file=NULL)
-
-
-
 
 # set reference level to within-category
 d_subj$phase <- factor(d_subj$phase, c("test", "exposure"))
 d_subj$exposure_condition <- factor(d_subj$exposure_condition, c("SUBJ", "WH", "POLAR"))
-phase_model2 <- lmer(
+phase_model_subj2 <- lmer(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
@@ -180,23 +181,23 @@ phase_model2 <- lmer(
   # verbose = 100
 )
 
-summary(phase_model2)
+summary(phase_model_subj2)
 # save output to a txt file
-sink(file="generalization_model2.txt")
-summary(phase_model2)
+sink(file="generalization_subj_pos.txt")
+summary(phase_model_subj2)
 sink(file=NULL)
 
 
-###################
+# whether test condition
+##########################
 
 d_wh <- subset(d_no_fillers, test_condition=="WH")
-
 
 # set reference level to test and polar
 d_wh$phase <- factor(d_wh$phase, c("test", "exposure"))
 d_wh$exposure_condition <- factor(d_wh$exposure_condition, c("POLAR", "SUBJ", "WH"))
 
-phase_model1 <- lmer(
+phase_model_wh1 <- lmer(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
@@ -204,19 +205,16 @@ phase_model1 <- lmer(
   # verbose = 100
 )
 
-summary(phase_model1)
+summary(phase_model_wh1)
 # save output to a txt file
-sink(file="generalization_model1.txt")
-summary(phase_model1)
+sink(file="generalization_wh_neg.txt")
+summary(phase_model_wh1)
 sink(file=NULL)
-
-
-
 
 # set reference level to within-category
 d_wh$phase <- factor(d_wh$phase, c("test", "exposure"))
-d_wh$exposure_condition <- factor(d_wh$exposure_condition, c("SUBJ", "WH", "POLAR"))
-phase_model2 <- lmer(
+d_wh$exposure_condition <- factor(d_wh$exposure_condition, c("WH", "SUBJ", "POLAR"))
+phase_model_w2 <- lmer(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
@@ -224,13 +222,11 @@ phase_model2 <- lmer(
   # verbose = 100
 )
 
-summary(phase_model2)
+summary(phase_model_wh2)
 # save output to a txt file
-sink(file="generalization_model2.txt")
-summary(phase_model2)
+sink(file="generalization_wh_pos.txt")
+summary(phase_model_wh2)
 sink(file=NULL)
-
-
 
 
 
@@ -240,39 +236,14 @@ sink(file=NULL)
 # run twice with ref levels as each control
 # generalization: pos. main effect wrt negative control, no
 # significant effect wrt positive control
-
-
-phase_model <- lmer(
-  response ~ exposure_condition +
-    (1 | workerid) +
-    (1 + exposure_condition | item_number), # with enough participants this works
-  data = d_no_fillers,
-  # verbose = 100
-)
-
-
-
-
-
-
-# # model to compare control's pre-exposure with experiment's test
-# dd <- subset(d_no_fillers, phase2 != "exposure")
-# dd <- subset(dd, !(phase2 == "pre-exposure" & group == "mismatch"))
-# dd <- subset(dd, !(phase2 == "test" & group == "match"))
-# dd$phase2 <- factor(dd$phase2, levels = c("pre-exposure", "test"))
-# 
-# phase_model2 <- lmer(
-#   response ~ phase2 +
+# phase_model <- lmer(
+#   response ~ exposure_condition +
 #     (1 | workerid) +
-#     (1 | item_number),
-#   data = dd
+#     (1 + exposure_condition | item_number), # with enough participants this works
+#   data = d_no_fillers,
+#   # verbose = 100
 # )
-# 
-# summary(phase_model2)
-# # save output to a txt file
-# sink(file="generalization_model2.txt")
-# summary(phase_model2)
-# sink(file=NULL)
+
 
 # satiation models
 
@@ -301,17 +272,17 @@ this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
 cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
-d <- read.csv("../data/pilot2_cleaned.csv")
-d$item_type <- factor(d$item_type, levels = c("FILL", "WH","SUBJ","UNGRAM"))
+d <- read.csv("../data/exp1b_cleaned.csv")
+d$item_type <- factor(d$item_type, levels = c("FILL", "WH","SUBJ", "POLAR", "UNGRAM"))
 d$phase <- factor(d$phase, levels = c("exposure", "test"))
 
 d = subset(d, block_sequence != "practice")
 #d <- subset(d, group == "mismatch")
 
 d_no_ungram <- subset(d, item_type != "UNGRAM")
-d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "SUBJ", "WH") )
+d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "SUBJ","POLAR", "WH") )
 d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
-d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ"))
+d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ", "POLAR"))
 
 #calculate and plot trial/cumulative average
 
@@ -383,143 +354,8 @@ ggsave("../graphs/pilot2_phase_bars.png",width=10,height=5)
 
 
 
-# satiation curves
-
-#calculate and plot trial average
-trial_avg_control <- aggregate(d_no_fillers_control[,"response"],list(d_no_fillers_control$trial_sequence_total), mean)
-names(trial_avg_control)[names(trial_avg_control) == "Group.1"] <- "trial"
-names(trial_avg_control)[names(trial_avg_control) == "x"] <- "avg"
-
-trial_avg_mismatch <- aggregate(d_no_fillers_mismatch[,"response"],list(d_no_fillers_mismatch$trial_sequence_total), mean)
-names(trial_avg_mismatch)[names(trial_avg_mismatch) == "Group.1"] <- "trial"
-names(trial_avg_mismatch)[names(trial_avg_mismatch) == "x"] <- "avg"
-
-#trial_average plot
-
-trial_avg_control <- trial_avg_control[order(trial_avg_control$trial),]
-# cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
-# trial_avg$cum <- cum
-
-curve= ggplot(trial_avg_control, aes(x=trial, y=avg)) +
-  geom_smooth(method = lm, se = F) + geom_point()+  
-  xlab("Trial Sequence") +
-  ylab("Average acceptability rating")+
-  theme_bw()
-
-curve
 
 
-new_d <- d_no_fillers
-trial_means_p = d_no_fillers %>%
-  group_by(exposure_condition, phase2,trial_sequence_total) %>%
-  summarize(response = mean(response)) %>%
-  ungroup()
-
-  curve_split_p <- ggplot(new_d, aes(x=trial_sequence_total, y=response, color = exposure_condition)) +
-    geom_point(data=trial_means_p,alpha=.9) +
-    scale_color_manual(values=cbPalette) +
-    scale_fill_manual(values=cbPalette) +
-    xlab("Trial Sequence") +
-    ylab("Acceptability rating")+
-    geom_smooth(data=subset(trial_means_p, phase2=="exposure"),method=lm, aes(fill=exposure_condition))+
-    geom_smooth(data=subset(trial_means_p, phase2=="pre-exposure"),method=lm, aes(fill=exposure_condition))+
-    geom_smooth(data=subset(trial_means_p, phase2=="test"),method=lm, aes(fill=exposure_condition))+
-    geom_vline(xintercept=6, linetype="dashed", size=1) +
-    geom_vline(xintercept=40, linetype="dashed",
-               size=1)+
-    theme_bw()
-
-curve_split_p
-  
-ggsave("../graphs/pilot2_phase_p_curves.pdf",width=10,height=5)
-ggsave("../graphs/pilot2_phase_p_curves.png",width=10,height=5)
-
-trial_means = d_no_fillers %>%
-  group_by(exposure_condition, phase,trial_sequence_total) %>%
-  summarize(response = mean(response)) %>%
-  ungroup()
-
-curve_split <- ggplot(new_d, aes(x=trial_sequence_total, y=response, color = exposure_condition)) +
-  geom_point(data=trial_means,alpha=.9) +
-  scale_color_manual(values=cbPalette) +
-  scale_fill_manual(values=cbPalette) +
-  xlab("Trial Sequence") +
-  ylab("Acceptability rating")+
-  geom_smooth(data=subset(trial_means, phase=="exposure"),method=lm, aes(fill=exposure_condition))+
-  geom_smooth(data=subset(trial_means, phase=="test"),method=lm, aes(fill=exposure_condition))+
-  geom_vline(xintercept=40, linetype="dashed",
-             size=1)+
-  theme_bw()
-
-curve_split
-
-ggsave("../graphs/pilot2_phase_curves.pdf",width=10,height=5)
-ggsave("../graphs/pilot2_phase_curves.png",width=10,height=5)
-
-curve_grouped <- ggplot(new_d, aes(x=trial_sequence_total, y=response, color = exposure_condition)) +
-  geom_point(data=trial_means,alpha=.9) +
-  scale_color_manual(values=cbPalette) +
-  scale_fill_manual(values=cbPalette) +
-  xlab("Trial Sequence") +
-  ylab("Acceptability rating")+
-  geom_smooth(method=lm, aes(fill=exposure_condition))+
-  geom_vline(xintercept=40, linetype="dashed",
-             size=1)+
-  theme_bw()
-
-ggsave("../graphs/pilot2_curves.pdf",width=10,height=5)
-ggsave("../graphs/pilot2_curves.png",width=10,height=5)
-
-curve_split_p
-curve_grouped
-
-
-#overall plot:
-nd = d %>%
-  mutate(item_type = fct_recode(item_type,"grammatical"="FILL","ungrammatical"="UNGRAM", "subject island"="SUBJ", "whether island"="WH")) %>% 
-  #, "complex-NP island"="CNPC", "whether island"="WH")) %>%
-  mutate(item_type = fct_relevel(item_type,"grammatical","whether island","subject island", "ungrammatical")) %>%
-  mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) 
-#complex-NP island","subject island", "ungrammatical"))
-
-trial_means = nd %>%
-  group_by(item_type,phase,trial_sequence_total, exposure_condition) %>%
-  summarize(response = mean(response)) %>%
-  ungroup()
-
-# ggplot(nd, aes(x=trial_sequence_total, y=response, color = item_type)) +
-#   geom_point(data=trial_means,alpha=.9) +
-#   xlab("Trial Sequence") +
-#   ylab("Acceptability rating")+
-# 
-#   # fillers
-#   geom_smooth(data=subset(trial_means, item_type == "grammatical" ),method=lm, aes(fill="grammatical")) +
-#   geom_smooth(data=subset(trial_means, item_type == "ungrammatical"),method=lm, aes(fill="ungrammatical")) +
-#   # wh items
-#   geom_smooth(data=subset(trial_means, !(item_type == "ungrammatical" | item_type == "grammatical") & exposure_condition=="WH"),method=lm, aes(fill="match")) +
-#   # exposure
-#   geom_smooth(data=subset(trial_means, !(item_type == "ungrammatical" | item_type == "grammatical" | exposure_condition=="WH") & phase== "exposure"),method=lm, aes(fill="mismatch")) +
-#   # test
-#   geom_smooth(data=subset(trial_means, !(item_type == "ungrammatical" | item_type == "grammatical" | exposure_condition=="WH") & phase== "test"),method=lm, aes(fill="mismatch")) +
-#   
-#   scale_color_manual(name="item type", values=cbPalette) +
-#   scale_fill_manual(name="experiment group", values=cbPalette) +
-# 
-#   theme_bw()
-
-ggplot(nd, aes(x=trial_sequence_total, y=response, color = item_type, shape=exposure_condition)) +
-  geom_point(data=trial_means,alpha=.9) +
-  xlab("Trial Sequence") +
-  ylab("Acceptability rating")+
-  geom_smooth(data=trial_means, method=lm, aes(fill=exposure_condition))+
-
-  scale_color_manual(name="item type", values=cbPalette) +
-  scale_fill_manual(name="exposure condition", values=cbPalette, guide=FALSE) +
-  scale_shape(name="exposure condition") +
-  theme_bw()
-
-ggsave("../graphs/satiation_pilot2_plot.pdf",width=10,height=5)
-ggsave("../graphs/satiation_pilot2_plot.png",width=10,height=5)
 
 #by-subject Plot
 ggplot(d, aes(x=trial_sequence_total, y=response, color = item_type, shape = item_type)) +
@@ -527,3 +363,100 @@ ggplot(d, aes(x=trial_sequence_total, y=response, color = item_type, shape = ite
   geom_smooth(method=lm, aes(fill=item_type))+facet_wrap(~workerid)
 ggsave("../graphs/subject_variability_pilot2.pdf", width=20, height = 25)
 ggsave("../graphs/subject_variability_pilot2.png", width=20, height = 25)
+
+
+
+# overall plot
+nd = d %>%
+  mutate(item_type = fct_recode(item_type,"grammatical"="FILL","ungrammatical"="UNGRAM", "subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
+  #, "complex-NP island"="CNPC", "whether island"="WH")) %>%
+  mutate(item_type = fct_relevel(item_type,"grammatical","whether island","subject island", "polar question", "ungrammatical")) %>%
+  mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR"))  %>%
+mutate(test_condition = fct_recode(test_condition,"subject island"="SUBJ", "whether island"="WH")) 
+#complex-NP island","subject island", "ungrammatical"))
+
+trial_means = nd %>%
+  group_by(exposure_condition,item_type, test_condition, phase,group,trial_sequence_total) %>%
+  summarize(response = mean(response)) %>%
+  ungroup()
+
+trial_means$condition <- ""
+trial_means$condition[trial_means$test_condition == "whether island"] <- "subject islands" 
+trial_means$condition[trial_means$test_condition == "subject island"] <- "whether islands" 
+
+trial_means$condition[trial_means$item_type == "grammatical" | trial_means$item_type=="ungrammatical"] <- "fillers"
+
+
+trial_means = trial_means %>%
+  group_by(test_condition, condition,phase, item_type, group, trial_sequence_total) %>%
+  summarize(response = mean(response)) %>%
+  ungroup()
+
+
+trial_means$condition <- factor(trial_means$condition, levels = c("fillers", "whether islands", "subject islands"))
+
+# trial_means <- subset(trial_means, condition=="fillers" | condition=="whether islands")
+
+
+cbPalette = c("#e69d00", "#009e74","#d55e00",  "#cc79a7", "#0071b2")
+
+ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condition, linetype=group)) +
+  geom_point(data=trial_means,alpha=.9) +
+  xlab("trial sequence") +
+  ylab("average acceptability")+
+  
+  
+  # fillers
+  geom_smooth(data=subset(trial_means, item_type == "grammatical" ),method=lm) +
+  geom_smooth(data=subset(trial_means, item_type == "ungrammatical"),method=lm) +
+  
+  geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "pre-exposure"), method=lm) +
+  geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "exposure"), method=lm) +
+  geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "test"), method=lm) +
+  
+  # geom_vline(xintercept=12.5, linetype="dashed",
+  #            size=0.5)+
+  scale_color_manual(name="test item type", values=cbPalette) +
+  scale_fill_manual(name="test item type", values=cbPalette) +
+  scale_linetype(name="experiment group", labels=c("control", "within-category", "between-category")) +
+  theme_bw()
+
+
+
+# bar plot
+d_no_ungram <- subset(d, item_type != "UNGRAM")
+d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
+d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ", "POLAR"))
+#d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("SUBJ", "WH"))
+
+d_no_fillers <- subset(d_no_fillers, group=="control")
+# d_no_fillers <- subset(d_no_fillers, exposure_condition=="WH")
+
+cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
+cbPalette = c("#009e74","#d55e00","#e69d00","#cc79a7", "#0071b2")
+
+theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}
+ci.low <- function(x,na.rm=T) {
+  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)}
+ci.high <- function(x,na.rm=T) {
+  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
+
+phase_avg = d_no_fillers %>%
+  group_by(phase,exposure_condition, test_condition, item_type) %>%
+  mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
+  mutate(item_type = fct_recode(item_type,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
+  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+  ungroup() %>%
+  mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
+
+# phase_avg = subset(phase_avg, phase != "exposure")
+phase_graph<- ggplot(phase_avg, aes(x=test_condition,y=Mean, fill=test_condition)) +
+  geom_bar(data=phase_avg, stat="identity", position="dodge", aes(alpha=phase)) +
+  geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
+  scale_fill_manual(name="item type", values=cbPalette) +
+  scale_alpha_manual(values=c(0.6,0.8,1)) +
+  xlab("test item type") +
+  ylab("average acceptability") +
+  theme_bw() 
+
+phase_graph
