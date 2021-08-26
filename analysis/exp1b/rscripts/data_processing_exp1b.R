@@ -20,12 +20,16 @@ data<-read.csv(raw_data_path)
 # remove subject information from data
 data <- data %>% select(-(catch_trials:system.screenW)) 
 
+d2 <- data
+
 mean(data$time_in_minutes)
 
-ggplot(data, aes(x=time_in_minutes)) +
+times <- ggplot(data, aes(x=time_in_minutes)) +
   geom_histogram(binwidth=1)
 theme_bw()
+times
 
+length(unique(data$workerid))
 
 head(data)
 
@@ -38,8 +42,10 @@ data$phase2[as.integer(data$trial_sequence_total) <= 6 & data$block_sequence != 
 # Step 1: Filter out the participants who responded incorrectly more than once to the practice questions:
 #############################
 
+excluded_subjects <- c()
 practice_data=subset(data,block_sequence == "practice")
 practice_good_data=subset(practice_data, wrong_attempts <= 1)
+excluded_subjects <- c(excluded_subjects, subset(data, !is.element(workerid, practice_good_data$workerid))$workerid)
 data=subset(data, is.element(workerid, practice_good_data$workerid))
 
 
@@ -73,25 +79,37 @@ for (i in (1:length(all_filler$subject))){
   if (row$ungram_ci_high < row$fill_ci_low){
     eligible_subjects <- c(eligible_subjects, row$subject)
   }
+  else{
+    excluded_subjects <- c(excluded_subjects, row$subject)
+  }
 }
 data = subset(data, workerid %in% eligible_subjects)
+
+length(unique(data$workerid))
 
 #############################
 # Step 3: exclude non-English speakers
 #############################
 
-non_Eng <- c()
+non_Eng <- c("526")
 
 data = subset(data, workerid %notin% non_Eng)
 
+excluded_subjects <- c(excluded_subjects, as.integer(non_Eng))
+
+excluded_data <- subset(d2, workerid %in% excluded_subjects)
 
 # how many excluded participants?
-n_participants <- 12 
+n_participants <- 360
 length(unique(data$workerid))
 exclusion_rate <- (n_participants - length(unique(data$workerid)))/n_participants
 
-
-
+# look at excluded participants
+# which conditions did excluded participants see?
+excluded <- subset(excluded_data, trial_sequence_total=="1") %>%
+  group_by(test_condition, exposure_condition) %>%
+  summarise(cnt = n()) %>%
+  ungroup()
 
 
 #############################
@@ -128,10 +146,10 @@ d$phase2 <- factor(d$phase2, levels= c("pre-exposure", "exposure", "test"))
 
 
 d_no_ungram <- subset(d, item_type != "UNGRAM")
-d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "SUBJ", "WH", "POLAR") )
+d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "POLAR", "SUBJ", "WH") )
 
 d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
-d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("POLAR", "WH", "SUBJ"))
+d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("POLAR", "SUBJ", "WH"))
 
 d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("POLAR", "SUBJ", "WH"))
 
@@ -214,7 +232,7 @@ sink(file=NULL)
 # set reference level to within-category
 d_wh$phase <- factor(d_wh$phase, c("test", "exposure"))
 d_wh$exposure_condition <- factor(d_wh$exposure_condition, c("WH", "SUBJ", "POLAR"))
-phase_model_w2 <- lmer(
+phase_model_wh2 <- lmer(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
@@ -286,72 +304,94 @@ d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ", "POLAR"
 
 #calculate and plot trial/cumulative average
 
-trial_avg <- aggregate(d[,"response"],list(d$trial_sequence_total), mean)
-names(trial_avg)[names(trial_avg) == "Group.1"] <- "trial"
-names(trial_avg)[names(trial_avg) == "x"] <- "avg"
+# trial_avg <- aggregate(d[,"response"],list(d$trial_sequence_total), mean)
+# names(trial_avg)[names(trial_avg) == "Group.1"] <- "trial"
+# names(trial_avg)[names(trial_avg) == "x"] <- "avg"
+# 
+# #trial_average plot
+# trial_avg <- trial_avg[order(trial_avg$trial),]
+# cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
+# trial_avg$cum <- cum
+# 
+# a= ggplot(trial_avg, aes(x=trial, y=avg)) +
+#   geom_smooth(method = lm, se = F) + geom_point()+  
+#   xlab("Trial Sequence") +
+#   ylab("Average acceptability rating")+
+#   theme_bw()
+# a
+# 
+# 
+# #cum_average plot
+# b=ggplot(trial_avg, aes(x=trial, y=cum)) +
+#   
+#   geom_smooth (se = F) + geom_point()+
+#   xlab("Trial number") +
+#   ylab("Cumulative average acceptability rating")+
+#   geom_hline(yintercept=0.5, linetype="dashed",
+#              size=1)+
+#   theme( plot.margin = margin(0, 0, 0, 0, "cm"))+
+#   theme_bw()
+# b
+# 
+# ab <- ggarrange(a,b,
+#                 labels = c("By-trial Average", "Cumulative Average"),
+#                 ncol = 2, nrow = 1)
+# 
 
-#trial_average plot
-trial_avg <- trial_avg[order(trial_avg$trial),]
-cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
-trial_avg$cum <- cum
 
-a= ggplot(trial_avg, aes(x=trial, y=avg)) +
-  geom_smooth(method = lm, se = F) + geom_point()+  
-  xlab("Trial Sequence") +
-  ylab("Average acceptability rating")+
-  theme_bw()
-a
-
-
-#cum_average plot
-b=ggplot(trial_avg, aes(x=trial, y=cum)) +
-  
-  geom_smooth (se = F) + geom_point()+
-  xlab("Trial number") +
-  ylab("Cumulative average acceptability rating")+
-  geom_hline(yintercept=0.5, linetype="dashed",
-             size=1)+
-  theme( plot.margin = margin(0, 0, 0, 0, "cm"))+
-  theme_bw()
-b
-
-ab <- ggarrange(a,b,
-                labels = c("By-trial Average", "Cumulative Average"),
-                ncol = 2, nrow = 1)
-
-
-
-# phase chart
+# bar chart
 
 theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}
 ci.low <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)}
 ci.high <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
+# 
+# phase_avg = d_no_fillers %>%
+#   group_by(phase2, exposure_condition) %>%
+#   mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) %>% 
+#   mutate(phase2 = fct_recode(phase2,"first 6 trials"="pre-exposure", "exposure"="exposure","test"="test")) %>% 
+#   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+#   ungroup() %>%
+#   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
+# 
+# 
+# phase_avg = subset(phase_avg, phase2 != "exposure")
+# phase_graph<- ggplot(phase_avg, aes(x=phase2,y=Mean, fill=exposure_condition)) +
+#   geom_bar(data=phase_avg, stat="identity", position="dodge") +
+#   geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
+#   scale_fill_manual(name="exposure condition", values=cbPalette) +
+#   #scale_alpha_manual(values=c(0.6,1)) +
+#   xlab("phase") +
+#   ylab("average acceptability") +
+#   theme_bw() 
+# 
+# phase_graph
+# ggsave("../graphs/pilot2_phase_bars.pdf",width=10,height=5)
+# ggsave("../graphs/pilot2_phase_bars.png",width=10,height=5)
+
 
 phase_avg = d_no_fillers %>%
-  group_by(phase2, exposure_condition) %>%
-  mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) %>% 
-  mutate(phase2 = fct_recode(phase2,"first 6 trials"="pre-exposure", "exposure"="exposure","test"="test")) %>% 
+  group_by(exposure_condition, test_condition, phase) %>%
+  mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
+  mutate(test_condition = fct_recode(test_condition,"subject island"="SUBJ", "whether island"="WH")) %>% 
   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
   ungroup() %>%
   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
 
 
-phase_avg = subset(phase_avg, phase2 != "exposure")
-phase_graph<- ggplot(phase_avg, aes(x=phase2,y=Mean, fill=exposure_condition)) +
+phase_avg = subset(phase_avg, phase == "test")
+phase_graph<- ggplot(phase_avg, aes(x=test_condition,y=Mean, fill=exposure_condition)) +
   geom_bar(data=phase_avg, stat="identity", position="dodge") +
   geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
   scale_fill_manual(name="exposure condition", values=cbPalette) +
   #scale_alpha_manual(values=c(0.6,1)) +
-  xlab("phase") +
+  xlab("test condition") +
   ylab("average acceptability") +
   theme_bw() 
 
 phase_graph
-ggsave("../graphs/pilot2_phase_bars.pdf",width=10,height=5)
-ggsave("../graphs/pilot2_phase_bars.png",width=10,height=5)
-
+ggsave("../graphs/exp1b_bars.pdf",width=10,height=5)
 
 
 
@@ -372,8 +412,8 @@ nd = d %>%
   #, "complex-NP island"="CNPC", "whether island"="WH")) %>%
   mutate(item_type = fct_relevel(item_type,"grammatical","whether island","subject island", "polar question", "ungrammatical")) %>%
   mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR"))  %>%
-mutate(test_condition = fct_recode(test_condition,"subject island"="SUBJ", "whether island"="WH")) 
-#complex-NP island","subject island", "ungrammatical"))
+mutate(test_condition = fct_recode(test_condition,"subject island"="SUBJ", "whether island"="WH")) %>%
+  mutate(group = fct_recode(group, "control"="control", "within-category"="match", "between-category"="mismatch"))
 
 trial_means = nd %>%
   group_by(exposure_condition,item_type, test_condition, phase,group,trial_sequence_total) %>%
@@ -381,82 +421,79 @@ trial_means = nd %>%
   ungroup()
 
 trial_means$condition <- ""
-trial_means$condition[trial_means$test_condition == "whether island"] <- "subject islands" 
-trial_means$condition[trial_means$test_condition == "subject island"] <- "whether islands" 
+trial_means$condition[trial_means$test_condition == "whether island"] <- "whether islands" 
+trial_means$condition[trial_means$test_condition == "subject island"] <- "subject islands" 
 
 trial_means$condition[trial_means$item_type == "grammatical" | trial_means$item_type=="ungrammatical"] <- "fillers"
 
 
 trial_means = trial_means %>%
-  group_by(test_condition, condition,phase, item_type, group, trial_sequence_total) %>%
+  group_by(test_condition, condition,phase, item_type, group, trial_sequence_total, exposure_condition) %>%
   summarize(response = mean(response)) %>%
   ungroup()
 
 
 trial_means$condition <- factor(trial_means$condition, levels = c("fillers", "whether islands", "subject islands"))
 
-# trial_means <- subset(trial_means, condition=="fillers" | condition=="whether islands")
+# trial_means <- subset(trial_means, condition=="subject islands")
+# trial_means <- subset(trial_means, condition=="whether islands")
 
 
 cbPalette = c("#e69d00", "#009e74","#d55e00",  "#cc79a7", "#0071b2")
 
-ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condition, linetype=group)) +
+ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condition, linetype=group, shape=exposure_condition)) +
   geom_point(data=trial_means,alpha=.9) +
   xlab("trial sequence") +
   ylab("average acceptability")+
-  
-  
-  # fillers
   geom_smooth(data=subset(trial_means, item_type == "grammatical" ),method=lm) +
   geom_smooth(data=subset(trial_means, item_type == "ungrammatical"),method=lm) +
-  
-  geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "pre-exposure"), method=lm) +
   geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "exposure"), method=lm) +
   geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "test"), method=lm) +
   
-  # geom_vline(xintercept=12.5, linetype="dashed",
-  #            size=0.5)+
+  geom_vline(xintercept=40.5, linetype="dashed",
+             size=0.5)+
   scale_color_manual(name="test item type", values=cbPalette) +
   scale_fill_manual(name="test item type", values=cbPalette) +
-  scale_linetype(name="experiment group", labels=c("control", "within-category", "between-category")) +
+  scale_linetype(name="experiment group") +
   theme_bw()
 
+ggsave("../graphs/exp_1b_overall.pdf",width=10,height=5)
 
 
-# bar plot
-d_no_ungram <- subset(d, item_type != "UNGRAM")
-d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
-d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ", "POLAR"))
-#d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("SUBJ", "WH"))
-
-d_no_fillers <- subset(d_no_fillers, group=="control")
-# d_no_fillers <- subset(d_no_fillers, exposure_condition=="WH")
-
-cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
-cbPalette = c("#009e74","#d55e00","#e69d00","#cc79a7", "#0071b2")
-
-theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}
-ci.low <- function(x,na.rm=T) {
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)}
-ci.high <- function(x,na.rm=T) {
-  quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
-
-phase_avg = d_no_fillers %>%
-  group_by(phase,exposure_condition, test_condition, item_type) %>%
-  mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
-  mutate(item_type = fct_recode(item_type,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
-  summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-  ungroup() %>%
-  mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
-
-# phase_avg = subset(phase_avg, phase != "exposure")
-phase_graph<- ggplot(phase_avg, aes(x=test_condition,y=Mean, fill=test_condition)) +
-  geom_bar(data=phase_avg, stat="identity", position="dodge", aes(alpha=phase)) +
-  geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
-  scale_fill_manual(name="item type", values=cbPalette) +
-  scale_alpha_manual(values=c(0.6,0.8,1)) +
-  xlab("test item type") +
-  ylab("average acceptability") +
-  theme_bw() 
-
-phase_graph
+# # bar plot
+# d_no_ungram <- subset(d, item_type != "UNGRAM")
+# d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
+# d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ", "POLAR"))
+# #d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("SUBJ", "WH"))
+# 
+# d_no_fillers <- subset(d_no_fillers, group=="control")
+# # d_no_fillers <- subset(d_no_fillers, exposure_condition=="WH")
+# 
+# cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
+# cbPalette = c("#009e74","#d55e00","#e69d00","#cc79a7", "#0071b2")
+# 
+# theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}
+# ci.low <- function(x,na.rm=T) {
+#   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)}
+# ci.high <- function(x,na.rm=T) {
+#   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
+# 
+# phase_avg = d_no_fillers %>%
+#   group_by(phase,exposure_condition, test_condition, item_type) %>%
+#   mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
+#   mutate(item_type = fct_recode(item_type,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
+#   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
+#   ungroup() %>%
+#   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
+# 
+# # phase_avg = subset(phase_avg, phase != "exposure")
+# phase_graph<- ggplot(phase_avg, aes(x=test_condition,y=Mean, fill=test_condition)) +
+#   geom_bar(data=phase_avg, stat="identity", position="dodge", aes(alpha=phase)) +
+#   geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
+#   scale_fill_manual(name="item type", values=cbPalette) +
+#   scale_alpha_manual(values=c(0.6,0.8,1)) +
+#   xlab("test item type") +
+#   ylab("average acceptability") +
+#   theme_bw() 
+# 
+# phase_graph
