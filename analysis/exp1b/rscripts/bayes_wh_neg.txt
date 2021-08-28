@@ -1,0 +1,54 @@
+ Family: gaussian 
+  Links: mu = identity; sigma = identity 
+Formula: response ~ phase * exposure_condition + (1 + phase | workerid) + (1 + exposure_condition * phase | item_number) 
+   Data: d_wh (Number of observations: 4212) 
+Samples: 4 chains, each with iter = 2000; warmup = 1000; thin = 1;
+         total post-warmup samples = 4000
+
+Group-Level Effects: 
+~item_number (Number of levels: 26) 
+                                                                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)                                                                    0.02      0.01     0.00     0.04 1.00     1089     1582
+sd(exposure_conditionSUBJ)                                                       0.03      0.02     0.00     0.06 1.00     1145     1330
+sd(exposure_conditionWH)                                                         0.02      0.01     0.00     0.04 1.00     2260     2086
+sd(phaseexposure)                                                                0.01      0.01     0.00     0.04 1.00      968     2036
+sd(exposure_conditionSUBJ:phaseexposure)                                         0.05      0.02     0.01     0.08 1.00      964     1148
+sd(exposure_conditionWH:phaseexposure)                                           0.05      0.01     0.02     0.08 1.00     1504     1380
+cor(Intercept,exposure_conditionSUBJ)                                            0.09      0.35    -0.59     0.74 1.00     3128     2920
+cor(Intercept,exposure_conditionWH)                                              0.01      0.38    -0.70     0.72 1.00     7140     3075
+cor(exposure_conditionSUBJ,exposure_conditionWH)                                 0.10      0.38    -0.64     0.76 1.00     3874     3087
+cor(Intercept,phaseexposure)                                                    -0.28      0.40    -0.88     0.58 1.00     1571     2207
+cor(exposure_conditionSUBJ,phaseexposure)                                        0.07      0.36    -0.61     0.72 1.00     3028     2665
+cor(exposure_conditionWH,phaseexposure)                                          0.01      0.38    -0.68     0.72 1.00     2961     2412
+cor(Intercept,exposure_conditionSUBJ:phaseexposure)                             -0.04      0.33    -0.66     0.62 1.00     1778     2613
+cor(exposure_conditionSUBJ,exposure_conditionSUBJ:phaseexposure)                -0.08      0.35    -0.70     0.65 1.00     1311     2322
+cor(exposure_conditionWH,exposure_conditionSUBJ:phaseexposure)                  -0.04      0.37    -0.72     0.68 1.00     1458     2325
+cor(phaseexposure,exposure_conditionSUBJ:phaseexposure)                          0.09      0.36    -0.62     0.72 1.00     1471     2070
+cor(Intercept,exposure_conditionWH:phaseexposure)                                0.14      0.32    -0.49     0.73 1.00     1428     2161
+cor(exposure_conditionSUBJ,exposure_conditionWH:phaseexposure)                   0.20      0.34    -0.55     0.78 1.00     1173     1792
+cor(exposure_conditionWH,exposure_conditionWH:phaseexposure)                    -0.11      0.38    -0.76     0.65 1.00     1150     2463
+cor(phaseexposure,exposure_conditionWH:phaseexposure)                           -0.09      0.36    -0.74     0.63 1.00     1427     2423
+cor(exposure_conditionSUBJ:phaseexposure,exposure_conditionWH:phaseexposure)    -0.18      0.30    -0.72     0.42 1.00     1874     2418
+
+~workerid (Number of levels: 162) 
+                             Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sd(Intercept)                    0.27      0.02     0.24     0.30 1.00      881     1540
+sd(phaseexposure)                0.19      0.01     0.17     0.22 1.00      872     1912
+cor(Intercept,phaseexposure)    -0.72      0.05    -0.80    -0.62 1.00     1343     2336
+
+Population-Level Effects: 
+                                     Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+Intercept                                0.51      0.04     0.43     0.57 1.00      655     1005
+phaseexposure                            0.41      0.03     0.35     0.46 1.00      743     1687
+exposure_conditionSUBJ                   0.02      0.05    -0.08     0.13 1.00      599     1156
+exposure_conditionWH                     0.10      0.05    -0.00     0.20 1.00      573     1301
+phaseexposure:exposure_conditionSUBJ    -0.55      0.04    -0.63    -0.47 1.00      773     1649
+phaseexposure:exposure_conditionWH      -0.48      0.04    -0.56    -0.40 1.00      791     1890
+
+Family Specific Parameters: 
+      Estimate Est.Error l-95% CI u-95% CI Rhat Bulk_ESS Tail_ESS
+sigma     0.20      0.00     0.19     0.20 1.00     6825     2785
+
+Samples were drawn using sampling(NUTS). For each parameter, Bulk_ESS
+and Tail_ESS are effective sample size measures, and Rhat is the potential
+scale reduction factor on split chains (at convergence, Rhat = 1).
