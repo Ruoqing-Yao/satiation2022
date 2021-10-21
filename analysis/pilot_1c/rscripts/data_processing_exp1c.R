@@ -26,7 +26,7 @@ raw_data_path <- "../data/exp1c_raw.csv"
 data<-read.csv(raw_data_path)
 
 # remove subject information from data
-data <- data %>% select(-(catch_trials:system.screenW)) 
+#data <- data %>% select(-(catch_trials:system.screenW)) 
 
 d2 <- data
 
@@ -37,11 +37,12 @@ times <- ggplot(data, aes(x=time_in_minutes)) +
 theme_bw()
 times
 
-length(unique(data$workerid))
+n_parts <- length(unique(data$workerid))
 
 head(data)
 
 # create pseudo-pre-exposure phase
+# this isn't used in this version of the experiment
 data$phase2 <- data$phase
 data$phase2 <- factor(data$phase2, levels = c("pre-exposure", "exposure", "test"))
 data$phase2[as.integer(data$trial_sequence_total) <= 6 & data$block_sequence != "practice"] <- "pre-exposure"
@@ -103,6 +104,10 @@ non_Eng <- c("")
 
 data = subset(data, workerid %notin% non_Eng)
 
+
+# examine excluded subjects
+##################
+
 excluded_subjects <- c(excluded_subjects, as.integer(non_Eng))
 
 excluded_data <- subset(d2, workerid %in% excluded_subjects)
@@ -119,10 +124,22 @@ excluded <- subset(excluded_data, trial_sequence_total=="1") %>%
   summarise(cnt = n()) %>%
   ungroup()
 
-times <- ggplot(data, aes(x=time_in_minutes)) +
+ee <- subset(excluded_data, trial_sequence_total=="1")
+
+
+# plot of excluded participants by time to completion
+ggplot(ee, aes(x=time_in_minutes)) +
   geom_histogram(binwidth=1) +
   theme_bw()
-times
+
+# plot of included participants by time to completion
+ggplot(data, aes(x=time_in_minutes)) +
+  geom_histogram(binwidth=1) +
+  theme_bw()
+
+mean(excluded_data$time_in_minutes)
+
+ee$subject_information.problems
 
 head(data)
 
@@ -418,8 +435,8 @@ ggsave("../graphs/exp1c_bars.pdf",width=10,height=5)
 ggplot(d, aes(x=trial_sequence_total, y=response, color = item_type, shape = item_type)) +
   geom_point() +
   geom_smooth(method=lm, aes(fill=item_type))+facet_wrap(~workerid)
-ggsave("../graphs/subject_variability_pilot2.pdf", width=20, height = 25)
-ggsave("../graphs/subject_variability_pilot2.png", width=20, height = 25)
+ggsave("../graphs/subject_variability_pilot1c.pdf", width=20, height = 25)
+ggsave("../graphs/subject_variability_pilot1c.png", width=20, height = 25)
 
 
 
