@@ -459,6 +459,29 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condi
 ggsave("../graphs/exp_1c_overall.pdf",width=10,height=5)
 
 
+# loess lines
+
+cbPalette = c("#e69d00", "#009e74","#d55e00",  "#cc79a7", "#0071b2")
+
+ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condition, linetype=group, shape=exposure_condition)) +
+  geom_point(data=trial_means,alpha=.9) +
+  xlab("trial sequence") +
+  ylab("average acceptability")+
+  geom_smooth(data=subset(trial_means, item_type == "grammatical" )) +
+  geom_smooth(data=subset(trial_means, item_type == "ungrammatical")) +
+  geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "exposure")) +
+  geom_smooth(data=subset(trial_means, condition != "fillers" & phase == "test")) +
+  
+  geom_vline(xintercept=24.5, linetype="dashed",
+             size=0.5)+
+  scale_color_manual(name="test item type", values=cbPalette) +
+  scale_fill_manual(name="test item type", values=cbPalette) +
+  scale_linetype(name="experiment group") +
+  theme_bw()
+
+ggsave("../graphs/exp_1c_overall_loess.pdf",width=10,height=5)
+
+
 # # bar plot
 # d_no_ungram <- subset(d, item_type != "UNGRAM")
 # d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
