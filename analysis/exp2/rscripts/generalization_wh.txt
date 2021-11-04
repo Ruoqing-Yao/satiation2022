@@ -1,0 +1,45 @@
+Linear mixed model fit by REML. t-tests use Satterthwaite's method ['lmerModLmerTest']
+Formula: response ~ phase * exposure_condition + (1 + phase | workerid) +  
+    (1 + exposure_condition * phase | item_number)
+   Data: d_wh
+
+REML criterion at convergence: -3293.6
+
+Scaled residuals: 
+    Min      1Q  Median      3Q     Max 
+-4.3562 -0.4513  0.0312  0.4705  4.4879 
+
+Random effects:
+ Groups      Name                                  Variance  Std.Dev. Corr                         
+ workerid    (Intercept)                           6.472e-02 0.254401                              
+             phaseexposure                         3.783e-02 0.194510 -0.70                        
+ item_number (Intercept)                           1.053e-03 0.032448                              
+             exposure_conditionPOLAR               4.968e-04 0.022289 -0.61                        
+             exposure_conditionWH                  7.451e-05 0.008632 -0.87  0.55                  
+             phaseexposure                         5.377e-03 0.073330 -0.32  0.13  0.60            
+             exposure_conditionPOLAR:phaseexposure 4.609e-03 0.067886  0.18 -0.37 -0.44 -0.90      
+             exposure_conditionWH:phaseexposure    6.200e-03 0.078743  0.27 -0.11 -0.64 -0.97  0.86
+ Residual                                          3.984e-02 0.199590                              
+Number of obs: 20834, groups:  workerid, 945; item_number, 22
+
+Fixed effects:
+                                        Estimate Std. Error         df t value Pr(>|t|)    
+(Intercept)                              0.57825    0.01621  308.59588  35.662  < 2e-16 ***
+phaseexposure                           -0.19158    0.01971   43.48017  -9.720 1.81e-12 ***
+exposure_conditionPOLAR                 -0.10046    0.02121  687.49886  -4.738 2.63e-06 ***
+exposure_conditionWH                     0.06216    0.02045 1021.35699   3.039  0.00243 ** 
+phaseexposure:exposure_conditionPOLAR    0.63549    0.02220   74.66109  28.625  < 2e-16 ***
+phaseexposure:exposure_conditionWH       0.10010    0.02378   60.67993   4.209 8.60e-05 ***
+---
+Signif. codes:  0 ‘***’ 0.001 ‘**’ 0.01 ‘*’ 0.05 ‘.’ 0.1 ‘ ’ 1
+
+Correlation of Fixed Effects:
+            (Intr) phsxps e_POLA exp_WH p:_POL
+phaseexposr -0.490                            
+expsr_POLAR -0.684  0.314                     
+expsr_cndWH -0.661  0.337  0.491              
+phsx:_POLAR  0.386 -0.794 -0.564 -0.287       
+phsxpsr:_WH  0.390 -0.847 -0.253 -0.527  0.667
+optimizer (nloptwrap) convergence code: 0 (OK)
+boundary (singular) fit: see ?isSingular
+
