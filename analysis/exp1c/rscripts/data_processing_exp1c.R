@@ -436,11 +436,11 @@ trial_means$condition <- factor(trial_means$condition, levels = c("fillers", "wh
 
 # trial_means <- subset(trial_means, condition=="subject islands")
 # trial_means <- subset(trial_means, condition=="whether islands")
-
+trial_means <- subset(trial_means, condition != "fillers")
 
 cbPalette = c("#e69d00", "#009e74","#d55e00",  "#cc79a7", "#0071b2")
 
-ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condition, linetype=group, shape=exposure_condition)) +
+ggplot(nd, aes(x=trial_sequence_total, y=response, color = exposure_condition, fill=exposure_condition, linetype=item_type, shape=item_type)) +
   geom_point(data=trial_means,alpha=.9) +
   xlab("trial sequence") +
   ylab("average acceptability")+
@@ -451,12 +451,14 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condi
   
   geom_vline(xintercept=24.5, linetype="dashed",
              size=0.5)+
-  scale_color_manual(name="test item type", values=cbPalette) +
-  scale_fill_manual(name="test item type", values=cbPalette) +
-  scale_linetype(name="experiment group") +
+  # scale_color_manual(name="test item type", values=cbPalette) +
+  # scale_fill_manual(name="test item type", values=cbPalette) +
+  scale_color_manual(values=cbPalette) +
+  scale_fill_manual(values=cbPalette) +
+  # scale_linetype(name="experiment group") +
   theme_bw()
 
-ggsave("../graphs/exp_1c_overall.pdf",width=10,height=5)
+ggsave("../graphs/exp_1c_overall_1.pdf",width=10,height=5)
 
 
 # loess lines

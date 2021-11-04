@@ -22,7 +22,7 @@ devtools::install_github("DejanDraschkow/mixedpower") # mixedpower is hosted on 
 # load library
 library(mixedpower)
 `%notin%` <- Negate(`%in%`)
-raw_data_path <- "../data/exp1c_raw.csv"
+raw_data_path <- "../data/exp2_raw.csv"
 data<-read.csv(raw_data_path)
 
 # remove subject information from data
@@ -41,11 +41,6 @@ n_parts <- length(unique(data$workerid))
 
 head(data)
 
-# # create pseudo-pre-exposure phase
-# # this isn't used in this version of the experiment
-# data$phase2 <- data$phase
-# data$phase2 <- factor(data$phase2, levels = c("pre-exposure", "exposure", "test"))
-# data$phase2[as.integer(data$trial_sequence_total) <= 6 & data$block_sequence != "practice"] <- "pre-exposure"
 
 #############################
 # Step 1: Filter out the participants who responded incorrectly more than once to the practice questions:
@@ -56,6 +51,8 @@ practice_data=subset(data,block_sequence == "practice")
 practice_good_data=subset(practice_data, wrong_attempts <= 1)
 excluded_subjects <- c(excluded_subjects, subset(data, !is.element(workerid, practice_good_data$workerid))$workerid)
 data=subset(data, is.element(workerid, practice_good_data$workerid))
+
+length(unique(data$workerid))
 
 
 #############################
@@ -100,10 +97,10 @@ length(unique(data$workerid))
 # Step 3: exclude non-English speakers
 #############################
 
-non_Eng <- c("1719", "1408", "1091", "1308", "1404")
+non_Eng <- c("2548", "2570")
 
 data = subset(data, workerid %notin% non_Eng)
-
+length(unique(data$workerid))
 
 # examine excluded subjects
 ##################
@@ -113,7 +110,7 @@ excluded_subjects <- c(excluded_subjects, as.integer(non_Eng))
 excluded_data <- subset(d2, workerid %in% excluded_subjects)
 
 # how many excluded participants?
-n_participants <- 973
+n_participants <- 968
 length(unique(data$workerid))
 exclusion_rate <- (n_participants - length(unique(data$workerid)))/n_participants
 
@@ -155,18 +152,16 @@ data$item_type <- factor(data$item_type, levels = c("FILL", "UNGRAM","SUBJ","WH"
 #data = subset(data, condition != "CNPC")
 #data = subset(data, condition != "SUBJ")
 d=transform(data, block_sequence = as.numeric(block_sequence))
-write.csv(d,"../data/exp1c_cleaned.csv", row.names = FALSE)
+write.csv(d,"../data/exp2_cleaned.csv", row.names = FALSE)
 
 
 #############################
 # Statistics
 #############################
 
-d <- read.csv("../data/exp1c_cleaned.csv")
+d <- read.csv("../data/exp2_cleaned.csv")
 d$item_type <- factor(d$item_type, levels = c("FILL", "WH","SUBJ","UNGRAM", "POLAR"))
 d$phase <- factor(d$phase, levels = c("exposure", "test"))
-d$phase2 <- factor(d$phase2, levels= c("pre-exposure", "exposure", "test"))
-
 
 d_no_ungram <- subset(d, item_type != "UNGRAM")
 d_no_ungram$item_type <- factor(d_no_ungram$item_type, levels = c("FILL", "POLAR", "SUBJ", "WH") )
@@ -191,48 +186,48 @@ d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("PO
 # Subject test condition
 ##############################
 
-d_subj <- subset(d_no_fillers, test_condition=="SUBJ")
-
-# d_subj <- subset(d_subj, trial_sequence_total<=30)
-
-# set reference level to test phase and between-category
-d_subj$phase <- factor(d_subj$phase, c("test", "exposure"))
-d_subj$exposure_condition <- factor(d_subj$exposure_condition, c("WH", "SUBJ", "POLAR"))
-
-phase_model_subj1 <- lmer(
-  response ~ phase * exposure_condition +
-    (1 + phase | workerid) +
-    (1 + exposure_condition*phase | item_number),
-  data = d_subj,
-  # verbose = 100
-)
-
-summary(phase_model_subj1)
-# save output to a txt file
-sink(file="generalization_subj.txt")
-summary(phase_model_subj1)
-sink(file=NULL)
-
-power_subj <- mixedpower(model = phase_model_subj1, data = d_subj,
-                        fixed_effects = c("phase", "exposure_condition"),
-                        simvar = "workerid", steps = c(60,360,480,600),
-                        critical_value = 2, n_sim = 10)
-power_subj
-plots <- multiplotPower(power_subj)
-
-plots
+# d_subj <- subset(d_no_fillers, test_condition=="SUBJ")
+# 
+# # d_subj <- subset(d_subj, trial_sequence_total<=30)
+# 
+# # set reference level to test phase and between-category
+# d_subj$phase <- factor(d_subj$phase, c("test", "exposure"))
+# d_subj$exposure_condition <- factor(d_subj$exposure_condition, c("WH", "SUBJ", "POLAR"))
+# 
+# phase_model_subj1 <- lmer(
+#   response ~ phase * exposure_condition +
+#     (1 + phase | workerid) +
+#     (1 + exposure_condition*phase | item_number),
+#   data = d_subj,
+#   # verbose = 100
+# )
+# 
+# summary(phase_model_subj1)
+# # save output to a txt file
+# sink(file="generalization_subj.txt")
+# summary(phase_model_subj1)
+# sink(file=NULL)
+# 
+# power_subj <- mixedpower(model = phase_model_subj1, data = d_subj,
+#                         fixed_effects = c("phase", "exposure_condition"),
+#                         simvar = "workerid", steps = c(60,360,480,600),
+#                         critical_value = 2, n_sim = 10)
+# power_subj
+# plots <- multiplotPower(power_subj)
+# 
+# plots
 
 
 # whether test condition
 ##########################
 
-d_wh <- subset(d_no_fillers, test_condition=="WH")
+d_wh <- d_no_fillers # subset(d_no_fillers, test_condition=="WH")
 
 # set reference level to test and polar
 d_wh$phase <- factor(d_wh$phase, c("test", "exposure"))
 d_wh$exposure_condition <- factor(d_wh$exposure_condition, c("SUBJ", "POLAR", "WH"))
 
-phase_model_wh1 <- lmer(
+phase_model_wh <- lmer(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
@@ -240,10 +235,10 @@ phase_model_wh1 <- lmer(
   # verbose = 100
 )
 
-summary(phase_model_wh1)
+summary(phase_model_wh)
 # save output to a txt file
 sink(file="generalization_wh.txt")
-summary(phase_model_wh1)
+summary(phase_model_wh)
 sink(file=NULL)
 
 
@@ -289,7 +284,7 @@ this.dir <- dirname(rstudioapi::getSourceEditorContext()$path)
 setwd(this.dir)
 
 cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
-d <- read.csv("../data/exp1c_cleaned.csv")
+d <- read.csv("../data/exp2_cleaned.csv")
 d$item_type <- factor(d$item_type, levels = c("FILL", "WH","SUBJ", "POLAR", "UNGRAM"))
 d$phase <- factor(d$phase, levels = c("exposure", "test"))
 
@@ -345,29 +340,6 @@ ci.low <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)}
 ci.high <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
-# 
-# phase_avg = d_no_fillers %>%
-#   group_by(phase2, exposure_condition) %>%
-#   mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) %>% 
-#   mutate(phase2 = fct_recode(phase2,"first 6 trials"="pre-exposure", "exposure"="exposure","test"="test")) %>% 
-#   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-#   ungroup() %>%
-#   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
-# 
-# 
-# phase_avg = subset(phase_avg, phase2 != "exposure")
-# phase_graph<- ggplot(phase_avg, aes(x=phase2,y=Mean, fill=exposure_condition)) +
-#   geom_bar(data=phase_avg, stat="identity", position="dodge") +
-#   geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
-#   scale_fill_manual(name="exposure condition", values=cbPalette) +
-#   #scale_alpha_manual(values=c(0.6,1)) +
-#   xlab("phase") +
-#   ylab("average acceptability") +
-#   theme_bw() 
-# 
-# phase_graph
-# ggsave("../graphs/pilot2_phase_bars.pdf",width=10,height=5)
-# ggsave("../graphs/pilot2_phase_bars.png",width=10,height=5)
 
 
 phase_avg = d_no_fillers %>%
@@ -390,7 +362,7 @@ phase_graph<- ggplot(phase_avg, aes(x=test_condition,y=Mean, fill=exposure_condi
   theme_bw() 
 
 phase_graph
-ggsave("../graphs/exp1c_bars.pdf",width=10,height=5)
+ggsave("../graphs/exp2_bars.pdf",width=10,height=5)
 
 
 
@@ -400,8 +372,8 @@ ggsave("../graphs/exp1c_bars.pdf",width=10,height=5)
 ggplot(d, aes(x=trial_sequence_total, y=response, color = item_type, shape = item_type)) +
   geom_point() +
   geom_smooth(method=lm, aes(fill=item_type))+facet_wrap(~workerid)
-ggsave("../graphs/subject_variability_pilot1c.pdf", width=20, height = 25)
-ggsave("../graphs/subject_variability_pilot1c.png", width=20, height = 25)
+ggsave("../graphs/subject_variability_exp2.pdf", width=20, height = 25)
+ggsave("../graphs/subject_variability_exp2.png", width=20, height = 25)
 
 
 
@@ -456,7 +428,7 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condi
   scale_linetype(name="experiment group") +
   theme_bw()
 
-ggsave("../graphs/exp_1c_overall.pdf",width=10,height=5)
+ggsave("../graphs/exp_2_overall.pdf",width=10,height=5)
 
 
 # loess lines
@@ -479,43 +451,5 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condi
   scale_linetype(name="experiment group") +
   theme_bw()
 
-ggsave("../graphs/exp_1c_overall_loess.pdf",width=10,height=5)
+ggsave("../graphs/exp_2_overall_loess.pdf",width=10,height=5)
 
-
-# # bar plot
-# d_no_ungram <- subset(d, item_type != "UNGRAM")
-# d_no_fillers <- subset(d_no_ungram, item_type != "FILL")
-# d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ", "POLAR"))
-# #d_no_fillers$exposure_condition <- factor(d_no_fillers$exposure_condition, c("SUBJ", "WH"))
-# 
-# d_no_fillers <- subset(d_no_fillers, group=="control")
-# # d_no_fillers <- subset(d_no_fillers, exposure_condition=="WH")
-# 
-# cbPalette = c("#d55e00", "#009e74","#e69d00","#cc79a7", "#0071b2")
-# cbPalette = c("#009e74","#d55e00","#e69d00","#cc79a7", "#0071b2")
-# 
-# theta <- function(x,xdata,na.rm=T) {mean(xdata[x],na.rm=na.rm)}
-# ci.low <- function(x,na.rm=T) {
-#   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)}
-# ci.high <- function(x,na.rm=T) {
-#   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
-# 
-# phase_avg = d_no_fillers %>%
-#   group_by(phase,exposure_condition, test_condition, item_type) %>%
-#   mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
-#   mutate(item_type = fct_recode(item_type,"subject island"="SUBJ", "whether island"="WH", "polar question"="POLAR")) %>% 
-#   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-#   ungroup() %>%
-#   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
-# 
-# # phase_avg = subset(phase_avg, phase != "exposure")
-# phase_graph<- ggplot(phase_avg, aes(x=test_condition,y=Mean, fill=test_condition)) +
-#   geom_bar(data=phase_avg, stat="identity", position="dodge", aes(alpha=phase)) +
-#   geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
-#   scale_fill_manual(name="item type", values=cbPalette) +
-#   scale_alpha_manual(values=c(0.6,0.8,1)) +
-#   xlab("test item type") +
-#   ylab("average acceptability") +
-#   theme_bw() 
-# 
-# phase_graph
