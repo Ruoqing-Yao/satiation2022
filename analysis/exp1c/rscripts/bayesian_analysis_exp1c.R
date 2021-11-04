@@ -36,35 +36,19 @@ d_subj <- subset(d_no_fillers, test_condition=="SUBJ")
 
 # set reference level to test and polar
 d_subj$phase <- factor(d_subj$phase, c("test", "exposure"))
-d_subj$exposure_condition <- factor(d_subj$exposure_condition, c("POLAR", "SUBJ", "WH"))
+d_subj$exposure_condition <- factor(d_subj$exposure_condition, c("WH", "SUBJ", "POLAR"))
 
-phase_model_subj1 <- brm(
+phase_model_subj_bayes <- brm(
   response ~ phase * exposure_condition +
     (1 + phase | workerid) +
     (1 + exposure_condition*phase | item_number),
   data = d_subj,
 )
 
-summary(phase_model_subj1)
+summary(phase_model_subj_bayes)
 # save output to a txt file
 sink(file="bayes_subj_neg.txt")
-summary(phase_model_subj1)
-sink(file=NULL)
-
-# set reference level to within-category
-d_subj$phase <- factor(d_subj$phase, c("test", "exposure"))
-d_subj$exposure_condition <- factor(d_subj$exposure_condition, c("SUBJ", "WH", "POLAR"))
-phase_model_subj2 <- brm(
-  response ~ phase * exposure_condition +
-    (1 + phase | workerid) +
-    (1 + exposure_condition*phase | item_number),
-  data = d_subj,
-)
-
-summary(phase_model_subj2)
-# save output to a txt file
-sink(file="bayes_subj_pos.txt")
-summary(phase_model_subj2)
+summary(phase_model_subj_bayes)
 sink(file=NULL)
 
 

@@ -391,7 +391,7 @@ phase_graph<- ggplot(phase_avg, aes(x=test_condition,y=Mean, fill=exposure_condi
 
 phase_graph
 ggsave("../graphs/exp1c_bars.pdf",width=10,height=5)
-
+ggsave("../graphs/exp1c_bars.png",width=10,height=5)
 
 
 
@@ -457,7 +457,7 @@ ggplot(nd, aes(x=trial_sequence_total, y=response, color = condition, fill=condi
   theme_bw()
 
 ggsave("../graphs/exp_1c_overall.pdf",width=10,height=5)
-
+ggsave("../graphs/exp_1c_overall.png",width=10,height=5)
 
 # # bar plot
 # d_no_ungram <- subset(d, item_type != "UNGRAM")
