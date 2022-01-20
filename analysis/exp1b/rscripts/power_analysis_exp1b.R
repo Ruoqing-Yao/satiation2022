@@ -55,3 +55,27 @@ p_curve_treat <- powerCurve(model_ext_subj, test=fcompare(response~phase), withi
 
 
 
+d_wh <- subset(d_no_fillers, test_condition=="WH")
+
+# set reference level to test and polar
+d_wh$phase <- factor(d_wh$phase, c("test", "exposure"))
+d_wh$exposure_condition <- factor(d_wh$exposure_condition, c("POLAR", "SUBJ", "WH"))
+
+phase_model_wh1 <- lmer(
+  response ~ phase * exposure_condition +
+    (1 + phase | workerid) +
+    (1 + exposure_condition*phase | item_number),
+  data = d_wh,
+  # verbose = 100
+)
+
+summary(phase_model_wh1)
+
+powerSim(phase_model_wh1, nsim=100, test = fcompare(response~phase))
+model_ext_wh <- extend(phase_model_wh1, within="phase+exposure_condition", n=720)
+
+
+p_curve_treat <- powerCurve(model_ext_wh, test=fcompare(response~phase), within="phase+exposure_condition", breaks=c(360,480,600,720))
+
+sink(file="pcurve.txt")
+p_curve_treat

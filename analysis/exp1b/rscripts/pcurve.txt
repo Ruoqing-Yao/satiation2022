@@ -1,0 +1,8 @@
+Power for model comparison, (95% confidence interval),
+by number of observations within phase+exposure_condition:
+    660: 100.0% (99.63, 100.0) - 2922 rows
+    720: 100.0% (99.63, 100.0) - 3102 rows
+     NA: 100.0% (99.63, 100.0) - 3102 rows
+     NA: 100.0% (99.63, 100.0) - 3102 rows
+
+Time elapsed: 102 h 0 m 12 s
