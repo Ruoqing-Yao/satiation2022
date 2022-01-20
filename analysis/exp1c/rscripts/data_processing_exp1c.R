@@ -303,39 +303,39 @@ d_no_fillers$item_type <- factor(d_no_fillers$item_type, c("WH", "SUBJ", "POLAR"
 
 #calculate and plot trial/cumulative average
 
-# trial_avg <- aggregate(d[,"response"],list(d$trial_sequence_total), mean)
-# names(trial_avg)[names(trial_avg) == "Group.1"] <- "trial"
-# names(trial_avg)[names(trial_avg) == "x"] <- "avg"
-# 
-# #trial_average plot
-# trial_avg <- trial_avg[order(trial_avg$trial),]
-# cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
-# trial_avg$cum <- cum
-# 
-# a= ggplot(trial_avg, aes(x=trial, y=avg)) +
-#   geom_smooth(method = lm, se = F) + geom_point()+  
-#   xlab("Trial Sequence") +
-#   ylab("Average acceptability rating")+
-#   theme_bw()
-# a
-# 
-# 
-# #cum_average plot
-# b=ggplot(trial_avg, aes(x=trial, y=cum)) +
-#   
-#   geom_smooth (se = F) + geom_point()+
-#   xlab("Trial number") +
-#   ylab("Cumulative average acceptability rating")+
-#   geom_hline(yintercept=0.5, linetype="dashed",
-#              size=1)+
-#   theme( plot.margin = margin(0, 0, 0, 0, "cm"))+
-#   theme_bw()
-# b
-# 
-# ab <- ggarrange(a,b,
-#                 labels = c("By-trial Average", "Cumulative Average"),
-#                 ncol = 2, nrow = 1)
-# 
+trial_avg <- aggregate(d[,"response"],list(d$trial_sequence_total), mean)
+names(trial_avg)[names(trial_avg) == "Group.1"] <- "trial"
+names(trial_avg)[names(trial_avg) == "x"] <- "avg"
+
+#trial_average plot
+trial_avg <- trial_avg[order(trial_avg$trial),]
+cum <- cumsum(trial_avg$avg) / seq_along(trial_avg$avg)
+trial_avg$cum <- cum
+
+a= ggplot(trial_avg, aes(x=trial, y=avg)) +
+  geom_smooth(method = lm, se = F) + geom_point()+
+  xlab("Trial Sequence") +
+  ylab("Average acceptability rating")+
+  theme_bw()
+a
+
+
+#cum_average plot
+b=ggplot(trial_avg, aes(x=trial, y=cum)) +
+
+  geom_smooth (se = F) + geom_point()+
+  xlab("Trial number") +
+  ylab("Cumulative average acceptability rating")+
+  geom_hline(yintercept=0.5, linetype="dashed",
+             size=1)+
+  theme( plot.margin = margin(0, 0, 0, 0, "cm"))+
+  theme_bw()
+b
+
+ab <- ggarrange(a,b,
+                labels = c("By-trial Average", "Cumulative Average"),
+                ncol = 2, nrow = 1)
+
 
 
 # bar chart
@@ -345,29 +345,6 @@ ci.low <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.025,na.rm=na.rm)}
 ci.high <- function(x,na.rm=T) {
   quantile(bootstrap(1:length(x),1000,theta,x,na.rm=na.rm)$thetastar,.975,na.rm=na.rm)}
-# 
-# phase_avg = d_no_fillers %>%
-#   group_by(phase2, exposure_condition) %>%
-#   mutate(exposure_condition = fct_recode(exposure_condition,"subject island"="SUBJ", "whether island"="WH")) %>% 
-#   mutate(phase2 = fct_recode(phase2,"first 6 trials"="pre-exposure", "exposure"="exposure","test"="test")) %>% 
-#   summarize(Mean = mean(response), CILow = ci.low(response), CIHigh = ci.high(response)) %>%
-#   ungroup() %>%
-#   mutate(YMin=Mean-CILow,YMax=Mean+CIHigh)
-# 
-# 
-# phase_avg = subset(phase_avg, phase2 != "exposure")
-# phase_graph<- ggplot(phase_avg, aes(x=phase2,y=Mean, fill=exposure_condition)) +
-#   geom_bar(data=phase_avg, stat="identity", position="dodge") +
-#   geom_errorbar(aes(ymin=CILow,ymax=CIHigh), position=position_dodge2(width=0.2, padding=0.5)) +
-#   scale_fill_manual(name="exposure condition", values=cbPalette) +
-#   #scale_alpha_manual(values=c(0.6,1)) +
-#   xlab("phase") +
-#   ylab("average acceptability") +
-#   theme_bw() 
-# 
-# phase_graph
-# ggsave("../graphs/pilot2_phase_bars.pdf",width=10,height=5)
-# ggsave("../graphs/pilot2_phase_bars.png",width=10,height=5)
 
 
 phase_avg = d_no_fillers %>%
