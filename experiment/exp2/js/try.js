@@ -370,9 +370,9 @@ function make_slides(f) {
     },
 
     init_sliders : function() {
-      utils.make_slider("#single_slider", function(event, ui) {
-        exp.sliderPost = ui.value;
-      });
+        utils.make_slider("#single_slider", function(event, ui) {
+            exp.sliderPost = ui.value;
+        });
     },
 
     log_responses : function() {
