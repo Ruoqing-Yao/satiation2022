@@ -23,9 +23,8 @@ var shuffle = function (array) {
 };
 
 
-
 num_target_items = 12;
-const num_gram_filler = 12;
+num_gram_filler = 12;
 num_ungram_filler = 12;
 block_size = 3;
 
@@ -47,12 +46,6 @@ console.log("group", experiment_group);
  * Purpose: filter an array with two filter
  * 
  */
-
-/* 
-*Method Name: Filt
-Purpose: filter an array with two filter
-Paramter: group, cond (two filtering conditions)
-*/
 function filt(items, condition, num){
     return items.filter(item => (item.condition == condition /*&& item.condition == cond*/
                         && item.lex_items <= num))
@@ -77,11 +70,11 @@ console.log("ungram ", ungram_filler);
  * @param {*} list1 three lists of items
  * @param {*} list2 
  * @param {*} list3 
- * @returns An array of randomized items
+ * @returns An array of randomized blocks
  */
 function pseudo_block(list1, list2, list3){
     output = [];
-    num = l1.length;
+    num = list1.length;
     for(var i = 0; i < num; i++){
         block = [list1.pop(), list2.pop(), list3.pop()];
         block = shuffle(block);
@@ -90,6 +83,270 @@ function pseudo_block(list1, list2, list3){
     return output;
 }
 
-final_stimuli = pseudo_block(experiment_stimuli, gram_filler, ungram_filler);
-console.log("final stimuli", final_stimuli);
+final_stimuli_blocks = pseudo_block(experiment_stimuli, gram_filler, ungram_filler);
+console.log("final stimuli", final_stimuli_blocks);
 
+//tag information about the experiment conditions to each item
+//not sure what should be tagged
+for(var i = 0; i < num_target_items; i++){
+    for (var j = 0; j < block_size; j++){
+  
+        final_stimuli_blocks[i][j]["new_block_sequence"] = i + 1;
+        final_stimuli_blocks[i][j]["exposure_condition"] = experiment_condition;
+        final_stimuli_blocks[i][j]["group"] = experiment_group;
+  
+    };
+  };
+
+// create final sequence to present to the slide
+final_item_sequence = [final_stimuli_blocks].flat().flat();
+console.log("final sequence", final_item_sequence);
+
+
+function make_slides(f) {
+    var slides = {};  
+
+    slides.i0 = slide({
+        name : "i0",
+        start: function() {
+        exp.startT = Date.now();
+        }
+    });
+
+    slides.instructions = slide({
+        name : "instructions",
+        button : function() {
+          exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+    });
+
+    slides.practice_slider = slide({
+        name : "practice_slider",
+    
+        /* trial information for this block
+         (the variable 'stim' will change between each of these values,
+          and for each of these, present_handle will be run.) */
+        present : [{"a": 1}],
+        //this gets run only at the beginning of the block
+        present_handle : function(stim) {
+            $(".err").hide();
+            $(".errgood").hide();
+            this.stim = stim;
+            $(".prompt").html("Context: The boy saw an apple on the table. <p>  Target: <b> What did the boy see on the table? <\/b>");
+            this.init_sliders();
+            exp.sliderPost = null; //erase current slider value
+            exp.first_response_wrong = 0;
+            exp.first_response_value = null;
+            exp.attempts = 0;
+        },
+        button : function() {
+            if (exp.sliderPost == null) {
+            $(".err").show();
+            } 
+            else if (exp.sliderPost < 0.5) {
+                exp.first_response_wrong = 1;
+                exp.first_response_value =exp.sliderPost;
+                exp.attempts = exp.attempts + 1;
+                $(".errgood").show();
+            }
+            else {
+                this.log_responses();
+                /* use _stream.apply(this); if and only if there is
+                "present" data. (and only *after* responses are logged) */
+                _stream.apply(this);
+            }
+        },
+        init_sliders : function() {
+            utils.make_slider("#practice_slider_1", function(event, ui) {
+                exp.sliderPost = ui.value;
+            });
+        },
+        log_responses : function() {
+            exp.data_trials.push({
+                "response" : exp.sliderPost,
+                "first_response_value": exp.first_response_value,
+                "wrong_attempts": exp.attempts,
+                "item_type" : "practice_good",
+                "block_sequence": "practice",
+                "item_number": "practice_good",
+                "trial_sequence_total": 0,
+                "group": experiment_group
+            });
+        }
+    });
+
+    slides.post_practice_1 = slide({
+        name : "post_practice_1",
+        button : function() {
+            exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+    });
+
+    slides.practice_slider_bad = slide({
+        name : "practice_slider_bad",
+    
+        /* trial information for this block
+         (the variable 'stim' will change between each of these values,
+          and for each of these, present_handle will be run.) */
+        present : [1],
+    
+      
+        //this gets run only at the beginning of the block
+        present_handle : function(stim) {
+            $(".err").hide();
+            $(".errbad").hide();
+            $(".prompt").html("Context: The girl slept under the bed. <p>  Target: <b> Who the bed was slept under? <\/b>");
+            this.init_sliders();
+            exp.sliderPost = null; //erase current slider value
+            exp.first_response_wrong = 0;
+            exp.first_response_value = null;
+            exp.attempts = 0;
+        },
+        button : function() {
+            if (exp.sliderPost == null) {
+                $(".err").show();
+            } 
+            else if (exp.sliderPost > 0.5) {
+                exp.first_response_wrong = 1;
+                exp.first_response_value = exp.sliderPost;
+                exp.attempts = exp.attempts + 1;
+                $(".errbad").show();
+            }
+            else {
+                this.log_responses();
+                /* use _stream.apply(this); if and only if there is
+                "present" data. (and only *after* responses are logged) */
+                _stream.apply(this);
+            }
+        },
+        init_sliders : function() {
+            utils.make_slider("#practice_slider_2", function(event, ui) {
+                exp.sliderPost = ui.value;
+                
+            });
+        },
+        log_responses : function() {
+            exp.data_trials.push({
+                "response" : exp.sliderPost,
+                "first_response_value": exp.first_response_value,
+                "wrong_attempts": exp.attempts,
+                "item_type" : "practice_bad",
+                "block_sequence": "practice",
+                "item_number": "practice_bad",
+                "trial_sequence_total": 0,
+                "group": experiment_group
+            });
+        }
+    });
+    
+    slides.post_practice_2 = slide({
+        name : "post_practice_2",
+        button : function() {
+            exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+    });
+    
+    
+    slides.last_reminder = slide({
+        name : "last_reminder",
+        button : function() {
+            exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+        
+    });
+
+
+    slides.one_slider = slide({
+        name : "one_slider",
+    
+        /* trial information for this block
+         (the variable 'stim' will change between each of these values,
+          and for each of these, present_handle will be run.) */
+        present : final_item_sequence,
+        
+        //this gets run only at the beginning of the block
+        present_handle : function(stim) {
+            $(".err").hide();
+            this.stim = stim; //I like to store this information in the slide so I can record it later.
+            $(".target").html(stim.presented_target);
+            this.init_sliders()
+            exp.sliderPost = null; //erase current slider value
+        },
+    
+        button : function() {
+            if (exp.sliderPost == null) {
+                $(".err").show();
+            } else {
+                this.log_responses();
+        
+                /* use _stream.apply(this); if and only if there is
+                "present" data. (and only *after* responses are logged) */
+                _stream.apply(this);
+            }
+        },
+    
+        init_sliders : function() {
+            utils.make_slider("#single_slider", function(event, ui) {
+                exp.sliderPost = ui.value;
+            });
+        },
+    
+        log_responses : function() {
+          exp.data_trials.push({
+            // item-specific fields
+            "response" : exp.sliderPost,
+            "item_type" : this.stim.condition,
+            "trial_sequence_total": order,
+            "block_sequence": this.stim.new_block_sequence,
+            "item_number": this.stim.lex_items,
+            "sentence_id": this.stim.item,
+            // experiment-general fields
+            "exposure_condition": this.stim.exposure_condition,
+            "test_condition": this.stim.test_condition,
+            "group": this.stim.group
+          });
+          order = order + 1;
+        }
+      });
+
+    console.log(exp.data_trials);
+
+    return slides;
+    
+
+}
+
+
+function init() {
+    exp.trials = [];
+    exp.catch_trials = [];
+    //exp.condition = _.sample(["condition 1", "condition 2"]); //can randomize between subject conditions here
+    exp.system = {
+        Browser : BrowserDetect.browser,
+        OS : BrowserDetect.OS,
+        screenH: screen.height,
+        screenUH: exp.height,
+        screenW: screen.width,
+        screenUW: exp.width
+        };
+
+    //blocks of the experiment:
+    exp.structure=["i0", "instructions", "practice_slider", "post_practice_1", "practice_slider_bad",
+                    "post_practice_2", "last_reminder", "one_slider"];
+
+    exp.data_trials = [];
+    //make corresponding slides:
+    exp.slides = make_slides(exp);
+    
+    exp.nQs = utils.get_exp_length(); //this does not work if there are stacks of stims (but does work for an experiment with this structure)
+                    //relies on structure and slides being defined
+
+    $('.slide').hide(); //hide everything
+
+    //make sure turkers have accepted HIT (or you're not in mturk)
+    $("#start_button").click(function() {
+        exp.go();
+    });
+
+    exp.go(); //show first slide
+}
