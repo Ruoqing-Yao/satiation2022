@@ -32,8 +32,8 @@ experiment_condition = shuffle(["WH", "CNPC"])[0];
 experiment_group = shuffle(["RP", "GAP"])[0];
 
 
-console.log("condition", experiment_condition);
-console.log("group", experiment_group);
+//console.log("condition", experiment_condition);
+//console.log("group", experiment_group);
 
 /**
  * 
@@ -43,20 +43,19 @@ console.log("group", experiment_group);
  * @returns filtered items
  * 
  * Method Name: Filt
- * Purpose: filter an array with two filter
+ * Purpose: filter an array with two filters
  * 
  */
-function filt(items, condition, num){
-    return items.filter(item => (item.condition == condition /*&& item.condition == cond*/
-                        && item.lex_items <= num))
+function filt(items, cond){
+    return items.filter(item => (item.condition == cond))
 }
 
 //Desired stimuli list
-experiment_stimuli = filt(all_stimuli, experiment_condition, 12);
+experiment_stimuli = filt(all_stimuli, experiment_condition);
 //Desired grammatical filler
-gram_filler = filt(all_stimuli, "FILL", 112);
+gram_filler = filt(all_stimuli, "FILL");
 //Desired ungrammatical filler
-ungram_filler = filt(all_stimuli, "UNGRAM", 128);
+ungram_filler = filt(all_stimuli, "UG");
 
 
 //Testing logs
@@ -74,7 +73,9 @@ console.log("ungram ", ungram_filler);
  */
 function pseudo_block(list1, list2, list3){
     output = [];
-    num = list1.length;
+    //num = list1.length;
+    num = 12;
+    console.log('length', num)
     for(var i = 0; i < num; i++){
         block = [list1.pop(), list2.pop(), list3.pop()];
         block = shuffle(block);
@@ -83,22 +84,24 @@ function pseudo_block(list1, list2, list3){
     return output;
 }
 
+//Create final blocks
 final_stimuli_blocks = pseudo_block(experiment_stimuli, gram_filler, ungram_filler);
 console.log("final stimuli", final_stimuli_blocks);
 
 //tag information about the experiment conditions to each item
 //not sure what should be tagged
-for(var i = 0; i < num_target_items; i++){
+for(var i = 0; i < 12; i++){
     for (var j = 0; j < block_size; j++){
   
         final_stimuli_blocks[i][j]["new_block_sequence"] = i + 1;
-        final_stimuli_blocks[i][j]["exposure_condition"] = experiment_condition;
-        final_stimuli_blocks[i][j]["group"] = experiment_group;
+        final_stimuli_blocks[i][j]["exp_condition"] = experiment_condition;
+        final_stimuli_blocks[i][j]["exp_group"] = experiment_group;
+        final_stimuli_blocks[i][j]["presented_target"] = final_stimuli_blocks[i][j][experiment_group];
   
     };
   };
 
-// create final sequence to present to the slide
+//Create final sequence that are presented to the slide
 final_item_sequence = [final_stimuli_blocks].flat().flat();
 console.log("final sequence", final_item_sequence);
 
@@ -109,14 +112,14 @@ function make_slides(f) {
     slides.i0 = slide({
         name : "i0",
         start: function() {
-        exp.startT = Date.now();
+            exp.startT = Date.now();
         }
     });
 
     slides.instructions = slide({
         name : "instructions",
         button : function() {
-          exp.go(); //use exp.go() if and only if there is no "present" data.
+            exp.go(); //use exp.go() if and only if there is no "present" data.
         }
     });
 
@@ -129,41 +132,90 @@ function make_slides(f) {
         present : [{"a": 1}],
         //this gets run only at the beginning of the block
         present_handle : function(stim) {
-            $(".err").hide();
-            $(".errgood").hide();
+            $(".rating_err").hide();
+            $(".rating_errgood").hide();
+            $(".question_err").hide();
+            $(".question_errgood").hide();
             this.stim = stim;
-            $(".prompt").html("Context: The boy saw an apple on the table. <p>  Target: <b> What did the boy see on the table? <\/b>");
+            $(".prompt").html("<b> That's the dancer who thought that the choreographer wanted to move to the city to find a new job. <\/b>");
+            $(".comprehension_question").html("<b>Who thought that the choreographer wanted to move to the city to find a new job?<\/b>");
+            $(".comprehension_question_choice_a").html("The dancer");
+            $(".comprehension_question_choice_b").html("The choreographer");
+            $(".comprehension_question_choice_c").html("A girl");
+            $(".comprehension_question_choice_d").html("I don't know");
+            $(".comprehension").hide();
+            $(".second_button").hide();
+
             this.init_sliders();
             exp.sliderPost = null; //erase current slider value
             exp.first_response_wrong = 0;
             exp.first_response_value = null;
             exp.attempts = 0;
         },
-        button : function() {
+
+        first_button : function() {
+            $(".rating_err").hide();
+            $(".rating_errgood").hide();
             if (exp.sliderPost == null) {
-            $(".err").show();
+                $(".rating_err").show();
             } 
             else if (exp.sliderPost < 0.5) {
                 exp.first_response_wrong = 1;
                 exp.first_response_value =exp.sliderPost;
                 exp.attempts = exp.attempts + 1;
-                $(".errgood").show();
+                $(".rating_errgood").show();
+            }
+            else {
+                $(".first_button").hide();
+                $(".prompt").hide();
+                $(".target").hide();
+                $(".slider_table").hide();
+                
+                $(".comprehension").show();
+                $(".second_button").show();
+                rating = exp.sliderPost;
+                exp.sliderPost = null;
+
+                
+                /* use _stream.apply(this); if and only if there is
+                "present" data. (and only *after* responses are logged) */
+                //_stream.apply(this);
+            }
+        },
+
+        second_button : function(){
+            $(".question_err").hide();
+            $(".question_errgood").hide();
+            exp.sliderPost = $('input[name="choice"]:checked').val();
+            if (exp.sliderPost == null) {
+                $(".question_err").show();
+            } 
+            else if (exp.sliderPost != "a" && exp.sliderPost != "d") {
+                exp.first_response_wrong = 1;
+                exp.first_response_value = exp.sliderPost;
+                exp.attempts = exp.attempts + 1;
+                $(".question_errgood").show();
             }
             else {
                 this.log_responses();
                 /* use _stream.apply(this); if and only if there is
                 "present" data. (and only *after* responses are logged) */
                 _stream.apply(this);
+                exp.sliderPost = null;
             }
         },
+
         init_sliders : function() {
             utils.make_slider("#practice_slider_1", function(event, ui) {
                 exp.sliderPost = ui.value;
+                
             });
-        },
+        },       
+
         log_responses : function() {
             exp.data_trials.push({
-                "response" : exp.sliderPost,
+                "rating" : rating,
+                "answer_of_comprehension" : exp.sliderPost,
                 "first_response_value": exp.first_response_value,
                 "wrong_attempts": exp.attempts,
                 "item_type" : "practice_good",
@@ -172,6 +224,7 @@ function make_slides(f) {
                 "trial_sequence_total": 0,
                 "group": experiment_group
             });
+            console.log(exp.data_trials);
         }
     });
 
@@ -188,56 +241,111 @@ function make_slides(f) {
         /* trial information for this block
          (the variable 'stim' will change between each of these values,
           and for each of these, present_handle will be run.) */
-        present : [1],
-    
-      
+        present : [{"a": 1}],
         //this gets run only at the beginning of the block
         present_handle : function(stim) {
-            $(".err").hide();
-            $(".errbad").hide();
-            $(".prompt").html("Context: The girl slept under the bed. <p>  Target: <b> Who the bed was slept under? <\/b>");
+            $(".rating_err").hide();
+            $(".rating_errgood").hide();
+            $(".question_err").hide();
+            $(".question_errgood").hide();
+            this.stim = stim;
+            $(".prompt").html("<b> That's the box of sushi that the Grace believes the claim that the girl ate yesterday with a bowl of soup. <\/b>");
+            $(".comprehension_question").html("<b>What does Grace believes the claim that the girl ate yesterday with a bowl of soup?<\/b>");
+            $(".comprehension_question_choice_a").html("A box of sushi");
+            $(".comprehension_question_choice_b").html("A bowl of soup");
+            $(".comprehension_question_choice_c").html("A piece of cookie");
+            $(".comprehension_question_choice_d").html("I don't know");
+            $(".comprehension").hide();
+            $(".second_button").hide();
+            $(".prompt").show();
+            $(".slider_table").show();
+            $(".first_button").show();
+
             this.init_sliders();
             exp.sliderPost = null; //erase current slider value
             exp.first_response_wrong = 0;
             exp.first_response_value = null;
             exp.attempts = 0;
         },
-        button : function() {
+
+        first_button : function() {
+            $(".rating_err").hide();
+            $(".rating_errgood").hide();
+
             if (exp.sliderPost == null) {
-                $(".err").show();
+                $(".rating_err").show();
             } 
             else if (exp.sliderPost > 0.5) {
                 exp.first_response_wrong = 1;
+                exp.first_response_value =exp.sliderPost;
+                exp.attempts = exp.attempts + 1;
+                $(".rating_errgood").show();
+            }
+            else {
+                $(".first_button").hide();
+                $(".prompt").hide();
+                $(".target").hide();
+                $(".slider_table").hide();
+                
+                $(".comprehension").show();
+                $(".second_button").show();
+                rating = exp.sliderPost;
+                exp.sliderPost = null;
+         
+                /* use _stream.apply(this); if and only if there is
+                "present" data. (and only *after* responses are logged) */
+                //_stream.apply(this);
+            }
+        },
+        
+        second_button : function(){
+            exp.sliderPost = null;
+            $(".question_err").hide();
+            $(".question_errgood").hide();
+            exp.sliderPost = $('input[name="choice_"]:checked').val();
+            console.log(exp.sliderPost);
+            if (exp.sliderPost == null) {
+                $(".question_err").show();
+            } 
+            else if (exp.sliderPost != "a" && exp.sliderPost != "d") {
+                exp.first_response_wrong = 1;
                 exp.first_response_value = exp.sliderPost;
                 exp.attempts = exp.attempts + 1;
-                $(".errbad").show();
+                $(".question_errgood").show();
             }
             else {
                 this.log_responses();
                 /* use _stream.apply(this); if and only if there is
                 "present" data. (and only *after* responses are logged) */
                 _stream.apply(this);
+                exp.sliderPost = null;
             }
         },
+
         init_sliders : function() {
             utils.make_slider("#practice_slider_2", function(event, ui) {
                 exp.sliderPost = ui.value;
                 
             });
-        },
+        },       
+
         log_responses : function() {
             exp.data_trials.push({
-                "response" : exp.sliderPost,
+                "rating" : rating,
+                "answer_of_comprehension" : exp.sliderPost,
                 "first_response_value": exp.first_response_value,
                 "wrong_attempts": exp.attempts,
-                "item_type" : "practice_bad",
+                "item_type" : "practice_good",
                 "block_sequence": "practice",
-                "item_number": "practice_bad",
+                "item_number": "practice_good",
                 "trial_sequence_total": 0,
                 "group": experiment_group
             });
+            
         }
     });
+
+    
     
     slides.post_practice_2 = slide({
         name : "post_practice_2",
@@ -255,7 +363,6 @@ function make_slides(f) {
         
     });
 
-
     slides.one_slider = slide({
         name : "one_slider",
     
@@ -266,23 +373,67 @@ function make_slides(f) {
         
         //this gets run only at the beginning of the block
         present_handle : function(stim) {
-            $(".err").hide();
+            $(".rating_err").hide();
+            $(".question_err").hide();
             this.stim = stim; //I like to store this information in the slide so I can record it later.
             $(".target").html(stim.presented_target);
+            $(".comprehension_question").html(stim.comprehension_question);
+            //Shuffle the answers
+            choices = shuffle([0, 1, 2]);
+            console.log(choices);
+            choices.push(4);
+            choices_items = [stim.choice_a, stim.choice_b, stim.choice_c];
+            shuffled_items = [];
+            for(i = 0; i < 3; i++){
+                shuffled_items.push(choices_items[choices[i]]);
+            }
+            console.log(shuffled_items);
+            $(".comprehension_question_choice_a").html(shuffled_items[0]);
+            $(".comprehension_question_choice_b").html(shuffled_items[1]);
+            $(".comprehension_question_choice_c").html(shuffled_items[2]);
+            $(".comprehension_question_choice_d").html(stim.choice_d);
+            $(".target").show();
+            $(".comprehension").hide();
+            $(".slider_table").show();
+            $(".first_button").show();
+            exp.sliderPost == null
             this.init_sliders()
             exp.sliderPost = null; //erase current slider value
         },
     
-        button : function() {
+        first_button : function() {
             if (exp.sliderPost == null) {
-                $(".err").show();
+                $(".rating_err").show();
             } else {
+                $(".first_button").hide();
+                $(".prompt").hide();
+                $(".target").hide();
+                $(".slider_table").hide();
+                $(".rating_err").hide();
+                $(".comprehension").show();
+                $(".second_button").show();
+                rating = exp.sliderPost;
+                exp.sliderPost = null;
+            }
+        },
+
+        second_button : function(){
+            exp.sliderPost = null;
+            $(".question_err").hide();
+            exp.sliderPost = choices[$('input[name="choice_test"]:checked').val()];
+            console.log(exp.sliderPost);
+            if (exp.sliderPost == null) {
+                $(".question_err").show();
+            } 
+            else {
                 this.log_responses();
-        
                 /* use _stream.apply(this); if and only if there is
                 "present" data. (and only *after* responses are logged) */
+                $('input:radio[name="choice_test"]').removeAttr('checked');
                 _stream.apply(this);
+                exp.sliderPost = null;
             }
+            
         },
     
         init_sliders : function() {
@@ -294,22 +445,57 @@ function make_slides(f) {
         log_responses : function() {
           exp.data_trials.push({
             // item-specific fields
-            "response" : exp.sliderPost,
-            "item_type" : this.stim.condition,
+            "rating_response" : rating,
+            "comprehension_response" : exp.sliderPost,
+            "item_condition" : this.stim.condition,
+            "item_group" : this.stim.exp_group,
             "trial_sequence_total": order,
             "block_sequence": this.stim.new_block_sequence,
-            "item_number": this.stim.lex_items,
-            "sentence_id": this.stim.item,
+            "item_number": this.stim.item,
             // experiment-general fields
-            "exposure_condition": this.stim.exposure_condition,
-            "test_condition": this.stim.test_condition,
-            "group": this.stim.group
+            "experiment_condition": this.stim.exp_condition,
           });
           order = order + 1;
         }
       });
-
+    
     console.log(exp.data_trials);
+
+    slides.subj_info =  slide({
+        name : "subj_info",
+        submit : function(e){
+          //if (e.preventDefault) e.preventDefault(); // I don't know what this means.
+            exp.subj_data = {
+                language : $("#language").val(),
+                enjoyment : $("#enjoyment").val(),
+                asses : $('input[name="assess"]:checked').val(),
+                age : $("#age").val(),
+                gender : $("#gender").val(),
+                education : $("#education").val(),
+                comments : $("#comments").val(),
+                problems: $("#problems").val(),
+                fairprice: $("#fairprice").val()
+            };
+            exp.go(); //use exp.go() if and only if there is no "present" data.
+        }
+    });
+
+    
+    slides.thanks = slide({
+        name : "thanks",
+        start : function() {
+            exp.data= {
+                "trials" : exp.data_trials,
+                "catch_trials" : exp.catch_trials,
+                "system" : exp.system,
+                "condition" : exp.condition,
+                "group" : exp.group,
+                "subject_information" : exp.subj_data,
+                "time_in_minutes" : (Date.now() - exp.startT)/60000
+            };
+            proliferate.submit(exp.data);
+        }
+    });
 
     return slides;
     
@@ -331,9 +517,8 @@ function init() {
         };
 
     //blocks of the experiment:
-    exp.structure=["i0", "instructions", "practice_slider", "post_practice_1", "practice_slider_bad",
-                    "post_practice_2", "last_reminder", "one_slider"];
-
+    exp.structure=["i0", "instructions", "practice_slider", "post_practice_1","practice_slider_bad", "post_practice_2", "last_reminder", "one_slider", "subj_info", "thanks"];
+    //"instructions", "practice_slider", "post_practice_1","practice_slider_bad", "post_practice_2", "last_reminder",
     exp.data_trials = [];
     //make corresponding slides:
     exp.slides = make_slides(exp);
