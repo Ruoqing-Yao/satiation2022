@@ -137,14 +137,16 @@ function make_slides(f) {
             $(".question_err").hide();
             $(".question_errgood").hide();
             this.stim = stim;
-            $(".prompt").html("<b> That's the dancer who thought that the choreographer wanted to move to the city to find a new job. <\/b>");
-            $(".comprehension_question").html("<b>Who thought that the choreographer wanted to move to the city to find a new job?<\/b>");
-            $(".comprehension_question_choice_a").html("The dancer");
-            $(".comprehension_question_choice_b").html("The choreographer");
-            $(".comprehension_question_choice_c").html("A girl");
+            $(".prompt").html("<b> The composer thinks that the violinist has three extra tickets to the concert. <\/b>");
+            $(".comprehension_question").html("<b>______ might have three extra tickets to the concert.<\/b>");
+            $(".comprehension_question_choice_a").html("The composer");
+            $(".comprehension_question_choice_b").html("The vioinist");
+            $(".comprehension_question_choice_c").html("The box office");
             $(".comprehension_question_choice_d").html("I don't know");
+            $(".second_instruction").html("Now appears a question about the sentence appeared in the previous page. Please try to answer it to the best of your understanding.");
             $(".comprehension").hide();
             $(".second_button").hide();
+            $(".second_instruction").hide();
 
             this.init_sliders();
             exp.sliderPost = null; //erase current slider value
@@ -170,9 +172,11 @@ function make_slides(f) {
                 $(".prompt").hide();
                 $(".target").hide();
                 $(".slider_table").hide();
+                $(".first_instruction").hide();
                 
                 $(".comprehension").show();
                 $(".second_button").show();
+                $(".second_instruction").show();
                 rating = exp.sliderPost;
                 exp.sliderPost = null;
 
@@ -190,7 +194,7 @@ function make_slides(f) {
             if (exp.sliderPost == null) {
                 $(".question_err").show();
             } 
-            else if (exp.sliderPost != "a" && exp.sliderPost != "d") {
+            else if (exp.sliderPost != "b" /*&& exp.sliderPost != "d"*/) {
                 exp.first_response_wrong = 1;
                 exp.first_response_value = exp.sliderPost;
                 exp.attempts = exp.attempts + 1;
@@ -249,17 +253,20 @@ function make_slides(f) {
             $(".question_err").hide();
             $(".question_errgood").hide();
             this.stim = stim;
-            $(".prompt").html("<b> That's the box of sushi that the Grace believes the claim that the girl ate yesterday with a bowl of soup. <\/b>");
-            $(".comprehension_question").html("<b>What does Grace believes the claim that the girl ate yesterday with a bowl of soup?<\/b>");
-            $(".comprehension_question_choice_a").html("A box of sushi");
-            $(".comprehension_question_choice_b").html("A bowl of soup");
-            $(".comprehension_question_choice_c").html("A piece of cookie");
+            $(".first_instruction").show();
+            $(".prompt").html("<b> The to the wonders rehearsal guitarist the whether drummer come will<\/b>");
+            $(".comprehension_question").html("<b>______ might come to the rehearsal.<\/b>");
+            $(".comprehension_question_choice_a").html("The drummer");
+            $(".comprehension_question_choice_b").html("The guitarist");
+            $(".comprehension_question_choice_c").html("The director");
             $(".comprehension_question_choice_d").html("I don't know");
+            $(".second_instruction").html("Now appears a question about the sentence appeared in the previous page. Please try to answer it to the best of your understanding.");
             $(".comprehension").hide();
             $(".second_button").hide();
             $(".prompt").show();
             $(".slider_table").show();
             $(".first_button").show();
+            $(".second_instruction").hide();
 
             this.init_sliders();
             exp.sliderPost = null; //erase current slider value
@@ -286,9 +293,11 @@ function make_slides(f) {
                 $(".prompt").hide();
                 $(".target").hide();
                 $(".slider_table").hide();
+                $(".first_instruction").hide();
                 
                 $(".comprehension").show();
                 $(".second_button").show();
+                $(".second_instruction").show();
                 rating = exp.sliderPost;
                 exp.sliderPost = null;
          
@@ -307,7 +316,7 @@ function make_slides(f) {
             if (exp.sliderPost == null) {
                 $(".question_err").show();
             } 
-            else if (exp.sliderPost != "a" && exp.sliderPost != "d") {
+            else if (/*exp.sliderPost != "a" && */ exp.sliderPost != "d") {
                 exp.first_response_wrong = 1;
                 exp.first_response_value = exp.sliderPost;
                 exp.attempts = exp.attempts + 1;

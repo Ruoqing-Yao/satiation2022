@@ -3,3 +3,9 @@
 	width: 400;
 	margin: 10px;
 }
+
+.radios > span
+{
+    white-space: nowrap;
+	text-align: left;
+}

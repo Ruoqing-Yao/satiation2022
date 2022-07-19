@@ -164,3 +164,11 @@ textarea {
     width:0px;
     background-color:#000000
 }
+
+.radios
+{
+    display:inline;
+	text-align: left;
+	position: absolute;
+  	left: 40%;
+}
