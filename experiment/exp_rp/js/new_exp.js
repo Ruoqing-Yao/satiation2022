@@ -390,7 +390,7 @@ function make_slides(f) {
             //Shuffle the answers
             choices = shuffle([0, 1, 2]);
             console.log(choices);
-            choices.push(4);
+            choices.push(3);
             choices_items = [stim.choice_a, stim.choice_b, stim.choice_c];
             shuffled_items = [];
             for(i = 0; i < 3; i++){
@@ -429,8 +429,16 @@ function make_slides(f) {
         second_button : function(){
             exp.sliderPost = null;
             $(".question_err").hide();
-            exp.sliderPost = choices[$('input[name="choice_test"]:checked').val()];
+            choosed = $('input[name="choice_test"]:checked').val();
+            exp.sliderPost = choices[choosed];
             console.log(exp.sliderPost);
+            response_correctness = "Incorrect";
+            if (exp.sliderPost == 0){
+                response_correctness = "Correct";
+            }
+            else if (exp.sliderPost == 3){
+                response_correctness = "Don't know"
+            }
             if (exp.sliderPost == null) {
                 $(".question_err").show();
             } 
@@ -456,6 +464,8 @@ function make_slides(f) {
             // item-specific fields
             "rating_response" : rating,
             "comprehension_response" : exp.sliderPost,
+            "response_correctness" : response_correctness,
+            "choosed_choice" : choosed,
             "item_condition" : this.stim.condition,
             "item_group" : this.stim.exp_group,
             "trial_sequence_total": order,
