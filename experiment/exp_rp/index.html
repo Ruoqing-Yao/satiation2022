@@ -43,6 +43,8 @@
     
         <p id="cocolab">Stanford Department of Linguistics</p>
         <p id="instruct-text">This task should take approximately 20-25 minutes. Please pay attention, thanks!</p>
+        <button id="start_button" type="button">Start Experiment</button><br><br>
+        <div id="legal">
         <i><small><small>
             <b>Nonmedical Human Participants Consent Form and Waiver of Documentation</b>
             <br><br>
@@ -80,10 +82,10 @@
 
 
         </small></small></i>
-        <button id="start_button" type="button">Start Experiment</button>
+        
         <br>
         <br>
-
+        </div> 
     </div>
 
     <div class="slide" id="instructions">
@@ -92,9 +94,8 @@
         <br>
       
         <h3>Instructions</h3>
-        <p>In this experiment, you will be reading and rating some English sentences and answering questions about the sentences afterwards. One sentence will appear on each slide, and <b>your job is to rate how acceptable the given sentence sounds and answer comprehension questions based on information in the given sentences. </b></p>
+        <p>You will read and rate some English sentences and do some blank-filling tasks about them. A sentence will appear, and your job is to rate how acceptable it sounds. Then you will do a blank-filling task about the information in the sentence. </p>
         <p><b>When rating the sentences, please use your intuition rather than school grammar</b>. <p>The sentence <i>"Who did you go to school with?"</i> is considered bad according to school grammar (because of the stranded preposition <i>with</i>). However, most English speakers find it totally acceptable. If you think a sentence is acceptable, you should give it a high rating regardless of what you learned in school.</p>
-        <p>The questions following each sentence will ask about some information in the sentence. It will be a multiple choice question and please try your best to answer.</p>
         <button onclick="_s.button()">Continue</button>
     </div>
 
@@ -104,7 +105,7 @@
         <br>
         <br>
     
-        <p class="first_instruction">Let's try one practice item. Please read the sentence, and then rate the acceptability of the target sentence. Please indicate how acceptable the target sentence sounds by dragging the slider bar. A question about information appeared in this sentence will appear afterwards and you will be asked on the correct answer for the question.</p>
+        <p class="first_instruction">Let's try a practice item. Please read the sentence, and then rate how acceptable it sounds by adjusting the slider bar. Once you click "Continue," a blank-filling task about the sentence will appear. </p>
         
         <p class="prompt"> </p>
         <table id="slider_table" class="slider_table">
@@ -158,9 +159,7 @@
         <br>
         <br>
         <br>
-    
-        <p>Most English speakers find the given sentence <b>acceptable</b>. If you think it is acceptable, you should give it a high rating by dragging the slider to the <b>right</b>.</p>
-        <p>The correct answer is "The violinist". </p>
+        <p>Great! Let's try another one. </p>
         <button onclick="_s.button()">Continue</button>
     </div>
 
@@ -170,7 +169,7 @@
         <br>
         <br>
     
-        <p class="first_instruction">Let's try another practice item. Please read the sentence, and then rate the acceptability of the target sentence. Please indicate how acceptable the target sentence sounds by dragging the slider bar. A question about information appeared in this sentence will appear afterwards and you will be asked on the correct answer for the question.</p>
+        <p class="first_instruction">Here is another practice item. Please read the sentence, and then rate how acceptable it sounds by adjusting the slider bar. Once you click "Continue," a blank-filling task about the sentence will appear. </p>
         
         <p class="prompt"> </p>
         <table id="slider_table" class="slider_table">
@@ -229,7 +228,7 @@
         <br>
     
     
-        <p>Most English speakers find the given sentence totally <b>unacceptable</b>. If you think it is unacceptable, you should give it a low rating by dragging the slider to the <b>left</b>.</p>
+        <p>Great job!</p>
         <p>Since the sentence is not comprehensible, you should select "I don't know" for the question.</p>
         <button onclick="_s.button()">Continue</button>
     </div>
@@ -238,7 +237,7 @@
     <div class="slide" id="last_reminder">
         <br>
         <br>
-        <br>
+
     
         <p>Before we start the experiment, there are a few things to keep in mind:</p>
         <p>(1) You may see sentences that are totally acceptable or unacceptable, and you may also see sentences that are somewhere in between. Please make use of the full scale when rating them.</p>
