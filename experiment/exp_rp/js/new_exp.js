@@ -260,7 +260,7 @@ function make_slides(f) {
             $(".comprehension_question_choice_b").html("The guitarist");
             $(".comprehension_question_choice_c").html("The director");
             $(".comprehension_question_choice_d").html("I don't know");
-            $(".second_instruction").html("Here's a task about the sentence on the previous page. Please try to answer it to the best of your ability.");
+            $(".second_instruction").html("Please try to fill in the blank to the best of your ability.");
             $(".comprehension").hide();
             $(".second_button").hide();
             $(".prompt").show();
