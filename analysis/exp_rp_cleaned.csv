@@ -1,0 +1,685 @@
+"workerid","proliferate.condition","answer_of_comprehension","block_sequence","choosed_choice","comprehension_response","experiment_condition","first_response_value","group","item_condition","item_group","item_number","item_type","rating","rating_response","response_correctness","trial_sequence_total","wrong_attempts","error"
+18,"condition1","",1,0,2,"CNPC","","","FILL","RP","36","",NA,0.8,"Incorrect",1,NA,NA
+18,"condition1","",1,2,0,"CNPC","","","CNPC","RP","12","",NA,0.5,"Correct",2,NA,NA
+18,"condition1","",1,3,3,"CNPC","","","UG","RP","48","",NA,0.03,"Don't know",3,NA,NA
+18,"condition1","",2,1,0,"CNPC","","","CNPC","RP","11","",NA,0.52,"Correct",4,NA,NA
+18,"condition1","",2,3,3,"CNPC","","","UG","RP","47","",NA,0.08,"Don't know",5,NA,NA
+18,"condition1","",2,2,0,"CNPC","","","FILL","RP","35","",NA,0.98,"Correct",6,NA,NA
+18,"condition1","",3,3,3,"CNPC","","","UG","RP","46","",NA,0,"Don't know",7,NA,NA
+18,"condition1","",3,1,1,"CNPC","","","CNPC","RP","10","",NA,0.42,"Incorrect",8,NA,NA
+18,"condition1","",3,2,0,"CNPC","","","FILL","RP","34","",NA,0.98,"Correct",9,NA,NA
+18,"condition1","",4,1,0,"CNPC","","","FILL","RP","33","",NA,0.97,"Correct",10,NA,NA
+18,"condition1","",4,0,2,"CNPC","","","CNPC","RP","9","",NA,0.44,"Incorrect",11,NA,NA
+18,"condition1","",4,3,3,"CNPC","","","UG","RP","45","",NA,0.02,"Don't know",12,NA,NA
+18,"condition1","",5,0,0,"CNPC","","","CNPC","RP","8","",NA,0.57,"Correct",13,NA,NA
+18,"condition1","",5,3,3,"CNPC","","","UG","RP","44","",NA,0.02,"Don't know",14,NA,NA
+18,"condition1","",5,1,0,"CNPC","","","FILL","RP","32","",NA,0.98,"Correct",15,NA,NA
+18,"condition1","",6,2,1,"CNPC","","","CNPC","RP","7","",NA,0.65,"Incorrect",16,NA,NA
+18,"condition1","",6,0,0,"CNPC","","","FILL","RP","31","",NA,0.97,"Correct",17,NA,NA
+18,"condition1","",6,3,3,"CNPC","","","UG","RP","43","",NA,0.03,"Don't know",18,NA,NA
+18,"condition1","",7,1,0,"CNPC","","","CNPC","RP","6","",NA,0.69,"Correct",19,NA,NA
+18,"condition1","",7,0,0,"CNPC","","","FILL","RP","30","",NA,1,"Correct",20,NA,NA
+18,"condition1","",7,3,3,"CNPC","","","UG","RP","42","",NA,0.17,"Don't know",21,NA,NA
+18,"condition1","",8,2,0,"CNPC","","","CNPC","RP","5","",NA,0.65,"Correct",22,NA,NA
+18,"condition1","",8,3,3,"CNPC","","","UG","RP","41","",NA,0.09,"Don't know",23,NA,NA
+18,"condition1","",8,2,0,"CNPC","","","FILL","RP","29","",NA,0.81,"Correct",24,NA,NA
+18,"condition1","",9,1,0,"CNPC","","","FILL","RP","28","",NA,0.85,"Correct",25,NA,NA
+18,"condition1","",9,3,3,"CNPC","","","UG","RP","40","",NA,0.02,"Don't know",26,NA,NA
+18,"condition1","",9,1,0,"CNPC","","","CNPC","RP","4","",NA,0.55,"Correct",27,NA,NA
+18,"condition1","",10,1,0,"CNPC","","","FILL","RP","27","",NA,0.96,"Correct",28,NA,NA
+18,"condition1","",10,1,1,"CNPC","","","CNPC","RP","3","",NA,0.87,"Incorrect",29,NA,NA
+18,"condition1","",10,3,3,"CNPC","","","UG","RP","39","",NA,0.04,"Don't know",30,NA,NA
+18,"condition1","",11,1,0,"CNPC","","","FILL","RP","26","",NA,1,"Correct",31,NA,NA
+18,"condition1","",11,1,1,"CNPC","","","CNPC","RP","2","",NA,0.71,"Incorrect",32,NA,NA
+18,"condition1","",11,3,3,"CNPC","","","UG","RP","38","",NA,0.08,"Don't know",33,NA,NA
+18,"condition1","",12,3,3,"CNPC","","","UG","RP","37","",NA,0.08,"Don't know",34,NA,NA
+18,"condition1","",12,0,0,"CNPC","","","FILL","RP","25","",NA,0.99,"Correct",35,NA,NA
+18,"condition1","",12,0,0,"CNPC","","","CNPC","RP","1","",NA,0.64,"Correct",36,NA,NA
+5,"condition1","",1,1,0,"WH","","","FILL","RP","36","",NA,0.91,"Correct",1,NA,NA
+5,"condition1","",1,0,0,"WH","","","WH","RP","24","",NA,0.44,"Correct",2,NA,NA
+5,"condition1","",1,3,3,"WH","","","UG","RP","48","",NA,0.24,"Don't know",3,NA,NA
+5,"condition1","",2,1,0,"WH","","","FILL","RP","35","",NA,0.78,"Correct",4,NA,NA
+5,"condition1","",2,1,0,"WH","","","WH","RP","23","",NA,0.62,"Correct",5,NA,NA
+5,"condition1","",2,3,3,"WH","","","UG","RP","47","",NA,0,"Don't know",6,NA,NA
+5,"condition1","",3,0,0,"WH","","","WH","RP","22","",NA,0.23,"Correct",7,NA,NA
+5,"condition1","",3,3,3,"WH","","","UG","RP","46","",NA,0.22,"Don't know",8,NA,NA
+5,"condition1","",3,1,0,"WH","","","FILL","RP","34","",NA,0.87,"Correct",9,NA,NA
+5,"condition1","",4,3,3,"WH","","","UG","RP","45","",NA,0.29,"Don't know",10,NA,NA
+5,"condition1","",4,3,3,"WH","","","WH","RP","21","",NA,0.08,"Don't know",11,NA,NA
+5,"condition1","",4,2,0,"WH","","","FILL","RP","33","",NA,0.85,"Correct",12,NA,NA
+5,"condition1","",5,3,3,"WH","","","UG","RP","44","",NA,0.15,"Don't know",13,NA,NA
+5,"condition1","",5,0,0,"WH","","","FILL","RP","32","",NA,0.97,"Correct",14,NA,NA
+5,"condition1","",5,2,0,"WH","","","WH","RP","20","",NA,0.74,"Correct",15,NA,NA
+5,"condition1","",6,3,3,"WH","","","UG","RP","43","",NA,0.13,"Don't know",16,NA,NA
+5,"condition1","",6,2,1,"WH","","","FILL","RP","31","",NA,0.89,"Incorrect",17,NA,NA
+5,"condition1","",6,3,3,"WH","","","WH","RP","19","",NA,0.22,"Don't know",18,NA,NA
+5,"condition1","",7,1,0,"WH","","","FILL","RP","30","",NA,0.82,"Correct",19,NA,NA
+5,"condition1","",7,3,3,"WH","","","UG","RP","42","",NA,0,"Don't know",20,NA,NA
+5,"condition1","",7,2,0,"WH","","","WH","RP","18","",NA,0.42,"Correct",21,NA,NA
+5,"condition1","",8,0,0,"WH","","","FILL","RP","29","",NA,0.84,"Correct",22,NA,NA
+5,"condition1","",8,3,3,"WH","","","UG","RP","41","",NA,0.01,"Don't know",23,NA,NA
+5,"condition1","",8,1,0,"WH","","","WH","RP","17","",NA,0.73,"Correct",24,NA,NA
+5,"condition1","",9,3,3,"WH","","","UG","RP","40","",NA,0,"Don't know",25,NA,NA
+5,"condition1","",9,3,3,"WH","","","WH","RP","16","",NA,0.25,"Don't know",26,NA,NA
+5,"condition1","",9,3,3,"WH","","","FILL","RP","28","",NA,0.21,"Don't know",27,NA,NA
+5,"condition1","",10,3,3,"WH","","","UG","RP","39","",NA,0.14,"Don't know",28,NA,NA
+5,"condition1","",10,1,0,"WH","","","FILL","RP","27","",NA,0.83,"Correct",29,NA,NA
+5,"condition1","",10,1,0,"WH","","","WH","RP","15","",NA,0.34,"Correct",30,NA,NA
+5,"condition1","",11,3,3,"WH","","","UG","RP","38","",NA,0.26,"Don't know",31,NA,NA
+5,"condition1","",11,2,0,"WH","","","FILL","RP","26","",NA,0.7,"Correct",32,NA,NA
+5,"condition1","",11,2,0,"WH","","","WH","RP","14","",NA,0.38,"Correct",33,NA,NA
+5,"condition1","",12,3,3,"WH","","","UG","RP","37","",NA,0.17,"Don't know",34,NA,NA
+5,"condition1","",12,2,0,"WH","","","FILL","RP","25","",NA,0.84,"Correct",35,NA,NA
+5,"condition1","",12,0,0,"WH","","","WH","RP","13","",NA,0.7,"Correct",36,NA,NA
+9,"condition1","",1,0,0,"CNPC","","","FILL","GAP","36","",NA,0.72,"Correct",1,NA,NA
+9,"condition1","",1,3,3,"CNPC","","","CNPC","GAP","12","",NA,0.15,"Don't know",2,NA,NA
+9,"condition1","",1,3,3,"CNPC","","","UG","GAP","48","",NA,0.01,"Don't know",3,NA,NA
+9,"condition1","",2,3,3,"CNPC","","","UG","GAP","47","",NA,0.01,"Don't know",4,NA,NA
+9,"condition1","",2,3,3,"CNPC","","","CNPC","GAP","11","",NA,0.31,"Don't know",5,NA,NA
+9,"condition1","",2,2,0,"CNPC","","","FILL","GAP","35","",NA,0.99,"Correct",6,NA,NA
+9,"condition1","",3,3,3,"CNPC","","","UG","GAP","46","",NA,0,"Don't know",7,NA,NA
+9,"condition1","",3,2,0,"CNPC","","","FILL","GAP","34","",NA,0.98,"Correct",8,NA,NA
+9,"condition1","",3,2,0,"CNPC","","","CNPC","GAP","10","",NA,0.59,"Correct",9,NA,NA
+9,"condition1","",4,1,0,"CNPC","","","FILL","GAP","33","",NA,0.86,"Correct",10,NA,NA
+9,"condition1","",4,3,3,"CNPC","","","UG","GAP","45","",NA,0,"Don't know",11,NA,NA
+9,"condition1","",4,0,0,"CNPC","","","CNPC","GAP","9","",NA,0.73,"Correct",12,NA,NA
+9,"condition1","",5,1,0,"CNPC","","","CNPC","GAP","8","",NA,0.71,"Correct",13,NA,NA
+9,"condition1","",5,3,3,"CNPC","","","UG","GAP","44","",NA,0,"Don't know",14,NA,NA
+9,"condition1","",5,0,0,"CNPC","","","FILL","GAP","32","",NA,0.98,"Correct",15,NA,NA
+9,"condition1","",6,1,0,"CNPC","","","FILL","GAP","31","",NA,0.98,"Correct",16,NA,NA
+9,"condition1","",6,3,3,"CNPC","","","UG","GAP","43","",NA,0,"Don't know",17,NA,NA
+9,"condition1","",6,0,0,"CNPC","","","CNPC","GAP","7","",NA,0.37,"Correct",18,NA,NA
+9,"condition1","",7,0,0,"CNPC","","","FILL","GAP","30","",NA,0.99,"Correct",19,NA,NA
+9,"condition1","",7,3,3,"CNPC","","","UG","GAP","42","",NA,0,"Don't know",20,NA,NA
+9,"condition1","",7,0,0,"CNPC","","","CNPC","GAP","6","",NA,0.43,"Correct",21,NA,NA
+9,"condition1","",8,1,0,"CNPC","","","FILL","GAP","29","",NA,0.81,"Correct",22,NA,NA
+9,"condition1","",8,1,1,"CNPC","","","CNPC","GAP","5","",NA,0.21,"Incorrect",23,NA,NA
+9,"condition1","",8,3,3,"CNPC","","","UG","GAP","41","",NA,0.01,"Don't know",24,NA,NA
+9,"condition1","",9,2,0,"CNPC","","","CNPC","GAP","4","",NA,0.76,"Correct",25,NA,NA
+9,"condition1","",9,1,0,"CNPC","","","FILL","GAP","28","",NA,0.75,"Correct",26,NA,NA
+9,"condition1","",9,3,3,"CNPC","","","UG","GAP","40","",NA,0.01,"Don't know",27,NA,NA
+9,"condition1","",10,2,0,"CNPC","","","FILL","GAP","27","",NA,0.98,"Correct",28,NA,NA
+9,"condition1","",10,3,3,"CNPC","","","UG","GAP","39","",NA,0,"Don't know",29,NA,NA
+9,"condition1","",10,2,0,"CNPC","","","CNPC","GAP","3","",NA,0.77,"Correct",30,NA,NA
+9,"condition1","",11,3,3,"CNPC","","","UG","GAP","38","",NA,0,"Don't know",31,NA,NA
+9,"condition1","",11,1,0,"CNPC","","","FILL","GAP","26","",NA,0.97,"Correct",32,NA,NA
+9,"condition1","",11,1,0,"CNPC","","","CNPC","GAP","2","",NA,0.73,"Correct",33,NA,NA
+9,"condition1","",12,2,0,"CNPC","","","CNPC","GAP","1","",NA,0.77,"Correct",34,NA,NA
+9,"condition1","",12,1,0,"CNPC","","","FILL","GAP","25","",NA,0.99,"Correct",35,NA,NA
+9,"condition1","",12,3,3,"CNPC","","","UG","GAP","37","",NA,0.01,"Don't know",36,NA,NA
+20,"condition1","",1,0,0,"WH","","","FILL","GAP","36","",NA,1,"Correct",1,NA,NA
+20,"condition1","",1,0,0,"WH","","","WH","GAP","24","",NA,0.67,"Correct",2,NA,NA
+20,"condition1","",1,3,3,"WH","","","UG","GAP","48","",NA,0,"Don't know",3,NA,NA
+20,"condition1","",2,3,3,"WH","","","UG","GAP","47","",NA,0,"Don't know",4,NA,NA
+20,"condition1","",2,1,0,"WH","","","WH","GAP","23","",NA,0.21,"Correct",5,NA,NA
+20,"condition1","",2,1,0,"WH","","","FILL","GAP","35","",NA,1,"Correct",6,NA,NA
+20,"condition1","",3,3,3,"WH","","","UG","GAP","46","",NA,0,"Don't know",7,NA,NA
+20,"condition1","",3,0,0,"WH","","","WH","GAP","22","",NA,0.65,"Correct",8,NA,NA
+20,"condition1","",3,1,0,"WH","","","FILL","GAP","34","",NA,1,"Correct",9,NA,NA
+20,"condition1","",4,1,0,"WH","","","WH","GAP","21","",NA,0.84,"Correct",10,NA,NA
+20,"condition1","",4,3,3,"WH","","","UG","GAP","45","",NA,0,"Don't know",11,NA,NA
+20,"condition1","",4,1,0,"WH","","","FILL","GAP","33","",NA,1,"Correct",12,NA,NA
+20,"condition1","",5,1,0,"WH","","","FILL","GAP","32","",NA,1,"Correct",13,NA,NA
+20,"condition1","",5,2,0,"WH","","","WH","GAP","20","",NA,0.25,"Correct",14,NA,NA
+20,"condition1","",5,3,3,"WH","","","UG","GAP","44","",NA,0,"Don't know",15,NA,NA
+20,"condition1","",6,2,0,"WH","","","WH","GAP","19","",NA,0.18,"Correct",16,NA,NA
+20,"condition1","",6,3,3,"WH","","","UG","GAP","43","",NA,0,"Don't know",17,NA,NA
+20,"condition1","",6,2,0,"WH","","","FILL","GAP","31","",NA,1,"Correct",18,NA,NA
+20,"condition1","",7,0,0,"WH","","","FILL","GAP","30","",NA,1,"Correct",19,NA,NA
+20,"condition1","",7,2,0,"WH","","","WH","GAP","18","",NA,0.27,"Correct",20,NA,NA
+20,"condition1","",7,3,3,"WH","","","UG","GAP","42","",NA,0,"Don't know",21,NA,NA
+20,"condition1","",8,3,3,"WH","","","UG","GAP","41","",NA,0,"Don't know",22,NA,NA
+20,"condition1","",8,1,0,"WH","","","FILL","GAP","29","",NA,0.57,"Correct",23,NA,NA
+20,"condition1","",8,0,0,"WH","","","WH","GAP","17","",NA,0.76,"Correct",24,NA,NA
+20,"condition1","",9,3,3,"WH","","","UG","GAP","40","",NA,0,"Don't know",25,NA,NA
+20,"condition1","",9,1,0,"WH","","","FILL","GAP","28","",NA,0.36,"Correct",26,NA,NA
+20,"condition1","",9,0,0,"WH","","","WH","GAP","16","",NA,0.16,"Correct",27,NA,NA
+20,"condition1","",10,0,0,"WH","","","WH","GAP","15","",NA,0.24,"Correct",28,NA,NA
+20,"condition1","",10,0,0,"WH","","","FILL","GAP","27","",NA,0.81,"Correct",29,NA,NA
+20,"condition1","",10,3,3,"WH","","","UG","GAP","39","",NA,0,"Don't know",30,NA,NA
+20,"condition1","",11,3,3,"WH","","","UG","GAP","38","",NA,0,"Don't know",31,NA,NA
+20,"condition1","",11,0,0,"WH","","","WH","GAP","14","",NA,0.59,"Correct",32,NA,NA
+20,"condition1","",11,2,0,"WH","","","FILL","GAP","26","",NA,1,"Correct",33,NA,NA
+20,"condition1","",12,3,3,"WH","","","UG","GAP","37","",NA,0,"Don't know",34,NA,NA
+20,"condition1","",12,0,0,"WH","","","WH","GAP","13","",NA,0.77,"Correct",35,NA,NA
+20,"condition1","",12,0,0,"WH","","","FILL","GAP","25","",NA,0.16,"Correct",36,NA,NA
+14,"condition1","",1,0,0,"CNPC","","","FILL","GAP","36","",NA,0.63,"Correct",1,NA,NA
+14,"condition1","",1,2,2,"CNPC","","","CNPC","GAP","12","",NA,0.49,"Incorrect",2,NA,NA
+14,"condition1","",1,3,3,"CNPC","","","UG","GAP","48","",NA,0.02,"Don't know",3,NA,NA
+14,"condition1","",2,3,3,"CNPC","","","UG","GAP","47","",NA,0.02,"Don't know",4,NA,NA
+14,"condition1","",2,2,0,"CNPC","","","FILL","GAP","35","",NA,0.99,"Correct",5,NA,NA
+14,"condition1","",2,2,2,"CNPC","","","CNPC","GAP","11","",NA,0.61,"Incorrect",6,NA,NA
+14,"condition1","",3,2,2,"CNPC","","","FILL","GAP","34","",NA,0.77,"Incorrect",7,NA,NA
+14,"condition1","",3,2,1,"CNPC","","","CNPC","GAP","10","",NA,0.5,"Incorrect",8,NA,NA
+14,"condition1","",3,3,3,"CNPC","","","UG","GAP","46","",NA,0.02,"Don't know",9,NA,NA
+14,"condition1","",4,3,3,"CNPC","","","CNPC","GAP","9","",NA,0.03,"Don't know",10,NA,NA
+14,"condition1","",4,0,0,"CNPC","","","FILL","GAP","33","",NA,1,"Correct",11,NA,NA
+14,"condition1","",4,3,3,"CNPC","","","UG","GAP","45","",NA,0.06,"Don't know",12,NA,NA
+14,"condition1","",5,3,3,"CNPC","","","UG","GAP","44","",NA,0.02,"Don't know",13,NA,NA
+14,"condition1","",5,0,2,"CNPC","","","CNPC","GAP","8","",NA,0.31,"Incorrect",14,NA,NA
+14,"condition1","",5,2,0,"CNPC","","","FILL","GAP","32","",NA,0.98,"Correct",15,NA,NA
+14,"condition1","",6,3,3,"CNPC","","","CNPC","GAP","7","",NA,0.02,"Don't know",16,NA,NA
+14,"condition1","",6,2,0,"CNPC","","","FILL","GAP","31","",NA,0.85,"Correct",17,NA,NA
+14,"condition1","",6,3,3,"CNPC","","","UG","GAP","43","",NA,0.01,"Don't know",18,NA,NA
+14,"condition1","",7,2,0,"CNPC","","","CNPC","GAP","6","",NA,0.7,"Correct",19,NA,NA
+14,"condition1","",7,1,0,"CNPC","","","FILL","GAP","30","",NA,0.99,"Correct",20,NA,NA
+14,"condition1","",7,3,3,"CNPC","","","UG","GAP","42","",NA,0.02,"Don't know",21,NA,NA
+14,"condition1","",8,0,1,"CNPC","","","CNPC","GAP","5","",NA,0.88,"Incorrect",22,NA,NA
+14,"condition1","",8,2,0,"CNPC","","","FILL","GAP","29","",NA,0.71,"Correct",23,NA,NA
+14,"condition1","",8,3,3,"CNPC","","","UG","GAP","41","",NA,0.01,"Don't know",24,NA,NA
+14,"condition1","",9,3,3,"CNPC","","","UG","GAP","40","",NA,0.04,"Don't know",25,NA,NA
+14,"condition1","",9,2,0,"CNPC","","","FILL","GAP","28","",NA,0.82,"Correct",26,NA,NA
+14,"condition1","",9,2,1,"CNPC","","","CNPC","GAP","4","",NA,0.49,"Incorrect",27,NA,NA
+14,"condition1","",10,1,0,"CNPC","","","FILL","GAP","27","",NA,0.82,"Correct",28,NA,NA
+14,"condition1","",10,3,3,"CNPC","","","CNPC","GAP","3","",NA,0.48,"Don't know",29,NA,NA
+14,"condition1","",10,3,3,"CNPC","","","UG","GAP","39","",NA,0.07,"Don't know",30,NA,NA
+14,"condition1","",11,3,3,"CNPC","","","UG","GAP","38","",NA,0,"Don't know",31,NA,NA
+14,"condition1","",11,0,0,"CNPC","","","FILL","GAP","26","",NA,0.99,"Correct",32,NA,NA
+14,"condition1","",11,0,1,"CNPC","","","CNPC","GAP","2","",NA,0.49,"Incorrect",33,NA,NA
+14,"condition1","",12,2,0,"CNPC","","","CNPC","GAP","1","",NA,0.47,"Correct",34,NA,NA
+14,"condition1","",12,3,3,"CNPC","","","UG","GAP","37","",NA,0.02,"Don't know",35,NA,NA
+14,"condition1","",12,2,2,"CNPC","","","FILL","GAP","25","",NA,0.61,"Incorrect",36,NA,NA
+19,"condition1","",1,1,1,"CNPC","","","CNPC","RP","12","",NA,0.3,"Incorrect",1,NA,NA
+19,"condition1","",1,3,3,"CNPC","","","UG","RP","48","",NA,0,"Don't know",2,NA,NA
+19,"condition1","",1,0,1,"CNPC","","","FILL","RP","36","",NA,0.85,"Incorrect",3,NA,NA
+19,"condition1","",2,2,0,"CNPC","","","FILL","RP","35","",NA,0.81,"Correct",4,NA,NA
+19,"condition1","",2,1,0,"CNPC","","","UG","RP","47","",NA,0.29,"Correct",5,NA,NA
+19,"condition1","",2,2,0,"CNPC","","","CNPC","RP","11","",NA,0.3,"Correct",6,NA,NA
+19,"condition1","",3,3,3,"CNPC","","","UG","RP","46","",NA,0,"Don't know",7,NA,NA
+19,"condition1","",3,2,0,"CNPC","","","CNPC","RP","10","",NA,0.2,"Correct",8,NA,NA
+19,"condition1","",3,2,0,"CNPC","","","FILL","RP","34","",NA,0.83,"Correct",9,NA,NA
+19,"condition1","",4,3,3,"CNPC","","","CNPC","RP","9","",NA,0.09,"Don't know",10,NA,NA
+19,"condition1","",4,2,0,"CNPC","","","FILL","RP","33","",NA,0.81,"Correct",11,NA,NA
+19,"condition1","",4,3,3,"CNPC","","","UG","RP","45","",NA,0.01,"Don't know",12,NA,NA
+19,"condition1","",5,0,1,"CNPC","","","CNPC","RP","8","",NA,0.04,"Incorrect",13,NA,NA
+19,"condition1","",5,1,0,"CNPC","","","FILL","RP","32","",NA,0.77,"Correct",14,NA,NA
+19,"condition1","",5,3,3,"CNPC","","","UG","RP","44","",NA,0,"Don't know",15,NA,NA
+19,"condition1","",6,0,0,"CNPC","","","CNPC","RP","7","",NA,0.22,"Correct",16,NA,NA
+19,"condition1","",6,2,1,"CNPC","","","FILL","RP","31","",NA,0.61,"Incorrect",17,NA,NA
+19,"condition1","",6,3,3,"CNPC","","","UG","RP","43","",NA,0.1,"Don't know",18,NA,NA
+19,"condition1","",7,2,0,"CNPC","","","FILL","RP","30","",NA,0.72,"Correct",19,NA,NA
+19,"condition1","",7,3,3,"CNPC","","","UG","RP","42","",NA,0.03,"Don't know",20,NA,NA
+19,"condition1","",7,2,0,"CNPC","","","CNPC","RP","6","",NA,0.27,"Correct",21,NA,NA
+19,"condition1","",8,0,0,"CNPC","","","FILL","RP","29","",NA,0.69,"Correct",22,NA,NA
+19,"condition1","",8,1,0,"CNPC","","","UG","RP","41","",NA,0.19,"Correct",23,NA,NA
+19,"condition1","",8,2,1,"CNPC","","","CNPC","RP","5","",NA,0.15,"Incorrect",24,NA,NA
+19,"condition1","",9,3,3,"CNPC","","","CNPC","RP","4","",NA,0,"Don't know",25,NA,NA
+19,"condition1","",9,2,0,"CNPC","","","FILL","RP","28","",NA,0.01,"Correct",26,NA,NA
+19,"condition1","",9,3,3,"CNPC","","","UG","RP","40","",NA,0,"Don't know",27,NA,NA
+19,"condition1","",10,0,0,"CNPC","","","CNPC","RP","3","",NA,0.09,"Correct",28,NA,NA
+19,"condition1","",10,1,0,"CNPC","","","FILL","RP","27","",NA,0.73,"Correct",29,NA,NA
+19,"condition1","",10,3,3,"CNPC","","","UG","RP","39","",NA,0.16,"Don't know",30,NA,NA
+19,"condition1","",11,0,0,"CNPC","","","FILL","RP","26","",NA,0.66,"Correct",31,NA,NA
+19,"condition1","",11,2,0,"CNPC","","","UG","RP","38","",NA,0,"Correct",32,NA,NA
+19,"condition1","",11,1,0,"CNPC","","","CNPC","RP","2","",NA,0.4,"Correct",33,NA,NA
+19,"condition1","",12,0,0,"CNPC","","","CNPC","RP","1","",NA,0.66,"Correct",34,NA,NA
+19,"condition1","",12,3,3,"CNPC","","","UG","RP","37","",NA,0.09,"Don't know",35,NA,NA
+19,"condition1","",12,1,0,"CNPC","","","FILL","RP","25","",NA,0.42,"Correct",36,NA,NA
+21,"condition1","",1,1,0,"WH","","","FILL","RP","36","",NA,0.98,"Correct",1,NA,NA
+21,"condition1","",1,3,3,"WH","","","UG","RP","48","",NA,0.02,"Don't know",2,NA,NA
+21,"condition1","",1,1,0,"WH","","","WH","RP","24","",NA,0.55,"Correct",3,NA,NA
+21,"condition1","",2,1,0,"WH","","","FILL","RP","35","",NA,0.93,"Correct",4,NA,NA
+21,"condition1","",2,0,0,"WH","","","WH","RP","23","",NA,0.83,"Correct",5,NA,NA
+21,"condition1","",2,2,0,"WH","","","UG","RP","47","",NA,0.02,"Correct",6,NA,NA
+21,"condition1","",3,2,0,"WH","","","FILL","RP","34","",NA,0.99,"Correct",7,NA,NA
+21,"condition1","",3,2,0,"WH","","","WH","RP","22","",NA,0.66,"Correct",8,NA,NA
+21,"condition1","",3,3,3,"WH","","","UG","RP","46","",NA,0.01,"Don't know",9,NA,NA
+21,"condition1","",4,2,0,"WH","","","WH","RP","21","",NA,0.72,"Correct",10,NA,NA
+21,"condition1","",4,3,3,"WH","","","UG","RP","45","",NA,0,"Don't know",11,NA,NA
+21,"condition1","",4,2,0,"WH","","","FILL","RP","33","",NA,0.96,"Correct",12,NA,NA
+21,"condition1","",5,2,0,"WH","","","FILL","RP","32","",NA,0.98,"Correct",13,NA,NA
+21,"condition1","",5,3,3,"WH","","","UG","RP","44","",NA,0.01,"Don't know",14,NA,NA
+21,"condition1","",5,2,0,"WH","","","WH","RP","20","",NA,0.59,"Correct",15,NA,NA
+21,"condition1","",6,1,1,"WH","","","WH","RP","19","",NA,0.61,"Incorrect",16,NA,NA
+21,"condition1","",6,3,3,"WH","","","UG","RP","43","",NA,0.04,"Don't know",17,NA,NA
+21,"condition1","",6,1,0,"WH","","","FILL","RP","31","",NA,0.99,"Correct",18,NA,NA
+21,"condition1","",7,3,3,"WH","","","UG","RP","42","",NA,0.01,"Don't know",19,NA,NA
+21,"condition1","",7,0,0,"WH","","","FILL","RP","30","",NA,0.79,"Correct",20,NA,NA
+21,"condition1","",7,2,0,"WH","","","WH","RP","18","",NA,0.53,"Correct",21,NA,NA
+21,"condition1","",8,2,0,"WH","","","FILL","RP","29","",NA,0.59,"Correct",22,NA,NA
+21,"condition1","",8,2,0,"WH","","","WH","RP","17","",NA,0.54,"Correct",23,NA,NA
+21,"condition1","",8,3,3,"WH","","","UG","RP","41","",NA,0.04,"Don't know",24,NA,NA
+21,"condition1","",9,2,0,"WH","","","FILL","RP","28","",NA,0.58,"Correct",25,NA,NA
+21,"condition1","",9,3,3,"WH","","","UG","RP","40","",NA,0.01,"Don't know",26,NA,NA
+21,"condition1","",9,2,0,"WH","","","WH","RP","16","",NA,0.63,"Correct",27,NA,NA
+21,"condition1","",10,2,0,"WH","","","WH","RP","15","",NA,0.55,"Correct",28,NA,NA
+21,"condition1","",10,2,0,"WH","","","FILL","RP","27","",NA,0.99,"Correct",29,NA,NA
+21,"condition1","",10,3,3,"WH","","","UG","RP","39","",NA,0.03,"Don't know",30,NA,NA
+21,"condition1","",11,0,0,"WH","","","UG","RP","38","",NA,0.11,"Correct",31,NA,NA
+21,"condition1","",11,1,0,"WH","","","FILL","RP","26","",NA,0.92,"Correct",32,NA,NA
+21,"condition1","",11,1,0,"WH","","","WH","RP","14","",NA,0.69,"Correct",33,NA,NA
+21,"condition1","",12,3,3,"WH","","","UG","RP","37","",NA,0,"Don't know",34,NA,NA
+21,"condition1","",12,0,0,"WH","","","WH","RP","13","",NA,0.71,"Correct",35,NA,NA
+21,"condition1","",12,2,0,"WH","","","FILL","RP","25","",NA,0.98,"Correct",36,NA,NA
+17,"condition1","",1,2,0,"WH","","","FILL","GAP","36","",NA,0.77,"Correct",1,NA,NA
+17,"condition1","",1,1,0,"WH","","","WH","GAP","24","",NA,0.45,"Correct",2,NA,NA
+17,"condition1","",1,3,3,"WH","","","UG","GAP","48","",NA,0.04,"Don't know",3,NA,NA
+17,"condition1","",2,0,1,"WH","","","WH","GAP","23","",NA,0.8,"Incorrect",4,NA,NA
+17,"condition1","",2,1,0,"WH","","","FILL","GAP","35","",NA,0.71,"Correct",5,NA,NA
+17,"condition1","",2,3,3,"WH","","","UG","GAP","47","",NA,0.01,"Don't know",6,NA,NA
+17,"condition1","",3,2,0,"WH","","","WH","GAP","22","",NA,0.52,"Correct",7,NA,NA
+17,"condition1","",3,0,0,"WH","","","FILL","GAP","34","",NA,0.89,"Correct",8,NA,NA
+17,"condition1","",3,3,3,"WH","","","UG","GAP","46","",NA,0.01,"Don't know",9,NA,NA
+17,"condition1","",4,2,0,"WH","","","WH","GAP","21","",NA,0.39,"Correct",10,NA,NA
+17,"condition1","",4,0,0,"WH","","","FILL","GAP","33","",NA,0.72,"Correct",11,NA,NA
+17,"condition1","",4,3,3,"WH","","","UG","GAP","45","",NA,0.12,"Don't know",12,NA,NA
+17,"condition1","",5,1,0,"WH","","","WH","GAP","20","",NA,0.47,"Correct",13,NA,NA
+17,"condition1","",5,3,3,"WH","","","UG","GAP","44","",NA,0.05,"Don't know",14,NA,NA
+17,"condition1","",5,0,0,"WH","","","FILL","GAP","32","",NA,0.98,"Correct",15,NA,NA
+17,"condition1","",6,0,0,"WH","","","FILL","GAP","31","",NA,0.89,"Correct",16,NA,NA
+17,"condition1","",6,1,0,"WH","","","WH","GAP","19","",NA,0.65,"Correct",17,NA,NA
+17,"condition1","",6,3,3,"WH","","","UG","GAP","43","",NA,0.06,"Don't know",18,NA,NA
+17,"condition1","",7,1,0,"WH","","","FILL","GAP","30","",NA,0.96,"Correct",19,NA,NA
+17,"condition1","",7,2,0,"WH","","","WH","GAP","18","",NA,0.3,"Correct",20,NA,NA
+17,"condition1","",7,3,3,"WH","","","UG","GAP","42","",NA,0.06,"Don't know",21,NA,NA
+17,"condition1","",8,3,3,"WH","","","UG","GAP","41","",NA,0.08,"Don't know",22,NA,NA
+17,"condition1","",8,1,0,"WH","","","WH","GAP","17","",NA,0.91,"Correct",23,NA,NA
+17,"condition1","",8,1,0,"WH","","","FILL","GAP","29","",NA,0.71,"Correct",24,NA,NA
+17,"condition1","",9,0,0,"WH","","","FILL","GAP","28","",NA,0.7,"Correct",25,NA,NA
+17,"condition1","",9,0,0,"WH","","","WH","GAP","16","",NA,0.55,"Correct",26,NA,NA
+17,"condition1","",9,3,3,"WH","","","UG","GAP","40","",NA,0.06,"Don't know",27,NA,NA
+17,"condition1","",10,2,0,"WH","","","WH","GAP","15","",NA,0.63,"Correct",28,NA,NA
+17,"condition1","",10,1,0,"WH","","","FILL","GAP","27","",NA,0.81,"Correct",29,NA,NA
+17,"condition1","",10,3,3,"WH","","","UG","GAP","39","",NA,0.02,"Don't know",30,NA,NA
+17,"condition1","",11,2,0,"WH","","","WH","GAP","14","",NA,0.57,"Correct",31,NA,NA
+17,"condition1","",11,3,3,"WH","","","UG","GAP","38","",NA,0.02,"Don't know",32,NA,NA
+17,"condition1","",11,1,0,"WH","","","FILL","GAP","26","",NA,0.9,"Correct",33,NA,NA
+17,"condition1","",12,2,0,"WH","","","FILL","GAP","25","",NA,0.9,"Correct",34,NA,NA
+17,"condition1","",12,3,3,"WH","","","UG","GAP","37","",NA,0.04,"Don't know",35,NA,NA
+17,"condition1","",12,0,0,"WH","","","WH","GAP","13","",NA,0.81,"Correct",36,NA,NA
+6,"condition1","",1,2,1,"CNPC","","","CNPC","RP","12","",NA,0.56,"Incorrect",1,NA,NA
+6,"condition1","",1,3,3,"CNPC","","","FILL","RP","36","",NA,1,"Don't know",2,NA,NA
+6,"condition1","",1,3,3,"CNPC","","","UG","RP","48","",NA,0,"Don't know",3,NA,NA
+6,"condition1","",2,2,0,"CNPC","","","FILL","RP","35","",NA,0.91,"Correct",4,NA,NA
+6,"condition1","",2,1,1,"CNPC","","","CNPC","RP","11","",NA,0.53,"Incorrect",5,NA,NA
+6,"condition1","",2,2,0,"CNPC","","","UG","RP","47","",NA,0.1,"Correct",6,NA,NA
+6,"condition1","",3,0,0,"CNPC","","","FILL","RP","34","",NA,1,"Correct",7,NA,NA
+6,"condition1","",3,3,3,"CNPC","","","UG","RP","46","",NA,0.03,"Don't know",8,NA,NA
+6,"condition1","",3,0,1,"CNPC","","","CNPC","RP","10","",NA,0.96,"Incorrect",9,NA,NA
+6,"condition1","",4,3,3,"CNPC","","","UG","RP","45","",NA,0.03,"Don't know",10,NA,NA
+6,"condition1","",4,0,0,"CNPC","","","FILL","RP","33","",NA,1,"Correct",11,NA,NA
+6,"condition1","",4,3,3,"CNPC","","","CNPC","RP","9","",NA,0.56,"Don't know",12,NA,NA
+6,"condition1","",5,0,0,"CNPC","","","FILL","RP","32","",NA,0.99,"Correct",13,NA,NA
+6,"condition1","",5,3,3,"CNPC","","","UG","RP","44","",NA,0.08,"Don't know",14,NA,NA
+6,"condition1","",5,1,1,"CNPC","","","CNPC","RP","8","",NA,0.91,"Incorrect",15,NA,NA
+6,"condition1","",6,3,3,"CNPC","","","FILL","RP","31","",NA,1,"Don't know",16,NA,NA
+6,"condition1","",6,0,1,"CNPC","","","CNPC","RP","7","",NA,0.72,"Incorrect",17,NA,NA
+6,"condition1","",6,3,3,"CNPC","","","UG","RP","43","",NA,0.08,"Don't know",18,NA,NA
+6,"condition1","",7,0,0,"CNPC","","","FILL","RP","30","",NA,1,"Correct",19,NA,NA
+6,"condition1","",7,3,3,"CNPC","","","UG","RP","42","",NA,0,"Don't know",20,NA,NA
+6,"condition1","",7,0,0,"CNPC","","","CNPC","RP","6","",NA,0.64,"Correct",21,NA,NA
+6,"condition1","",8,0,0,"CNPC","","","FILL","RP","29","",NA,1,"Correct",22,NA,NA
+6,"condition1","",8,1,0,"CNPC","","","CNPC","RP","5","",NA,0.51,"Correct",23,NA,NA
+6,"condition1","",8,3,3,"CNPC","","","UG","RP","41","",NA,0,"Don't know",24,NA,NA
+6,"condition1","",9,2,1,"CNPC","","","CNPC","RP","4","",NA,0.65,"Incorrect",25,NA,NA
+6,"condition1","",9,3,3,"CNPC","","","UG","RP","40","",NA,0,"Don't know",26,NA,NA
+6,"condition1","",9,0,0,"CNPC","","","FILL","RP","28","",NA,0.73,"Correct",27,NA,NA
+6,"condition1","",10,0,1,"CNPC","","","CNPC","RP","3","",NA,0.82,"Incorrect",28,NA,NA
+6,"condition1","",10,0,0,"CNPC","","","FILL","RP","27","",NA,1,"Correct",29,NA,NA
+6,"condition1","",10,0,0,"CNPC","","","UG","RP","39","",NA,0.29,"Correct",30,NA,NA
+6,"condition1","",11,0,0,"CNPC","","","FILL","RP","26","",NA,0.94,"Correct",31,NA,NA
+6,"condition1","",11,0,0,"CNPC","","","CNPC","RP","2","",NA,0.86,"Correct",32,NA,NA
+6,"condition1","",11,3,3,"CNPC","","","UG","RP","38","",NA,0,"Don't know",33,NA,NA
+6,"condition1","",12,0,1,"CNPC","","","CNPC","RP","1","",NA,0.7,"Incorrect",34,NA,NA
+6,"condition1","",12,1,0,"CNPC","","","FILL","RP","25","",NA,0.71,"Correct",35,NA,NA
+6,"condition1","",12,3,3,"CNPC","","","UG","RP","37","",NA,0.11,"Don't know",36,NA,NA
+7,"condition1","",1,1,0,"WH","","","FILL","GAP","36","",NA,0.81,"Correct",1,NA,NA
+7,"condition1","",1,0,0,"WH","","","WH","GAP","24","",NA,0.75,"Correct",2,NA,NA
+7,"condition1","",1,3,3,"WH","","","UG","GAP","48","",NA,0.02,"Don't know",3,NA,NA
+7,"condition1","",2,3,3,"WH","","","UG","GAP","47","",NA,0.02,"Don't know",4,NA,NA
+7,"condition1","",2,2,0,"WH","","","FILL","GAP","35","",NA,0.98,"Correct",5,NA,NA
+7,"condition1","",2,1,0,"WH","","","WH","GAP","23","",NA,0.83,"Correct",6,NA,NA
+7,"condition1","",3,3,3,"WH","","","UG","GAP","46","",NA,0.01,"Don't know",7,NA,NA
+7,"condition1","",3,1,0,"WH","","","WH","GAP","22","",NA,0.82,"Correct",8,NA,NA
+7,"condition1","",3,0,0,"WH","","","FILL","GAP","34","",NA,0.98,"Correct",9,NA,NA
+7,"condition1","",4,3,3,"WH","","","UG","GAP","45","",NA,0.02,"Don't know",10,NA,NA
+7,"condition1","",4,2,0,"WH","","","FILL","GAP","33","",NA,0.97,"Correct",11,NA,NA
+7,"condition1","",4,1,0,"WH","","","WH","GAP","21","",NA,0.93,"Correct",12,NA,NA
+7,"condition1","",5,0,0,"WH","","","FILL","GAP","32","",NA,0.99,"Correct",13,NA,NA
+7,"condition1","",5,3,3,"WH","","","UG","GAP","44","",NA,0,"Don't know",14,NA,NA
+7,"condition1","",5,2,0,"WH","","","WH","GAP","20","",NA,0.97,"Correct",15,NA,NA
+7,"condition1","",6,1,0,"WH","","","FILL","GAP","31","",NA,0.92,"Correct",16,NA,NA
+7,"condition1","",6,3,3,"WH","","","UG","GAP","43","",NA,0.01,"Don't know",17,NA,NA
+7,"condition1","",6,0,0,"WH","","","WH","GAP","19","",NA,0.82,"Correct",18,NA,NA
+7,"condition1","",7,2,0,"WH","","","FILL","GAP","30","",NA,0.98,"Correct",19,NA,NA
+7,"condition1","",7,3,3,"WH","","","UG","GAP","42","",NA,0.01,"Don't know",20,NA,NA
+7,"condition1","",7,2,0,"WH","","","WH","GAP","18","",NA,0.82,"Correct",21,NA,NA
+7,"condition1","",8,1,0,"WH","","","FILL","GAP","29","",NA,0.8,"Correct",22,NA,NA
+7,"condition1","",8,3,3,"WH","","","UG","GAP","41","",NA,0.02,"Don't know",23,NA,NA
+7,"condition1","",8,1,0,"WH","","","WH","GAP","17","",NA,0.89,"Correct",24,NA,NA
+7,"condition1","",9,2,0,"WH","","","FILL","GAP","28","",NA,0.86,"Correct",25,NA,NA
+7,"condition1","",9,0,0,"WH","","","WH","GAP","16","",NA,0.86,"Correct",26,NA,NA
+7,"condition1","",9,3,3,"WH","","","UG","GAP","40","",NA,0,"Don't know",27,NA,NA
+7,"condition1","",10,3,3,"WH","","","UG","GAP","39","",NA,0.02,"Don't know",28,NA,NA
+7,"condition1","",10,1,0,"WH","","","WH","GAP","15","",NA,0.84,"Correct",29,NA,NA
+7,"condition1","",10,1,0,"WH","","","FILL","GAP","27","",NA,0.87,"Correct",30,NA,NA
+7,"condition1","",11,1,0,"WH","","","FILL","GAP","26","",NA,0.99,"Correct",31,NA,NA
+7,"condition1","",11,1,1,"WH","","","WH","GAP","14","",NA,0.98,"Incorrect",32,NA,NA
+7,"condition1","",11,3,3,"WH","","","UG","GAP","38","",NA,0.01,"Don't know",33,NA,NA
+7,"condition1","",12,1,2,"WH","","","WH","GAP","13","",NA,0.92,"Incorrect",34,NA,NA
+7,"condition1","",12,3,3,"WH","","","UG","GAP","37","",NA,0.01,"Don't know",35,NA,NA
+7,"condition1","",12,0,0,"WH","","","FILL","GAP","25","",NA,0.98,"Correct",36,NA,NA
+16,"condition1","",1,1,2,"CNPC","","","FILL","GAP","36","",NA,0.83,"Incorrect",1,NA,NA
+16,"condition1","",1,0,0,"CNPC","","","CNPC","GAP","12","",NA,0.18,"Correct",2,NA,NA
+16,"condition1","",1,2,1,"CNPC","","","UG","GAP","48","",NA,0.09,"Incorrect",3,NA,NA
+16,"condition1","",2,0,0,"CNPC","","","FILL","GAP","35","",NA,0.95,"Correct",4,NA,NA
+16,"condition1","",2,0,0,"CNPC","","","CNPC","GAP","11","",NA,0.33,"Correct",5,NA,NA
+16,"condition1","",2,2,0,"CNPC","","","UG","GAP","47","",NA,0.03,"Correct",6,NA,NA
+16,"condition1","",3,3,3,"CNPC","","","UG","GAP","46","",NA,0.06,"Don't know",7,NA,NA
+16,"condition1","",3,1,0,"CNPC","","","FILL","GAP","34","",NA,0.87,"Correct",8,NA,NA
+16,"condition1","",3,1,1,"CNPC","","","CNPC","GAP","10","",NA,0.21,"Incorrect",9,NA,NA
+16,"condition1","",4,3,3,"CNPC","","","CNPC","GAP","9","",NA,0.1,"Don't know",10,NA,NA
+16,"condition1","",4,2,0,"CNPC","","","UG","GAP","45","",NA,0.05,"Correct",11,NA,NA
+16,"condition1","",4,0,0,"CNPC","","","FILL","GAP","33","",NA,0.74,"Correct",12,NA,NA
+16,"condition1","",5,0,0,"CNPC","","","FILL","GAP","32","",NA,0.79,"Correct",13,NA,NA
+16,"condition1","",5,2,0,"CNPC","","","CNPC","GAP","8","",NA,0.76,"Correct",14,NA,NA
+16,"condition1","",5,3,3,"CNPC","","","UG","GAP","44","",NA,0,"Don't know",15,NA,NA
+16,"condition1","",6,2,0,"CNPC","","","FILL","GAP","31","",NA,0.88,"Correct",16,NA,NA
+16,"condition1","",6,0,1,"CNPC","","","CNPC","GAP","7","",NA,0.27,"Incorrect",17,NA,NA
+16,"condition1","",6,3,3,"CNPC","","","UG","GAP","43","",NA,0.24,"Don't know",18,NA,NA
+16,"condition1","",7,2,0,"CNPC","","","CNPC","GAP","6","",NA,0.76,"Correct",19,NA,NA
+16,"condition1","",7,1,0,"CNPC","","","FILL","GAP","30","",NA,0.64,"Correct",20,NA,NA
+16,"condition1","",7,2,1,"CNPC","","","UG","GAP","42","",NA,0.17,"Incorrect",21,NA,NA
+16,"condition1","",8,1,1,"CNPC","","","CNPC","GAP","5","",NA,0.16,"Incorrect",22,NA,NA
+16,"condition1","",8,3,3,"CNPC","","","UG","GAP","41","",NA,0.1,"Don't know",23,NA,NA
+16,"condition1","",8,0,0,"CNPC","","","FILL","GAP","29","",NA,0.8,"Correct",24,NA,NA
+16,"condition1","",9,1,1,"CNPC","","","CNPC","GAP","4","",NA,0.47,"Incorrect",25,NA,NA
+16,"condition1","",9,3,3,"CNPC","","","UG","GAP","40","",NA,0.16,"Don't know",26,NA,NA
+16,"condition1","",9,0,0,"CNPC","","","FILL","GAP","28","",NA,0.86,"Correct",27,NA,NA
+16,"condition1","",10,0,2,"CNPC","","","UG","GAP","39","",NA,0.15,"Incorrect",28,NA,NA
+16,"condition1","",10,1,0,"CNPC","","","FILL","GAP","27","",NA,0.69,"Correct",29,NA,NA
+16,"condition1","",10,0,1,"CNPC","","","CNPC","GAP","3","",NA,0.65,"Incorrect",30,NA,NA
+16,"condition1","",11,0,0,"CNPC","","","UG","GAP","38","",NA,0.24,"Correct",31,NA,NA
+16,"condition1","",11,2,0,"CNPC","","","CNPC","GAP","2","",NA,0.63,"Correct",32,NA,NA
+16,"condition1","",11,0,0,"CNPC","","","FILL","GAP","26","",NA,0.71,"Correct",33,NA,NA
+16,"condition1","",12,2,0,"CNPC","","","CNPC","GAP","1","",NA,0.21,"Correct",34,NA,NA
+16,"condition1","",12,1,0,"CNPC","","","FILL","GAP","25","",NA,0.82,"Correct",35,NA,NA
+16,"condition1","",12,3,3,"CNPC","","","UG","GAP","37","",NA,0.1,"Don't know",36,NA,NA
+10,"condition1","",1,3,3,"CNPC","","","CNPC","GAP","12","",NA,0.07,"Don't know",1,NA,NA
+10,"condition1","",1,1,0,"CNPC","","","FILL","GAP","36","",NA,0.97,"Correct",2,NA,NA
+10,"condition1","",1,3,3,"CNPC","","","UG","GAP","48","",NA,0.01,"Don't know",3,NA,NA
+10,"condition1","",2,1,0,"CNPC","","","UG","GAP","47","",NA,0.02,"Correct",4,NA,NA
+10,"condition1","",2,1,0,"CNPC","","","CNPC","GAP","11","",NA,0.13,"Correct",5,NA,NA
+10,"condition1","",2,0,0,"CNPC","","","FILL","GAP","35","",NA,0.99,"Correct",6,NA,NA
+10,"condition1","",3,2,0,"CNPC","","","CNPC","GAP","10","",NA,0.13,"Correct",7,NA,NA
+10,"condition1","",3,2,0,"CNPC","","","FILL","GAP","34","",NA,1,"Correct",8,NA,NA
+10,"condition1","",3,3,3,"CNPC","","","UG","GAP","46","",NA,0.01,"Don't know",9,NA,NA
+10,"condition1","",4,1,0,"CNPC","","","CNPC","GAP","9","",NA,0.28,"Correct",10,NA,NA
+10,"condition1","",4,0,0,"CNPC","","","FILL","GAP","33","",NA,0.9,"Correct",11,NA,NA
+10,"condition1","",4,3,3,"CNPC","","","UG","GAP","45","",NA,0.01,"Don't know",12,NA,NA
+10,"condition1","",5,1,0,"CNPC","","","CNPC","GAP","8","",NA,0.26,"Correct",13,NA,NA
+10,"condition1","",5,2,0,"CNPC","","","FILL","GAP","32","",NA,0.99,"Correct",14,NA,NA
+10,"condition1","",5,3,3,"CNPC","","","UG","GAP","44","",NA,0.01,"Don't know",15,NA,NA
+10,"condition1","",6,3,3,"CNPC","","","UG","GAP","43","",NA,0.01,"Don't know",16,NA,NA
+10,"condition1","",6,0,1,"CNPC","","","CNPC","GAP","7","",NA,0.22,"Incorrect",17,NA,NA
+10,"condition1","",6,1,0,"CNPC","","","FILL","GAP","31","",NA,0.82,"Correct",18,NA,NA
+10,"condition1","",7,0,0,"CNPC","","","FILL","GAP","30","",NA,1,"Correct",19,NA,NA
+10,"condition1","",7,3,3,"CNPC","","","UG","GAP","42","",NA,0.01,"Don't know",20,NA,NA
+10,"condition1","",7,1,0,"CNPC","","","CNPC","GAP","6","",NA,0.28,"Correct",21,NA,NA
+10,"condition1","",8,3,3,"CNPC","","","UG","GAP","41","",NA,0.01,"Don't know",22,NA,NA
+10,"condition1","",8,2,0,"CNPC","","","FILL","GAP","29","",NA,0.67,"Correct",23,NA,NA
+10,"condition1","",8,1,0,"CNPC","","","CNPC","GAP","5","",NA,0.15,"Correct",24,NA,NA
+10,"condition1","",9,2,0,"CNPC","","","CNPC","GAP","4","",NA,0.35,"Correct",25,NA,NA
+10,"condition1","",9,3,3,"CNPC","","","UG","GAP","40","",NA,0,"Don't know",26,NA,NA
+10,"condition1","",9,0,0,"CNPC","","","FILL","GAP","28","",NA,0.31,"Correct",27,NA,NA
+10,"condition1","",10,3,3,"CNPC","","","UG","GAP","39","",NA,0.01,"Don't know",28,NA,NA
+10,"condition1","",10,2,0,"CNPC","","","FILL","GAP","27","",NA,0.88,"Correct",29,NA,NA
+10,"condition1","",10,2,0,"CNPC","","","CNPC","GAP","3","",NA,0.35,"Correct",30,NA,NA
+10,"condition1","",11,1,0,"CNPC","","","FILL","GAP","26","",NA,0.7,"Correct",31,NA,NA
+10,"condition1","",11,3,3,"CNPC","","","UG","GAP","38","",NA,0,"Don't know",32,NA,NA
+10,"condition1","",11,0,0,"CNPC","","","CNPC","GAP","2","",NA,0.34,"Correct",33,NA,NA
+10,"condition1","",12,1,0,"CNPC","","","FILL","GAP","25","",NA,0.46,"Correct",34,NA,NA
+10,"condition1","",12,2,0,"CNPC","","","CNPC","GAP","1","",NA,0.29,"Correct",35,NA,NA
+10,"condition1","",12,3,3,"CNPC","","","UG","GAP","37","",NA,0.01,"Don't know",36,NA,NA
+12,"condition1","",1,3,3,"CNPC","","","UG","RP","48","",NA,0,"Don't know",1,NA,NA
+12,"condition1","",1,1,0,"CNPC","","","FILL","RP","36","",NA,0.41,"Correct",2,NA,NA
+12,"condition1","",1,2,1,"CNPC","","","CNPC","RP","12","",NA,0.28,"Incorrect",3,NA,NA
+12,"condition1","",2,3,3,"CNPC","","","UG","RP","47","",NA,0,"Don't know",4,NA,NA
+12,"condition1","",2,0,0,"CNPC","","","CNPC","RP","11","",NA,0.21,"Correct",5,NA,NA
+12,"condition1","",2,0,0,"CNPC","","","FILL","RP","35","",NA,0.9,"Correct",6,NA,NA
+12,"condition1","",3,0,0,"CNPC","","","CNPC","RP","10","",NA,0.1,"Correct",7,NA,NA
+12,"condition1","",3,2,0,"CNPC","","","FILL","RP","34","",NA,0.75,"Correct",8,NA,NA
+12,"condition1","",3,3,3,"CNPC","","","UG","RP","46","",NA,0.02,"Don't know",9,NA,NA
+12,"condition1","",4,1,0,"CNPC","","","FILL","RP","33","",NA,1,"Correct",10,NA,NA
+12,"condition1","",4,3,3,"CNPC","","","UG","RP","45","",NA,0,"Don't know",11,NA,NA
+12,"condition1","",4,1,0,"CNPC","","","CNPC","RP","9","",NA,0.14,"Correct",12,NA,NA
+12,"condition1","",5,0,0,"CNPC","","","FILL","RP","32","",NA,1,"Correct",13,NA,NA
+12,"condition1","",5,3,3,"CNPC","","","UG","RP","44","",NA,0,"Don't know",14,NA,NA
+12,"condition1","",5,0,1,"CNPC","","","CNPC","RP","8","",NA,0.17,"Incorrect",15,NA,NA
+12,"condition1","",6,1,1,"CNPC","","","CNPC","RP","7","",NA,0.16,"Incorrect",16,NA,NA
+12,"condition1","",6,1,1,"CNPC","","","FILL","RP","31","",NA,0.81,"Incorrect",17,NA,NA
+12,"condition1","",6,3,3,"CNPC","","","UG","RP","43","",NA,0,"Don't know",18,NA,NA
+12,"condition1","",7,2,0,"CNPC","","","FILL","RP","30","",NA,0.87,"Correct",19,NA,NA
+12,"condition1","",7,3,3,"CNPC","","","UG","RP","42","",NA,0,"Don't know",20,NA,NA
+12,"condition1","",7,0,0,"CNPC","","","CNPC","RP","6","",NA,0.09,"Correct",21,NA,NA
+12,"condition1","",8,3,3,"CNPC","","","UG","RP","41","",NA,0,"Don't know",22,NA,NA
+12,"condition1","",8,1,0,"CNPC","","","FILL","RP","29","",NA,0.61,"Correct",23,NA,NA
+12,"condition1","",8,0,0,"CNPC","","","CNPC","RP","5","",NA,0.17,"Correct",24,NA,NA
+12,"condition1","",9,3,3,"CNPC","","","UG","RP","40","",NA,0,"Don't know",25,NA,NA
+12,"condition1","",9,1,1,"CNPC","","","CNPC","RP","4","",NA,0.36,"Incorrect",26,NA,NA
+12,"condition1","",9,1,0,"CNPC","","","FILL","RP","28","",NA,0.6,"Correct",27,NA,NA
+12,"condition1","",10,3,3,"CNPC","","","UG","RP","39","",NA,0,"Don't know",28,NA,NA
+12,"condition1","",10,2,0,"CNPC","","","FILL","RP","27","",NA,1,"Correct",29,NA,NA
+12,"condition1","",10,2,0,"CNPC","","","CNPC","RP","3","",NA,0.39,"Correct",30,NA,NA
+12,"condition1","",11,2,0,"CNPC","","","FILL","RP","26","",NA,1,"Correct",31,NA,NA
+12,"condition1","",11,1,0,"CNPC","","","CNPC","RP","2","",NA,0.62,"Correct",32,NA,NA
+12,"condition1","",11,3,3,"CNPC","","","UG","RP","38","",NA,0,"Don't know",33,NA,NA
+12,"condition1","",12,0,0,"CNPC","","","CNPC","RP","1","",NA,0.2,"Correct",34,NA,NA
+12,"condition1","",12,2,0,"CNPC","","","FILL","RP","25","",NA,0.89,"Correct",35,NA,NA
+12,"condition1","",12,3,3,"CNPC","","","UG","RP","37","",NA,0,"Don't know",36,NA,NA
+13,"condition1","",1,3,3,"CNPC","","","UG","GAP","48","",NA,0,"Don't know",1,NA,NA
+13,"condition1","",1,3,3,"CNPC","","","CNPC","GAP","12","",NA,0.22,"Don't know",2,NA,NA
+13,"condition1","",1,1,0,"CNPC","","","FILL","GAP","36","",NA,0.93,"Correct",3,NA,NA
+13,"condition1","",2,2,2,"CNPC","","","CNPC","GAP","11","",NA,0.47,"Incorrect",4,NA,NA
+13,"condition1","",2,0,0,"CNPC","","","FILL","GAP","35","",NA,0.88,"Correct",5,NA,NA
+13,"condition1","",2,3,3,"CNPC","","","UG","GAP","47","",NA,0.04,"Don't know",6,NA,NA
+13,"condition1","",3,3,3,"CNPC","","","UG","GAP","46","",NA,0.07,"Don't know",7,NA,NA
+13,"condition1","",3,2,0,"CNPC","","","FILL","GAP","34","",NA,0.95,"Correct",8,NA,NA
+13,"condition1","",3,2,0,"CNPC","","","CNPC","GAP","10","",NA,0.87,"Correct",9,NA,NA
+13,"condition1","",4,0,0,"CNPC","","","CNPC","GAP","9","",NA,0.81,"Correct",10,NA,NA
+13,"condition1","",4,3,3,"CNPC","","","UG","GAP","45","",NA,0,"Don't know",11,NA,NA
+13,"condition1","",4,0,0,"CNPC","","","FILL","GAP","33","",NA,0.85,"Correct",12,NA,NA
+13,"condition1","",5,1,0,"CNPC","","","FILL","GAP","32","",NA,0.9,"Correct",13,NA,NA
+13,"condition1","",5,3,3,"CNPC","","","UG","GAP","44","",NA,0,"Don't know",14,NA,NA
+13,"condition1","",5,0,0,"CNPC","","","CNPC","GAP","8","",NA,0.85,"Correct",15,NA,NA
+13,"condition1","",6,1,1,"CNPC","","","CNPC","GAP","7","",NA,0.88,"Incorrect",16,NA,NA
+13,"condition1","",6,3,3,"CNPC","","","UG","GAP","43","",NA,0,"Don't know",17,NA,NA
+13,"condition1","",6,0,0,"CNPC","","","FILL","GAP","31","",NA,0.93,"Correct",18,NA,NA
+13,"condition1","",7,2,0,"CNPC","","","FILL","GAP","30","",NA,0.93,"Correct",19,NA,NA
+13,"condition1","",7,1,0,"CNPC","","","CNPC","GAP","6","",NA,0.8,"Correct",20,NA,NA
+13,"condition1","",7,3,3,"CNPC","","","UG","GAP","42","",NA,0,"Don't know",21,NA,NA
+13,"condition1","",8,0,0,"CNPC","","","CNPC","GAP","5","",NA,0.87,"Correct",22,NA,NA
+13,"condition1","",8,1,0,"CNPC","","","FILL","GAP","29","",NA,0.93,"Correct",23,NA,NA
+13,"condition1","",8,3,3,"CNPC","","","UG","GAP","41","",NA,0,"Don't know",24,NA,NA
+13,"condition1","",9,2,0,"CNPC","","","FILL","GAP","28","",NA,0.82,"Correct",25,NA,NA
+13,"condition1","",9,0,1,"CNPC","","","CNPC","GAP","4","",NA,0.87,"Incorrect",26,NA,NA
+13,"condition1","",9,3,3,"CNPC","","","UG","GAP","40","",NA,0,"Don't know",27,NA,NA
+13,"condition1","",10,1,1,"CNPC","","","CNPC","GAP","3","",NA,0.87,"Incorrect",28,NA,NA
+13,"condition1","",10,3,3,"CNPC","","","UG","GAP","39","",NA,0,"Don't know",29,NA,NA
+13,"condition1","",10,1,0,"CNPC","","","FILL","GAP","27","",NA,0.87,"Correct",30,NA,NA
+13,"condition1","",11,1,0,"CNPC","","","FILL","GAP","26","",NA,0.92,"Correct",31,NA,NA
+13,"condition1","",11,2,0,"CNPC","","","CNPC","GAP","2","",NA,0.85,"Correct",32,NA,NA
+13,"condition1","",11,3,3,"CNPC","","","UG","GAP","38","",NA,0,"Don't know",33,NA,NA
+13,"condition1","",12,3,3,"CNPC","","","UG","GAP","37","",NA,0,"Don't know",34,NA,NA
+13,"condition1","",12,2,0,"CNPC","","","CNPC","GAP","1","",NA,0.91,"Correct",35,NA,NA
+13,"condition1","",12,0,0,"CNPC","","","FILL","GAP","25","",NA,0.9,"Correct",36,NA,NA
+8,"condition1","",1,0,0,"WH","","","FILL","RP","36","",NA,0.97,"Correct",1,NA,NA
+8,"condition1","",1,3,3,"WH","","","UG","RP","48","",NA,0.01,"Don't know",2,NA,NA
+8,"condition1","",1,1,0,"WH","","","WH","RP","24","",NA,0.14,"Correct",3,NA,NA
+8,"condition1","",2,2,0,"WH","","","FILL","RP","35","",NA,0.98,"Correct",4,NA,NA
+8,"condition1","",2,3,3,"WH","","","UG","RP","47","",NA,0,"Don't know",5,NA,NA
+8,"condition1","",2,0,1,"WH","","","WH","RP","23","",NA,0.21,"Incorrect",6,NA,NA
+8,"condition1","",3,3,3,"WH","","","UG","RP","46","",NA,0.01,"Don't know",7,NA,NA
+8,"condition1","",3,2,0,"WH","","","FILL","RP","34","",NA,0.97,"Correct",8,NA,NA
+8,"condition1","",3,2,0,"WH","","","WH","RP","22","",NA,0.49,"Correct",9,NA,NA
+8,"condition1","",4,2,0,"WH","","","WH","RP","21","",NA,0.16,"Correct",10,NA,NA
+8,"condition1","",4,1,0,"WH","","","FILL","RP","33","",NA,0.38,"Correct",11,NA,NA
+8,"condition1","",4,3,3,"WH","","","UG","RP","45","",NA,0.02,"Don't know",12,NA,NA
+8,"condition1","",5,3,3,"WH","","","UG","RP","44","",NA,0.01,"Don't know",13,NA,NA
+8,"condition1","",5,0,0,"WH","","","FILL","RP","32","",NA,0.97,"Correct",14,NA,NA
+8,"condition1","",5,1,0,"WH","","","WH","RP","20","",NA,0.23,"Correct",15,NA,NA
+8,"condition1","",6,0,0,"WH","","","FILL","RP","31","",NA,0.9,"Correct",16,NA,NA
+8,"condition1","",6,2,0,"WH","","","WH","RP","19","",NA,0.39,"Correct",17,NA,NA
+8,"condition1","",6,3,3,"WH","","","UG","RP","43","",NA,0,"Don't know",18,NA,NA
+8,"condition1","",7,3,3,"WH","","","UG","RP","42","",NA,0.09,"Don't know",19,NA,NA
+8,"condition1","",7,2,0,"WH","","","FILL","RP","30","",NA,0.79,"Correct",20,NA,NA
+8,"condition1","",7,1,0,"WH","","","WH","RP","18","",NA,0.2,"Correct",21,NA,NA
+8,"condition1","",8,1,0,"WH","","","WH","RP","17","",NA,0.36,"Correct",22,NA,NA
+8,"condition1","",8,3,3,"WH","","","UG","RP","41","",NA,0.01,"Don't know",23,NA,NA
+8,"condition1","",8,2,0,"WH","","","FILL","RP","29","",NA,0.4,"Correct",24,NA,NA
+8,"condition1","",9,3,3,"WH","","","UG","RP","40","",NA,0.04,"Don't know",25,NA,NA
+8,"condition1","",9,2,0,"WH","","","WH","RP","16","",NA,0.2,"Correct",26,NA,NA
+8,"condition1","",9,0,0,"WH","","","FILL","RP","28","",NA,0.49,"Correct",27,NA,NA
+8,"condition1","",10,0,0,"WH","","","WH","RP","15","",NA,0.27,"Correct",28,NA,NA
+8,"condition1","",10,3,3,"WH","","","UG","RP","39","",NA,0.02,"Don't know",29,NA,NA
+8,"condition1","",10,2,0,"WH","","","FILL","RP","27","",NA,0.99,"Correct",30,NA,NA
+8,"condition1","",11,0,0,"WH","","","UG","RP","38","",NA,0.03,"Correct",31,NA,NA
+8,"condition1","",11,1,0,"WH","","","FILL","RP","26","",NA,0.89,"Correct",32,NA,NA
+8,"condition1","",11,0,0,"WH","","","WH","RP","14","",NA,0.26,"Correct",33,NA,NA
+8,"condition1","",12,0,0,"WH","","","WH","RP","13","",NA,0.4,"Correct",34,NA,NA
+8,"condition1","",12,3,3,"WH","","","UG","RP","37","",NA,0,"Don't know",35,NA,NA
+8,"condition1","",12,2,0,"WH","","","FILL","RP","25","",NA,0.97,"Correct",36,NA,NA
+3,"condition1","",1,1,0,"WH","","","FILL","RP","36","",NA,0.48,"Correct",1,NA,NA
+3,"condition1","",1,3,3,"WH","","","WH","RP","24","",NA,0.26,"Don't know",2,NA,NA
+3,"condition1","",1,1,2,"WH","","","UG","RP","48","",NA,0,"Incorrect",3,NA,NA
+3,"condition1","",2,2,0,"WH","","","UG","RP","47","",NA,0.06,"Correct",4,NA,NA
+3,"condition1","",2,1,0,"WH","","","FILL","RP","35","",NA,0.98,"Correct",5,NA,NA
+3,"condition1","",2,1,0,"WH","","","WH","RP","23","",NA,0.76,"Correct",6,NA,NA
+3,"condition1","",3,1,2,"WH","","","WH","RP","22","",NA,0.46,"Incorrect",7,NA,NA
+3,"condition1","",3,3,3,"WH","","","UG","RP","46","",NA,0.01,"Don't know",8,NA,NA
+3,"condition1","",3,0,0,"WH","","","FILL","RP","34","",NA,0.98,"Correct",9,NA,NA
+3,"condition1","",4,1,0,"WH","","","WH","RP","21","",NA,0.93,"Correct",10,NA,NA
+3,"condition1","",4,3,3,"WH","","","UG","RP","45","",NA,0.13,"Don't know",11,NA,NA
+3,"condition1","",4,1,0,"WH","","","FILL","RP","33","",NA,0.96,"Correct",12,NA,NA
+3,"condition1","",5,2,1,"WH","","","WH","RP","20","",NA,0.43,"Incorrect",13,NA,NA
+3,"condition1","",5,0,0,"WH","","","UG","RP","44","",NA,0.03,"Correct",14,NA,NA
+3,"condition1","",5,3,3,"WH","","","FILL","RP","32","",NA,0.97,"Don't know",15,NA,NA
+3,"condition1","",6,0,0,"WH","","","UG","RP","43","",NA,0.06,"Correct",16,NA,NA
+3,"condition1","",6,2,0,"WH","","","WH","RP","19","",NA,0.67,"Correct",17,NA,NA
+3,"condition1","",6,2,0,"WH","","","FILL","RP","31","",NA,0.44,"Correct",18,NA,NA
+3,"condition1","",7,2,0,"WH","","","UG","RP","42","",NA,0.56,"Correct",19,NA,NA
+3,"condition1","",7,2,0,"WH","","","FILL","RP","30","",NA,0.89,"Correct",20,NA,NA
+3,"condition1","",7,0,2,"WH","","","WH","RP","18","",NA,0.48,"Incorrect",21,NA,NA
+3,"condition1","",8,1,0,"WH","","","FILL","RP","29","",NA,0.99,"Correct",22,NA,NA
+3,"condition1","",8,0,0,"WH","","","WH","RP","17","",NA,0.42,"Correct",23,NA,NA
+3,"condition1","",8,2,1,"WH","","","UG","RP","41","",NA,0.08,"Incorrect",24,NA,NA
+3,"condition1","",9,2,2,"WH","","","FILL","RP","28","",NA,0.51,"Incorrect",25,NA,NA
+3,"condition1","",9,1,0,"WH","","","WH","RP","16","",NA,0.28,"Correct",26,NA,NA
+3,"condition1","",9,2,1,"WH","","","UG","RP","40","",NA,0.05,"Incorrect",27,NA,NA
+3,"condition1","",10,2,0,"WH","","","FILL","RP","27","",NA,0.89,"Correct",28,NA,NA
+3,"condition1","",10,2,2,"WH","","","WH","RP","15","",NA,0.72,"Incorrect",29,NA,NA
+3,"condition1","",10,2,1,"WH","","","UG","RP","39","",NA,0.11,"Incorrect",30,NA,NA
+3,"condition1","",11,1,0,"WH","","","FILL","RP","26","",NA,0.55,"Correct",31,NA,NA
+3,"condition1","",11,2,0,"WH","","","WH","RP","14","",NA,0.73,"Correct",32,NA,NA
+3,"condition1","",11,2,0,"WH","","","UG","RP","38","",NA,0.28,"Correct",33,NA,NA
+3,"condition1","",12,2,2,"WH","","","FILL","RP","25","",NA,0.17,"Incorrect",34,NA,NA
+3,"condition1","",12,0,0,"WH","","","UG","RP","37","",NA,0.42,"Correct",35,NA,NA
+3,"condition1","",12,2,0,"WH","","","WH","RP","13","",NA,0.56,"Correct",36,NA,NA
+15,"condition1","",1,2,0,"WH","","","WH","GAP","24","",NA,0.66,"Correct",1,NA,NA
+15,"condition1","",1,2,0,"WH","","","FILL","GAP","36","",NA,0.99,"Correct",2,NA,NA
+15,"condition1","",1,3,3,"WH","","","UG","GAP","48","",NA,0.01,"Don't know",3,NA,NA
+15,"condition1","",2,1,0,"WH","","","UG","GAP","47","",NA,0.01,"Correct",4,NA,NA
+15,"condition1","",2,0,0,"WH","","","FILL","GAP","35","",NA,0.99,"Correct",5,NA,NA
+15,"condition1","",2,1,1,"WH","","","WH","GAP","23","",NA,0.9,"Incorrect",6,NA,NA
+15,"condition1","",3,2,0,"WH","","","WH","GAP","22","",NA,0.65,"Correct",7,NA,NA
+15,"condition1","",3,3,3,"WH","","","UG","GAP","46","",NA,0.02,"Don't know",8,NA,NA
+15,"condition1","",3,2,0,"WH","","","FILL","GAP","34","",NA,0.99,"Correct",9,NA,NA
+15,"condition1","",4,0,0,"WH","","","WH","GAP","21","",NA,0.88,"Correct",10,NA,NA
+15,"condition1","",4,3,3,"WH","","","UG","GAP","45","",NA,0.02,"Don't know",11,NA,NA
+15,"condition1","",4,1,0,"WH","","","FILL","GAP","33","",NA,0.98,"Correct",12,NA,NA
+15,"condition1","",5,3,3,"WH","","","UG","GAP","44","",NA,0.01,"Don't know",13,NA,NA
+15,"condition1","",5,0,0,"WH","","","WH","GAP","20","",NA,0.96,"Correct",14,NA,NA
+15,"condition1","",5,0,0,"WH","","","FILL","GAP","32","",NA,0.99,"Correct",15,NA,NA
+15,"condition1","",6,0,0,"WH","","","WH","GAP","19","",NA,0.89,"Correct",16,NA,NA
+15,"condition1","",6,2,0,"WH","","","FILL","GAP","31","",NA,0.98,"Correct",17,NA,NA
+15,"condition1","",6,3,3,"WH","","","UG","GAP","43","",NA,0.02,"Don't know",18,NA,NA
+15,"condition1","",7,3,3,"WH","","","UG","GAP","42","",NA,0.03,"Don't know",19,NA,NA
+15,"condition1","",7,2,0,"WH","","","FILL","GAP","30","",NA,0.98,"Correct",20,NA,NA
+15,"condition1","",7,1,0,"WH","","","WH","GAP","18","",NA,0.5,"Correct",21,NA,NA
+15,"condition1","",8,3,3,"WH","","","UG","GAP","41","",NA,0,"Don't know",22,NA,NA
+15,"condition1","",8,0,0,"WH","","","FILL","GAP","29","",NA,0.98,"Correct",23,NA,NA
+15,"condition1","",8,1,0,"WH","","","WH","GAP","17","",NA,0.99,"Correct",24,NA,NA
+15,"condition1","",9,3,3,"WH","","","UG","GAP","40","",NA,0,"Don't know",25,NA,NA
+15,"condition1","",9,0,0,"WH","","","WH","GAP","16","",NA,0.99,"Correct",26,NA,NA
+15,"condition1","",9,1,0,"WH","","","FILL","GAP","28","",NA,0.6,"Correct",27,NA,NA
+15,"condition1","",10,0,0,"WH","","","FILL","GAP","27","",NA,0.71,"Correct",28,NA,NA
+15,"condition1","",10,3,3,"WH","","","UG","GAP","39","",NA,0.01,"Don't know",29,NA,NA
+15,"condition1","",10,0,1,"WH","","","WH","GAP","15","",NA,0.75,"Incorrect",30,NA,NA
+15,"condition1","",11,3,3,"WH","","","UG","GAP","38","",NA,0.02,"Don't know",31,NA,NA
+15,"condition1","",11,1,0,"WH","","","WH","GAP","14","",NA,0.83,"Correct",32,NA,NA
+15,"condition1","",11,0,0,"WH","","","FILL","GAP","26","",NA,0.93,"Correct",33,NA,NA
+15,"condition1","",12,3,3,"WH","","","UG","GAP","37","",NA,0.03,"Don't know",34,NA,NA
+15,"condition1","",12,0,2,"WH","","","WH","GAP","13","",NA,0.99,"Incorrect",35,NA,NA
+15,"condition1","",12,0,0,"WH","","","FILL","GAP","25","",NA,1,"Correct",36,NA,NA
+2,"condition1","",1,0,1,"CNPC","","","CNPC","GAP","12","",NA,0.07,"Incorrect",1,NA,NA
+2,"condition1","",1,2,0,"CNPC","","","FILL","GAP","36","",NA,0.92,"Correct",2,NA,NA
+2,"condition1","",1,3,3,"CNPC","","","UG","GAP","48","",NA,0,"Don't know",3,NA,NA
+2,"condition1","",2,2,0,"CNPC","","","UG","GAP","47","",NA,0.27,"Correct",4,NA,NA
+2,"condition1","",2,0,0,"CNPC","","","FILL","GAP","35","",NA,1,"Correct",5,NA,NA
+2,"condition1","",2,2,0,"CNPC","","","CNPC","GAP","11","",NA,0.33,"Correct",6,NA,NA
+2,"condition1","",3,3,3,"CNPC","","","CNPC","GAP","10","",NA,0.7,"Don't know",7,NA,NA
+2,"condition1","",3,3,3,"CNPC","","","UG","GAP","46","",NA,0.15,"Don't know",8,NA,NA
+2,"condition1","",3,1,0,"CNPC","","","FILL","GAP","34","",NA,0.86,"Correct",9,NA,NA
+2,"condition1","",4,0,0,"CNPC","","","FILL","GAP","33","",NA,1,"Correct",10,NA,NA
+2,"condition1","",4,3,3,"CNPC","","","UG","GAP","45","",NA,0,"Don't know",11,NA,NA
+2,"condition1","",4,2,0,"CNPC","","","CNPC","GAP","9","",NA,0.42,"Correct",12,NA,NA
+2,"condition1","",5,2,1,"CNPC","","","CNPC","GAP","8","",NA,0.5,"Incorrect",13,NA,NA
+2,"condition1","",5,3,3,"CNPC","","","UG","GAP","44","",NA,0,"Don't know",14,NA,NA
+2,"condition1","",5,0,0,"CNPC","","","FILL","GAP","32","",NA,0.66,"Correct",15,NA,NA
+2,"condition1","",6,3,3,"CNPC","","","UG","GAP","43","",NA,0,"Don't know",16,NA,NA
+2,"condition1","",6,2,0,"CNPC","","","FILL","GAP","31","",NA,1,"Correct",17,NA,NA
+2,"condition1","",6,1,0,"CNPC","","","CNPC","GAP","7","",NA,0.58,"Correct",18,NA,NA
+2,"condition1","",7,2,0,"CNPC","","","FILL","GAP","30","",NA,1,"Correct",19,NA,NA
+2,"condition1","",7,3,3,"CNPC","","","CNPC","GAP","6","",NA,0.17,"Don't know",20,NA,NA
+2,"condition1","",7,0,1,"CNPC","","","UG","GAP","42","",NA,0.45,"Incorrect",21,NA,NA
+2,"condition1","",8,2,0,"CNPC","","","FILL","GAP","29","",NA,0.53,"Correct",22,NA,NA
+2,"condition1","",8,3,3,"CNPC","","","UG","GAP","41","",NA,0,"Don't know",23,NA,NA
+2,"condition1","",8,1,0,"CNPC","","","CNPC","GAP","5","",NA,0.34,"Correct",24,NA,NA
+2,"condition1","",9,1,0,"CNPC","","","FILL","GAP","28","",NA,0.55,"Correct",25,NA,NA
+2,"condition1","",9,0,0,"CNPC","","","CNPC","GAP","4","",NA,0.55,"Correct",26,NA,NA
+2,"condition1","",9,2,1,"CNPC","","","UG","GAP","40","",NA,0.54,"Incorrect",27,NA,NA
+2,"condition1","",10,3,3,"CNPC","","","UG","GAP","39","",NA,0,"Don't know",28,NA,NA
+2,"condition1","",10,1,0,"CNPC","","","FILL","GAP","27","",NA,0.83,"Correct",29,NA,NA
+2,"condition1","",10,0,2,"CNPC","","","CNPC","GAP","3","",NA,0.64,"Incorrect",30,NA,NA
+2,"condition1","",11,2,0,"CNPC","","","UG","GAP","38","",NA,0.69,"Correct",31,NA,NA
+2,"condition1","",11,2,0,"CNPC","","","CNPC","GAP","2","",NA,0.87,"Correct",32,NA,NA
+2,"condition1","",11,0,0,"CNPC","","","FILL","GAP","26","",NA,1,"Correct",33,NA,NA
+2,"condition1","",12,1,0,"CNPC","","","CNPC","GAP","1","",NA,0.92,"Correct",34,NA,NA
+2,"condition1","",12,0,2,"CNPC","","","FILL","GAP","25","",NA,1,"Incorrect",35,NA,NA
+2,"condition1","",12,3,3,"CNPC","","","UG","GAP","37","",NA,0,"Don't know",36,NA,NA
+11,"condition1","",1,1,1,"WH","","","UG","GAP","48","",NA,0.09,"Incorrect",1,NA,NA
+11,"condition1","",1,0,0,"WH","","","FILL","GAP","36","",NA,0.99,"Correct",2,NA,NA
+11,"condition1","",1,1,0,"WH","","","WH","GAP","24","",NA,0.1,"Correct",3,NA,NA
+11,"condition1","",2,3,3,"WH","","","UG","GAP","47","",NA,0,"Don't know",4,NA,NA
+11,"condition1","",2,1,0,"WH","","","WH","GAP","23","",NA,0.67,"Correct",5,NA,NA
+11,"condition1","",2,2,0,"WH","","","FILL","GAP","35","",NA,1,"Correct",6,NA,NA
+11,"condition1","",3,1,0,"WH","","","FILL","GAP","34","",NA,1,"Correct",7,NA,NA
+11,"condition1","",3,3,3,"WH","","","UG","GAP","46","",NA,0,"Don't know",8,NA,NA
+11,"condition1","",3,0,0,"WH","","","WH","GAP","22","",NA,0.76,"Correct",9,NA,NA
+11,"condition1","",4,3,3,"WH","","","UG","GAP","45","",NA,0,"Don't know",10,NA,NA
+11,"condition1","",4,2,0,"WH","","","WH","GAP","21","",NA,0.76,"Correct",11,NA,NA
+11,"condition1","",4,1,0,"WH","","","FILL","GAP","33","",NA,0.89,"Correct",12,NA,NA
+11,"condition1","",5,1,0,"WH","","","WH","GAP","20","",NA,0.81,"Correct",13,NA,NA
+11,"condition1","",5,3,3,"WH","","","UG","GAP","44","",NA,0,"Don't know",14,NA,NA
+11,"condition1","",5,1,0,"WH","","","FILL","GAP","32","",NA,1,"Correct",15,NA,NA
+11,"condition1","",6,2,0,"WH","","","FILL","GAP","31","",NA,0.85,"Correct",16,NA,NA
+11,"condition1","",6,3,3,"WH","","","UG","GAP","43","",NA,0,"Don't know",17,NA,NA
+11,"condition1","",6,0,1,"WH","","","WH","GAP","19","",NA,0.95,"Incorrect",18,NA,NA
+11,"condition1","",7,0,0,"WH","","","WH","GAP","18","",NA,0.11,"Correct",19,NA,NA
+11,"condition1","",7,1,0,"WH","","","FILL","GAP","30","",NA,1,"Correct",20,NA,NA
+11,"condition1","",7,3,3,"WH","","","UG","GAP","42","",NA,0,"Don't know",21,NA,NA
+11,"condition1","",8,2,0,"WH","","","WH","GAP","17","",NA,1,"Correct",22,NA,NA
+11,"condition1","",8,1,0,"WH","","","FILL","GAP","29","",NA,1,"Correct",23,NA,NA
+11,"condition1","",8,3,3,"WH","","","UG","GAP","41","",NA,0,"Don't know",24,NA,NA
+11,"condition1","",9,3,3,"WH","","","UG","GAP","40","",NA,0,"Don't know",25,NA,NA
+11,"condition1","",9,1,0,"WH","","","WH","GAP","16","",NA,0.79,"Correct",26,NA,NA
+11,"condition1","",9,2,0,"WH","","","FILL","GAP","28","",NA,0.82,"Correct",27,NA,NA
+11,"condition1","",10,3,3,"WH","","","UG","GAP","39","",NA,0,"Don't know",28,NA,NA
+11,"condition1","",10,1,0,"WH","","","WH","GAP","15","",NA,0.32,"Correct",29,NA,NA
+11,"condition1","",10,1,0,"WH","","","FILL","GAP","27","",NA,0.94,"Correct",30,NA,NA
+11,"condition1","",11,1,0,"WH","","","FILL","GAP","26","",NA,0.78,"Correct",31,NA,NA
+11,"condition1","",11,3,3,"WH","","","UG","GAP","38","",NA,0,"Don't know",32,NA,NA
+11,"condition1","",11,0,0,"WH","","","WH","GAP","14","",NA,0.71,"Correct",33,NA,NA
+11,"condition1","",12,2,0,"WH","","","FILL","GAP","25","",NA,0.81,"Correct",34,NA,NA
+11,"condition1","",12,3,3,"WH","","","UG","GAP","37","",NA,0,"Don't know",35,NA,NA
+11,"condition1","",12,1,2,"WH","","","WH","GAP","13","",NA,0.98,"Incorrect",36,NA,NA
