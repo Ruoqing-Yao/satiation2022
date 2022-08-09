@@ -109,7 +109,7 @@ console.log("final stimuli", final_stimuli_blocks);
 for(var i = 0; i < 8; i++){
     for (var j = 0; j < block_size; j++){
         
-        final_stimuli_blocks[i][j]["item_sequence"] = i * 8 + j + 1;
+        final_stimuli_blocks[i][j]["item_sequence"] = i * 3 + j + 1;
         final_stimuli_blocks[i][j]["new_block_sequence"] = i + 1;
         final_stimuli_blocks[i][j]["exp_sentence_type"] = experiment_sentence_type;
         final_stimuli_blocks[i][j]["exp_cxt_condition"] = experiment_condition;
