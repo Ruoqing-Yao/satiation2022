@@ -591,9 +591,11 @@ function make_slides(f) {
             "trial_sequence_total": order,
             "block_sequence": this.stim.new_block_sequence,
             "item_number": this.stim.item_number,
+            "item_sentence_type" : this.stim.sentence_type,
+            "item_context_condition" : this.stim.condition,
             // experiment-general fields
-            "sentence_type" : experiment_sentence_type,
-            "condition" : experiment_condition,
+            "tested_sentence_type" : experiment_sentence_type,
+            "tested_context_condition" : experiment_condition,
           });
           order = order + 1;
         }
