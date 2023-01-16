@@ -37,6 +37,8 @@ data=subset(data, is.element(workerid, practice_good_data$workerid))
 length(unique(data$workerid))
 
 
+
+
 #############################
 # Step 2: filter: no overlap of 95%CI of FILL and UNGRAM
 #############################
@@ -153,7 +155,7 @@ ggplot(d_no_fillers, aes(x=trial_sequence_total, y=rating_response, color = item
   geom_point(data=trial_means,alpha=.9) +
   xlab("trial sequence") +
   ylab("rating response")+
-  geom_smooth(method = glmer) +
+  geom_smooth(method = lmer) +
   scale_color_manual (values=cbPalette) +
   scale_fill_manual (values=cbPalette) +
   theme_bw()
@@ -167,22 +169,22 @@ ggplot(d_no_fillers, aes(x=trial_sequence_total, y=rating_response, color = item
 data_CNPC <- subset(d_no_fillers, experiment_condition == "CNPC") 
 data_WH <- subset(d_no_fillers, experiment_condition == "WH") 
 
-data_CNPC$block_sequence <- as.numeric(data_CNPC$block_sequence)
-data_WH$block_sequence <- as.numeric(data_WH$block_sequence)
+data_CNPC$block_sequence <- as.numeric(data_CNPC$trial_sequence_total)
+data_WH$block_sequence <- as.numeric(data_WH$trial_sequence_total)
 
 trial_means_CNPC = data_CNPC %>%
-  group_by(item_condition,item_group, block_sequence) %>%
+  group_by(item_condition,item_group, trial_sequence_total) %>%
   summarize(rating_response = mean(rating_response)) %>%
   ungroup()
 
 trial_means_WH = data_WH %>%
-  group_by(item_condition,item_group, block_sequence) %>%
+  group_by(item_condition,item_group, trial_sequence_total) %>%
   summarize(rating_response = mean(rating_response)) %>%
   ungroup()
 
 
 trial_means = trial_means %>%
-  group_by(test_condition, condition,phase, item_type, group, block_sequence, exposure_condition) %>%
+  group_by(test_condition, condition,phase, item_type, group, trial_sequence_total, exposure_condition) %>%
   summarize(response = mean(response)) %>%
   ungroup()
 
@@ -191,7 +193,7 @@ trial_means = trial_means %>%
 cbPalette = c("#e69d00", "#009e74","#d55e00",  "#cc79a7", "#0071b2")
 
 # CNPC acceptability satiation
-ggplot(data_CNPC, aes(x=block_sequence, y=rating_response, color = item_group, fill=item_group, linetype=item_condition)) +
+ggplot(data_CNPC, aes(x=trial_sequence_total, y=rating_response, color = item_group, fill=item_group, linetype=item_condition)) +
   geom_point(data=trial_means_CNPC,alpha=.9) +
   xlab("trial sequence") +
   ylab("acceptability")+
@@ -202,7 +204,7 @@ ggplot(data_CNPC, aes(x=block_sequence, y=rating_response, color = item_group, f
 
 
 # WH acceptability satiation
-ggplot(data_WH, aes(x=block_sequence, y=rating_response, color = item_group, fill=item_group, linetype=item_condition)) +
+ggplot(data_WH, aes(x=trial_sequence_total, y=rating_response, color = item_group, fill=item_group, linetype=item_condition)) +
   geom_point(data=trial_means_WH,alpha=.9) +
   xlab("trial sequence") +
   ylab("average acceptability")+

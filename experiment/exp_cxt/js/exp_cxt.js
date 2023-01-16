@@ -97,6 +97,7 @@ function pseudo_block(list1, list2, list3){
         block = shuffle(block);
         output.push(block);
     }
+    output = shuffle(output)
     return output;
 }
 

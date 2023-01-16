@@ -1,0 +1,841 @@
+"workerid","proliferate.condition","answer_of_comprehension","attention_answer","attention_correctness","block_sequence","choosed_choice","comprehension_response","condition","context_attempts","context_response","first_response_value","item_context_condition","item_number","item_sentence_type","item_type","rating","rating_response","response_correctness","tested_context_condition","tested_sentence_type","trial_sequence_total","wrong_attempts","error"
+573,"default","",0,"correct",1,2,0,"",NA,"","","NC","120","FILL","",NA,0.78,"Correct","NC","WH",1,NA,NA
+573,"default","",2,"Null",1,1,0,"",NA,"","","NC","128","UG","",NA,0.09,"Correct","NC","WH",2,NA,NA
+573,"default","",2,"Null",1,0,1,"",NA,"","","NC","12","WH","",NA,0.58,"Incorrect","NC","WH",3,NA,NA
+573,"default","",2,"Null",2,2,0,"",NA,"","","NC","119","FILL","",NA,0.82,"Correct","NC","WH",4,NA,NA
+573,"default","",2,"Null",2,3,3,"",NA,"","","NC","11","WH","",NA,0.18,"Don't know","NC","WH",5,NA,NA
+573,"default","",2,"Null",2,3,3,"",NA,"","","NC","127","UG","",NA,0,"Don't know","NC","WH",6,NA,NA
+573,"default","",2,"Null",3,0,1,"",NA,"","","NC","126","UG","",NA,0.14,"Incorrect","NC","WH",7,NA,NA
+573,"default","",2,"Null",3,0,0,"",NA,"","","NC","118","FILL","",NA,0.87,"Correct","NC","WH",8,NA,NA
+573,"default","",0,"correct",3,0,0,"",NA,"","","NC","10","WH","",NA,0.73,"Correct","NC","WH",9,NA,NA
+573,"default","",2,"Null",4,0,0,"",NA,"","","NC","9","WH","",NA,0.73,"Correct","NC","WH",10,NA,NA
+573,"default","",0,"correct",4,3,3,"",NA,"","","NC","125","UG","",NA,0.05,"Don't know","NC","WH",11,NA,NA
+573,"default","",1,"correct",4,1,0,"",NA,"","","NC","117","FILL","",NA,0.54,"Correct","NC","WH",12,NA,NA
+573,"default","",2,"Null",5,0,2,"",NA,"","","NC","8","WH","",NA,0.89,"Incorrect","NC","WH",13,NA,NA
+573,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0,"Don't know","NC","WH",14,NA,NA
+573,"default","",1,"correct",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.86,"Correct","NC","WH",15,NA,NA
+573,"default","",2,"Null",6,2,0,"",NA,"","","NC","123","UG","",NA,0.06,"Correct","NC","WH",16,NA,NA
+573,"default","",2,"Null",6,1,0,"",NA,"","","NC","7","WH","",NA,0.52,"Correct","NC","WH",17,NA,NA
+573,"default","",2,"Null",6,2,0,"",NA,"","","NC","115","FILL","",NA,0.88,"Correct","NC","WH",18,NA,NA
+573,"default","",2,"Null",7,2,0,"",NA,"","","NC","122","UG","",NA,0.02,"Correct","NC","WH",19,NA,NA
+573,"default","",2,"Null",7,3,3,"",NA,"","","NC","6","WH","",NA,0.89,"Don't know","NC","WH",20,NA,NA
+573,"default","",2,"Null",7,1,0,"",NA,"","","NC","114","FILL","",NA,0.57,"Correct","NC","WH",21,NA,NA
+573,"default","",2,"Null",8,2,0,"",NA,"","","NC","5","WH","",NA,0.63,"Correct","NC","WH",22,NA,NA
+573,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0.2,"Don't know","NC","WH",23,NA,NA
+573,"default","",0,"correct",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.81,"Correct","NC","WH",24,NA,NA
+613,"default","",1,"incorrect",1,2,0,"",NA,"","","NC","120","FILL","",NA,0.99,"Correct","NC","CNPC",1,NA,NA
+613,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0.01,"Don't know","NC","CNPC",2,NA,NA
+613,"default","",2,"Null",1,3,3,"",NA,"","","NC","12","CNPC","",NA,0,"Don't know","NC","CNPC",3,NA,NA
+613,"default","",2,"Null",2,0,2,"",NA,"","","NC","11","CNPC","",NA,0.9,"Incorrect","NC","CNPC",4,NA,NA
+613,"default","",2,"Null",2,3,3,"",NA,"","","NC","127","UG","",NA,0.01,"Don't know","NC","CNPC",5,NA,NA
+613,"default","",2,"Null",2,1,0,"",NA,"","","NC","119","FILL","",NA,0.99,"Correct","NC","CNPC",6,NA,NA
+613,"default","",0,"correct",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.98,"Correct","NC","CNPC",7,NA,NA
+613,"default","",0,"correct",3,2,0,"",NA,"","","NC","10","CNPC","",NA,0.6,"Correct","NC","CNPC",8,NA,NA
+613,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0,"Don't know","NC","CNPC",9,NA,NA
+613,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0.02,"Don't know","NC","CNPC",10,NA,NA
+613,"default","",1,"correct",4,1,0,"",NA,"","","NC","117","FILL","",NA,0.91,"Correct","NC","CNPC",11,NA,NA
+613,"default","",2,"Null",4,3,3,"",NA,"","","NC","9","CNPC","",NA,0.24,"Don't know","NC","CNPC",12,NA,NA
+613,"default","",2,"Null",5,1,0,"",NA,"","","NC","116","FILL","",NA,0.52,"Correct","NC","CNPC",13,NA,NA
+613,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0.07,"Don't know","NC","CNPC",14,NA,NA
+613,"default","",2,"Null",5,1,0,"",NA,"","","NC","8","CNPC","",NA,0.99,"Correct","NC","CNPC",15,NA,NA
+613,"default","",2,"Null",6,3,3,"",NA,"","","NC","7","CNPC","",NA,0.14,"Don't know","NC","CNPC",16,NA,NA
+613,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0.03,"Don't know","NC","CNPC",17,NA,NA
+613,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,0.94,"Correct","NC","CNPC",18,NA,NA
+613,"default","",2,"Null",7,1,0,"",NA,"","","NC","114","FILL","",NA,0.94,"Correct","NC","CNPC",19,NA,NA
+613,"default","",1,"correct",7,3,3,"",NA,"","","NC","6","CNPC","",NA,0.3,"Don't know","NC","CNPC",20,NA,NA
+613,"default","",2,"Null",7,2,0,"",NA,"","","NC","122","UG","",NA,0.09,"Correct","NC","CNPC",21,NA,NA
+613,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.83,"Correct","NC","CNPC",22,NA,NA
+613,"default","",1,"correct",8,3,3,"",NA,"","","NC","121","UG","",NA,0.02,"Don't know","NC","CNPC",23,NA,NA
+613,"default","",2,"Null",8,0,0,"",NA,"","","NC","5","CNPC","",NA,0.63,"Correct","NC","CNPC",24,NA,NA
+579,"default","",0,"correct",1,3,3,"",NA,"","","SC","128","UG","",NA,0,"Don't know","SC","CNPC",1,NA,NA
+579,"default","",2,"Null",1,1,0,"",NA,"","","SC","12","CNPC","",NA,0.39,"Correct","SC","CNPC",2,NA,NA
+579,"default","",2,"Null",1,0,0,"",NA,"","","SC","120","FILL","",NA,0.99,"Correct","SC","CNPC",3,NA,NA
+579,"default","",2,"Null",2,3,3,"",NA,"","","SC","127","UG","",NA,0,"Don't know","SC","CNPC",4,NA,NA
+579,"default","",2,"Null",2,0,2,"",NA,"","","SC","11","CNPC","",NA,0.45,"Incorrect","SC","CNPC",5,NA,NA
+579,"default","",1,"correct",2,0,0,"",NA,"","","SC","119","FILL","",NA,0.99,"Correct","SC","CNPC",6,NA,NA
+579,"default","",2,"Null",3,0,0,"",NA,"","","SC","126","UG","",NA,0,"Correct","SC","CNPC",7,NA,NA
+579,"default","",0,"correct",3,1,0,"",NA,"","","SC","118","FILL","",NA,0.98,"Correct","SC","CNPC",8,NA,NA
+579,"default","",2,"Null",3,1,1,"",NA,"","","SC","10","CNPC","",NA,0.62,"Incorrect","SC","CNPC",9,NA,NA
+579,"default","",1,"correct",4,1,0,"",NA,"","","SC","117","FILL","",NA,0.98,"Correct","SC","CNPC",10,NA,NA
+579,"default","",2,"Null",4,1,0,"",NA,"","","SC","9","CNPC","",NA,0.72,"Correct","SC","CNPC",11,NA,NA
+579,"default","",2,"Null",4,3,3,"",NA,"","","SC","125","UG","",NA,0.01,"Don't know","SC","CNPC",12,NA,NA
+579,"default","",2,"Null",5,1,1,"",NA,"","","SC","8","CNPC","",NA,0.89,"Incorrect","SC","CNPC",13,NA,NA
+579,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0.02,"Don't know","SC","CNPC",14,NA,NA
+579,"default","",2,"Null",5,2,0,"",NA,"","","SC","116","FILL","",NA,0.99,"Correct","SC","CNPC",15,NA,NA
+579,"default","",0,"correct",6,3,3,"",NA,"","","SC","123","UG","",NA,0.02,"Don't know","SC","CNPC",16,NA,NA
+579,"default","",2,"Null",6,1,0,"",NA,"","","SC","7","CNPC","",NA,0.97,"Correct","SC","CNPC",17,NA,NA
+579,"default","",0,"correct",6,2,0,"",NA,"","","SC","115","FILL","",NA,0.99,"Correct","SC","CNPC",18,NA,NA
+579,"default","",2,"Null",7,3,3,"",NA,"","","SC","6","CNPC","",NA,0.46,"Don't know","SC","CNPC",19,NA,NA
+579,"default","",2,"Null",7,0,0,"",NA,"","","SC","114","FILL","",NA,0.98,"Correct","SC","CNPC",20,NA,NA
+579,"default","",2,"Null",7,3,3,"",NA,"","","SC","122","UG","",NA,0,"Don't know","SC","CNPC",21,NA,NA
+579,"default","",2,"Null",8,2,0,"",NA,"","","SC","5","CNPC","",NA,0.52,"Correct","SC","CNPC",22,NA,NA
+579,"default","",2,"Null",8,1,0,"",NA,"","","SC","113","FILL","",NA,1,"Correct","SC","CNPC",23,NA,NA
+579,"default","",2,"Null",8,3,3,"",NA,"","","SC","121","UG","",NA,0.01,"Don't know","SC","CNPC",24,NA,NA
+602,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,1,"Correct","NC","WH",1,NA,NA
+602,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0.03,"Don't know","NC","WH",2,NA,NA
+602,"default","",2,"Null",1,3,3,"",NA,"","","NC","12","WH","",NA,0.06,"Don't know","NC","WH",3,NA,NA
+602,"default","",2,"Null",2,3,3,"",NA,"","","NC","127","UG","",NA,0.02,"Don't know","NC","WH",4,NA,NA
+602,"default","",2,"Null",2,0,2,"",NA,"","","NC","11","WH","",NA,0.08,"Incorrect","NC","WH",5,NA,NA
+602,"default","",2,"Null",2,1,0,"",NA,"","","NC","119","FILL","",NA,0.96,"Correct","NC","WH",6,NA,NA
+602,"default","",2,"Null",3,1,1,"",NA,"","","NC","126","UG","",NA,0.03,"Incorrect","NC","WH",7,NA,NA
+602,"default","",2,"Null",3,0,0,"",NA,"","","NC","10","WH","",NA,0.72,"Correct","NC","WH",8,NA,NA
+602,"default","",2,"Null",3,1,0,"",NA,"","","NC","118","FILL","",NA,0.99,"Correct","NC","WH",9,NA,NA
+602,"default","",2,"Null",4,1,0,"",NA,"","","NC","9","WH","",NA,0.44,"Correct","NC","WH",10,NA,NA
+602,"default","",2,"Null",4,2,0,"",NA,"","","NC","117","FILL","",NA,0.99,"Correct","NC","WH",11,NA,NA
+602,"default","",2,"Null",4,1,0,"",NA,"","","NC","125","UG","",NA,0,"Correct","NC","WH",12,NA,NA
+602,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0.02,"Don't know","NC","WH",13,NA,NA
+602,"default","",2,"Null",5,0,2,"",NA,"","","NC","8","WH","",NA,0,"Incorrect","NC","WH",14,NA,NA
+602,"default","",2,"Null",5,1,0,"",NA,"","","NC","116","FILL","",NA,0.09,"Correct","NC","WH",15,NA,NA
+602,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0.03,"Don't know","NC","WH",16,NA,NA
+602,"default","",2,"Null",6,3,3,"",NA,"","","NC","7","WH","",NA,0,"Don't know","NC","WH",17,NA,NA
+602,"default","",2,"Null",6,2,0,"",NA,"","","NC","115","FILL","",NA,0.98,"Correct","NC","WH",18,NA,NA
+602,"default","",1,"correct",7,0,0,"",NA,"","","NC","122","UG","",NA,0.01,"Correct","NC","WH",19,NA,NA
+602,"default","",1,"correct",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.97,"Correct","NC","WH",20,NA,NA
+602,"default","",1,"correct",7,3,3,"",NA,"","","NC","6","WH","",NA,0.12,"Don't know","NC","WH",21,NA,NA
+602,"default","",0,"correct",8,1,0,"",NA,"","","NC","5","WH","",NA,0.97,"Correct","NC","WH",22,NA,NA
+602,"default","",0,"correct",8,2,0,"",NA,"","","NC","113","FILL","",NA,1,"Correct","NC","WH",23,NA,NA
+602,"default","",1,"correct",8,3,3,"",NA,"","","NC","121","UG","",NA,0.02,"Don't know","NC","WH",24,NA,NA
+604,"default","",2,"Null",1,1,0,"",NA,"","","SC","12","CNPC","",NA,0.27,"Correct","SC","CNPC",1,NA,NA
+604,"default","",2,"Null",1,3,3,"",NA,"","","SC","128","UG","",NA,0,"Don't know","SC","CNPC",2,NA,NA
+604,"default","",2,"Null",1,1,0,"",NA,"","","SC","120","FILL","",NA,0.92,"Correct","SC","CNPC",3,NA,NA
+604,"default","",0,"correct",2,0,0,"",NA,"","","SC","11","CNPC","",NA,0,"Correct","SC","CNPC",4,NA,NA
+604,"default","",1,"correct",2,1,0,"",NA,"","","SC","119","FILL","",NA,0.16,"Correct","SC","CNPC",5,NA,NA
+604,"default","",0,"correct",2,2,0,"",NA,"","","SC","127","UG","",NA,0,"Correct","SC","CNPC",6,NA,NA
+604,"default","",2,"Null",3,2,0,"",NA,"","","SC","10","CNPC","",NA,0.24,"Correct","SC","CNPC",7,NA,NA
+604,"default","",2,"Null",3,1,0,"",NA,"","","SC","118","FILL","",NA,0.91,"Correct","SC","CNPC",8,NA,NA
+604,"default","",2,"Null",3,2,1,"",NA,"","","SC","126","UG","",NA,0,"Incorrect","SC","CNPC",9,NA,NA
+604,"default","",2,"Null",4,0,0,"",NA,"","","SC","125","UG","",NA,0,"Correct","SC","CNPC",10,NA,NA
+604,"default","",2,"Null",4,3,3,"",NA,"","","SC","117","FILL","",NA,0.96,"Don't know","SC","CNPC",11,NA,NA
+604,"default","",2,"Null",4,0,0,"",NA,"","","SC","9","CNPC","",NA,0.68,"Correct","SC","CNPC",12,NA,NA
+604,"default","",1,"correct",5,2,0,"",NA,"","","SC","116","FILL","",NA,0.8,"Correct","SC","CNPC",13,NA,NA
+604,"default","",2,"Null",5,1,2,"",NA,"","","SC","124","UG","",NA,0.2,"Incorrect","SC","CNPC",14,NA,NA
+604,"default","",2,"Null",5,0,1,"",NA,"","","SC","8","CNPC","",NA,0.8,"Incorrect","SC","CNPC",15,NA,NA
+604,"default","",2,"Null",6,0,0,"",NA,"","","SC","115","FILL","",NA,0.98,"Correct","SC","CNPC",16,NA,NA
+604,"default","",0,"correct",6,2,2,"",NA,"","","SC","123","UG","",NA,0.09,"Incorrect","SC","CNPC",17,NA,NA
+604,"default","",2,"Null",6,3,3,"",NA,"","","SC","7","CNPC","",NA,0.47,"Don't know","SC","CNPC",18,NA,NA
+604,"default","",2,"Null",7,3,3,"",NA,"","","SC","6","CNPC","",NA,0.23,"Don't know","SC","CNPC",19,NA,NA
+604,"default","",2,"Null",7,3,3,"",NA,"","","SC","114","FILL","",NA,0.9,"Don't know","SC","CNPC",20,NA,NA
+604,"default","",2,"Null",7,0,0,"",NA,"","","SC","122","UG","",NA,0.13,"Correct","SC","CNPC",21,NA,NA
+604,"default","",1,"correct",8,0,0,"",NA,"","","SC","121","UG","",NA,0.08,"Correct","SC","CNPC",22,NA,NA
+604,"default","",2,"Null",8,2,0,"",NA,"","","SC","5","CNPC","",NA,0.89,"Correct","SC","CNPC",23,NA,NA
+604,"default","",2,"Null",8,2,0,"",NA,"","","SC","113","FILL","",NA,0.89,"Correct","SC","CNPC",24,NA,NA
+623,"default","",2,"Null",1,0,0,"",NA,"","","NC","12","WH","",NA,0.3,"Correct","NC","WH",1,NA,NA
+623,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",2,NA,NA
+623,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,1,"Correct","NC","WH",3,NA,NA
+623,"default","",2,"Null",2,0,0,"",NA,"","","NC","119","FILL","",NA,0.94,"Correct","NC","WH",4,NA,NA
+623,"default","",2,"Null",2,3,3,"",NA,"","","NC","127","UG","",NA,0.01,"Don't know","NC","WH",5,NA,NA
+623,"default","",0,"correct",2,1,2,"",NA,"","","NC","11","WH","",NA,0.37,"Incorrect","NC","WH",6,NA,NA
+623,"default","",2,"Null",3,2,0,"",NA,"","","NC","10","WH","",NA,0.41,"Correct","NC","WH",7,NA,NA
+623,"default","",2,"Null",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.87,"Correct","NC","WH",8,NA,NA
+623,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0,"Don't know","NC","WH",9,NA,NA
+623,"default","",2,"Null",4,2,0,"",NA,"","","NC","117","FILL","",NA,0.72,"Correct","NC","WH",10,NA,NA
+623,"default","",0,"correct",4,3,3,"",NA,"","","NC","125","UG","",NA,0,"Don't know","NC","WH",11,NA,NA
+623,"default","",2,"Null",4,2,1,"",NA,"","","NC","9","WH","",NA,0.71,"Incorrect","NC","WH",12,NA,NA
+623,"default","",0,"correct",5,0,0,"",NA,"","","NC","8","WH","",NA,0.97,"Correct","NC","WH",13,NA,NA
+623,"default","",2,"Null",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.7,"Correct","NC","WH",14,NA,NA
+623,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0.02,"Don't know","NC","WH",15,NA,NA
+623,"default","",0,"correct",6,3,3,"",NA,"","","NC","123","UG","",NA,0,"Don't know","NC","WH",16,NA,NA
+623,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,1,"Correct","NC","WH",17,NA,NA
+623,"default","",2,"Null",6,2,0,"",NA,"","","NC","7","WH","",NA,0.77,"Correct","NC","WH",18,NA,NA
+623,"default","",2,"Null",7,3,3,"",NA,"","","NC","122","UG","",NA,0,"Don't know","NC","WH",19,NA,NA
+623,"default","",1,"correct",7,3,3,"",NA,"","","NC","6","WH","",NA,1,"Don't know","NC","WH",20,NA,NA
+623,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,1,"Correct","NC","WH",21,NA,NA
+623,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0,"Don't know","NC","WH",22,NA,NA
+623,"default","",2,"Null",8,0,0,"",NA,"","","NC","113","FILL","",NA,1,"Correct","NC","WH",23,NA,NA
+623,"default","",0,"correct",8,2,0,"",NA,"","","NC","5","WH","",NA,1,"Correct","NC","WH",24,NA,NA
+609,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,0.92,"Correct","NC","WH",1,NA,NA
+609,"default","",0,"correct",1,0,2,"",NA,"","","NC","12","WH","",NA,0.42,"Incorrect","NC","WH",2,NA,NA
+609,"default","",2,"Null",1,1,0,"",NA,"","","NC","128","UG","",NA,0.13,"Correct","NC","WH",3,NA,NA
+609,"default","",2,"Null",2,0,2,"",NA,"","","NC","11","WH","",NA,0.4,"Incorrect","NC","WH",4,NA,NA
+609,"default","",1,"correct",2,1,0,"",NA,"","","NC","119","FILL","",NA,0.59,"Correct","NC","WH",5,NA,NA
+609,"default","",2,"Null",2,1,0,"",NA,"","","NC","127","UG","",NA,0.08,"Correct","NC","WH",6,NA,NA
+609,"default","",2,"Null",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.54,"Correct","NC","WH",7,NA,NA
+609,"default","",1,"correct",3,0,1,"",NA,"","","NC","126","UG","",NA,0.01,"Incorrect","NC","WH",8,NA,NA
+609,"default","",2,"Null",3,0,0,"",NA,"","","NC","10","WH","",NA,0.54,"Correct","NC","WH",9,NA,NA
+609,"default","",2,"Null",4,0,0,"",NA,"","","NC","117","FILL","",NA,0.3,"Correct","NC","WH",10,NA,NA
+609,"default","",2,"Null",4,1,0,"",NA,"","","NC","125","UG","",NA,0.01,"Correct","NC","WH",11,NA,NA
+609,"default","",0,"correct",4,0,0,"",NA,"","","NC","9","WH","",NA,0.06,"Correct","NC","WH",12,NA,NA
+609,"default","",2,"Null",5,0,1,"",NA,"","","NC","124","UG","",NA,0.07,"Incorrect","NC","WH",13,NA,NA
+609,"default","",2,"Null",5,2,1,"",NA,"","","NC","8","WH","",NA,0.01,"Incorrect","NC","WH",14,NA,NA
+609,"default","",2,"Null",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.57,"Correct","NC","WH",15,NA,NA
+609,"default","",2,"Null",6,0,2,"",NA,"","","NC","123","UG","",NA,0.24,"Incorrect","NC","WH",16,NA,NA
+609,"default","",2,"Null",6,1,0,"",NA,"","","NC","7","WH","",NA,0.61,"Correct","NC","WH",17,NA,NA
+609,"default","",2,"Null",6,0,0,"",NA,"","","NC","115","FILL","",NA,0.61,"Correct","NC","WH",18,NA,NA
+609,"default","",0,"incorrect",7,3,3,"",NA,"","","NC","6","WH","",NA,0.58,"Don't know","NC","WH",19,NA,NA
+609,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.63,"Correct","NC","WH",20,NA,NA
+609,"default","",2,"Null",7,1,0,"",NA,"","","NC","122","UG","",NA,0.36,"Correct","NC","WH",21,NA,NA
+609,"default","",0,"correct",8,3,3,"",NA,"","","NC","113","FILL","",NA,0.59,"Don't know","NC","WH",22,NA,NA
+609,"default","",2,"Null",8,0,0,"",NA,"","","NC","121","UG","",NA,0.01,"Correct","NC","WH",23,NA,NA
+609,"default","",2,"Null",8,0,2,"",NA,"","","NC","5","WH","",NA,0.73,"Incorrect","NC","WH",24,NA,NA
+622,"default","",0,"correct",1,3,3,"",NA,"","","SC","12","WH","",NA,0.21,"Don't know","SC","WH",1,NA,NA
+622,"default","",2,"Null",1,1,0,"",NA,"","","SC","120","FILL","",NA,0.64,"Correct","SC","WH",2,NA,NA
+622,"default","",2,"Null",1,3,3,"",NA,"","","SC","128","UG","",NA,0.01,"Don't know","SC","WH",3,NA,NA
+622,"default","",2,"Null",2,2,0,"",NA,"","","SC","11","WH","",NA,0.34,"Correct","SC","WH",4,NA,NA
+622,"default","",2,"Null",2,2,0,"",NA,"","","SC","119","FILL","",NA,0.61,"Correct","SC","WH",5,NA,NA
+622,"default","",2,"Null",2,3,3,"",NA,"","","SC","127","UG","",NA,0,"Don't know","SC","WH",6,NA,NA
+622,"default","",2,"Null",3,1,0,"",NA,"","","SC","10","WH","",NA,0.46,"Correct","SC","WH",7,NA,NA
+622,"default","",2,"Null",3,0,0,"",NA,"","","SC","118","FILL","",NA,0.82,"Correct","SC","WH",8,NA,NA
+622,"default","",2,"Null",3,3,3,"",NA,"","","SC","126","UG","",NA,0.01,"Don't know","SC","WH",9,NA,NA
+622,"default","",0,"correct",4,1,0,"",NA,"","","SC","9","WH","",NA,0.59,"Correct","SC","WH",10,NA,NA
+622,"default","",2,"Null",4,3,3,"",NA,"","","SC","125","UG","",NA,0.02,"Don't know","SC","WH",11,NA,NA
+622,"default","",2,"Null",4,2,0,"",NA,"","","SC","117","FILL","",NA,0.94,"Correct","SC","WH",12,NA,NA
+622,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0,"Don't know","SC","WH",13,NA,NA
+622,"default","",2,"Null",5,2,0,"",NA,"","","SC","116","FILL","",NA,0.52,"Correct","SC","WH",14,NA,NA
+622,"default","",0,"correct",5,1,2,"",NA,"","","SC","8","WH","",NA,0.68,"Incorrect","SC","WH",15,NA,NA
+622,"default","",2,"Null",6,0,0,"",NA,"","","SC","115","FILL","",NA,0.88,"Correct","SC","WH",16,NA,NA
+622,"default","",2,"Null",6,0,1,"",NA,"","","SC","7","WH","",NA,0.49,"Incorrect","SC","WH",17,NA,NA
+622,"default","",0,"correct",6,3,3,"",NA,"","","SC","123","UG","",NA,0.01,"Don't know","SC","WH",18,NA,NA
+622,"default","",2,"Null",7,1,0,"",NA,"","","SC","6","WH","",NA,0.99,"Correct","SC","WH",19,NA,NA
+622,"default","",2,"Null",7,2,0,"",NA,"","","SC","114","FILL","",NA,0.82,"Correct","SC","WH",20,NA,NA
+622,"default","",2,"Null",7,3,3,"",NA,"","","SC","122","UG","",NA,0,"Don't know","SC","WH",21,NA,NA
+622,"default","",0,"correct",8,2,0,"",NA,"","","SC","5","WH","",NA,0.98,"Correct","SC","WH",22,NA,NA
+622,"default","",1,"correct",8,3,3,"",NA,"","","SC","121","UG","",NA,0.01,"Don't know","SC","WH",23,NA,NA
+622,"default","",2,"Null",8,1,0,"",NA,"","","SC","113","FILL","",NA,0.97,"Correct","SC","WH",24,NA,NA
+591,"default","",0,"correct",1,1,1,"",NA,"","","SC","12","CNPC","",NA,0.23,"Incorrect","SC","CNPC",1,NA,NA
+591,"default","",0,"correct",1,2,0,"",NA,"","","SC","128","UG","",NA,0,"Correct","SC","CNPC",2,NA,NA
+591,"default","",2,"Null",1,0,0,"",NA,"","","SC","120","FILL","",NA,1,"Correct","SC","CNPC",3,NA,NA
+591,"default","",2,"Null",2,2,0,"",NA,"","","SC","119","FILL","",NA,0.84,"Correct","SC","CNPC",4,NA,NA
+591,"default","",2,"Null",2,1,0,"",NA,"","","SC","11","CNPC","",NA,0.27,"Correct","SC","CNPC",5,NA,NA
+591,"default","",2,"Null",2,0,0,"",NA,"","","SC","127","UG","",NA,0,"Correct","SC","CNPC",6,NA,NA
+591,"default","",2,"Null",3,1,0,"",NA,"","","SC","10","CNPC","",NA,0.31,"Correct","SC","CNPC",7,NA,NA
+591,"default","",2,"Null",3,0,0,"",NA,"","","SC","126","UG","",NA,0,"Correct","SC","CNPC",8,NA,NA
+591,"default","",2,"Null",3,1,0,"",NA,"","","SC","118","FILL","",NA,1,"Correct","SC","CNPC",9,NA,NA
+591,"default","",0,"correct",4,1,0,"",NA,"","","SC","9","CNPC","",NA,0.72,"Correct","SC","CNPC",10,NA,NA
+591,"default","",2,"Null",4,1,0,"",NA,"","","SC","125","UG","",NA,0,"Correct","SC","CNPC",11,NA,NA
+591,"default","",1,"correct",4,0,0,"",NA,"","","SC","117","FILL","",NA,0.22,"Correct","SC","CNPC",12,NA,NA
+591,"default","",2,"Null",5,1,2,"",NA,"","","SC","124","UG","",NA,0,"Incorrect","SC","CNPC",13,NA,NA
+591,"default","",1,"correct",5,0,0,"",NA,"","","SC","116","FILL","",NA,0.76,"Correct","SC","CNPC",14,NA,NA
+591,"default","",2,"Null",5,2,0,"",NA,"","","SC","8","CNPC","",NA,0.5,"Correct","SC","CNPC",15,NA,NA
+591,"default","",0,"correct",6,1,0,"",NA,"","","SC","123","UG","",NA,0,"Correct","SC","CNPC",16,NA,NA
+591,"default","",2,"Null",6,0,0,"",NA,"","","SC","7","CNPC","",NA,0.77,"Correct","SC","CNPC",17,NA,NA
+591,"default","",2,"Null",6,2,0,"",NA,"","","SC","115","FILL","",NA,1,"Correct","SC","CNPC",18,NA,NA
+591,"default","",2,"Null",7,1,0,"",NA,"","","SC","6","CNPC","",NA,0.49,"Correct","SC","CNPC",19,NA,NA
+591,"default","",2,"Null",7,2,0,"",NA,"","","SC","122","UG","",NA,0,"Correct","SC","CNPC",20,NA,NA
+591,"default","",2,"Null",7,2,0,"",NA,"","","SC","114","FILL","",NA,1,"Correct","SC","CNPC",21,NA,NA
+591,"default","",2,"Null",8,2,0,"",NA,"","","SC","5","CNPC","",NA,0.47,"Correct","SC","CNPC",22,NA,NA
+591,"default","",2,"Null",8,1,0,"",NA,"","","SC","113","FILL","",NA,0.87,"Correct","SC","CNPC",23,NA,NA
+591,"default","",2,"Null",8,2,0,"",NA,"","","SC","121","UG","",NA,0,"Correct","SC","CNPC",24,NA,NA
+605,"default","",0,"correct",1,3,3,"",NA,"","","SC","128","UG","",NA,0,"Don't know","SC","CNPC",1,NA,NA
+605,"default","",0,"correct",1,1,0,"",NA,"","","SC","120","FILL","",NA,1,"Correct","SC","CNPC",2,NA,NA
+605,"default","",2,"Null",1,1,0,"",NA,"","","SC","12","CNPC","",NA,0.18,"Correct","SC","CNPC",3,NA,NA
+605,"default","",2,"Null",2,1,0,"",NA,"","","SC","119","FILL","",NA,0.64,"Correct","SC","CNPC",4,NA,NA
+605,"default","",2,"Null",2,1,0,"",NA,"","","SC","11","CNPC","",NA,0.35,"Correct","SC","CNPC",5,NA,NA
+605,"default","",2,"Null",2,3,3,"",NA,"","","SC","127","UG","",NA,0,"Don't know","SC","CNPC",6,NA,NA
+605,"default","",2,"Null",3,0,0,"",NA,"","","SC","126","UG","",NA,0,"Correct","SC","CNPC",7,NA,NA
+605,"default","",2,"Null",3,1,0,"",NA,"","","SC","118","FILL","",NA,1,"Correct","SC","CNPC",8,NA,NA
+605,"default","",2,"Null",3,0,1,"",NA,"","","SC","10","CNPC","",NA,0.5,"Incorrect","SC","CNPC",9,NA,NA
+605,"default","",0,"correct",4,2,2,"",NA,"","","SC","9","CNPC","",NA,0.48,"Incorrect","SC","CNPC",10,NA,NA
+605,"default","",2,"Null",4,0,0,"",NA,"","","SC","117","FILL","",NA,1,"Correct","SC","CNPC",11,NA,NA
+605,"default","",2,"Null",4,3,3,"",NA,"","","SC","125","UG","",NA,0,"Don't know","SC","CNPC",12,NA,NA
+605,"default","",1,"correct",5,1,0,"",NA,"","","SC","116","FILL","",NA,1,"Correct","SC","CNPC",13,NA,NA
+605,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0,"Don't know","SC","CNPC",14,NA,NA
+605,"default","",1,"incorrect",5,1,1,"",NA,"","","SC","8","CNPC","",NA,0.84,"Incorrect","SC","CNPC",15,NA,NA
+605,"default","",2,"Null",6,1,1,"",NA,"","","SC","115","FILL","",NA,1,"Incorrect","SC","CNPC",16,NA,NA
+605,"default","",2,"Null",6,1,0,"",NA,"","","SC","7","CNPC","",NA,0.49,"Correct","SC","CNPC",17,NA,NA
+605,"default","",2,"Null",6,3,3,"",NA,"","","SC","123","UG","",NA,0,"Don't know","SC","CNPC",18,NA,NA
+605,"default","",1,"correct",7,0,0,"",NA,"","","SC","122","UG","",NA,0,"Correct","SC","CNPC",19,NA,NA
+605,"default","",2,"Null",7,0,0,"",NA,"","","SC","114","FILL","",NA,1,"Correct","SC","CNPC",20,NA,NA
+605,"default","",2,"Null",7,1,0,"",NA,"","","SC","6","CNPC","",NA,0.8,"Correct","SC","CNPC",21,NA,NA
+605,"default","",2,"Null",8,2,0,"",NA,"","","SC","121","UG","",NA,0.07,"Correct","SC","CNPC",22,NA,NA
+605,"default","",2,"Null",8,0,0,"",NA,"","","SC","113","FILL","",NA,0.35,"Correct","SC","CNPC",23,NA,NA
+605,"default","",2,"Null",8,0,0,"",NA,"","","SC","5","CNPC","",NA,0.11,"Correct","SC","CNPC",24,NA,NA
+575,"default","",0,"correct",1,3,3,"",NA,"","","NC","128","UG","",NA,0.01,"Don't know","NC","WH",1,NA,NA
+575,"default","",1,"incorrect",1,0,0,"",NA,"","","NC","120","FILL","",NA,0.98,"Correct","NC","WH",2,NA,NA
+575,"default","",0,"correct",1,0,0,"",NA,"","","NC","12","WH","",NA,0.33,"Correct","NC","WH",3,NA,NA
+575,"default","",2,"Null",2,2,0,"",NA,"","","NC","127","UG","",NA,0.01,"Correct","NC","WH",4,NA,NA
+575,"default","",2,"Null",2,0,2,"",NA,"","","NC","119","FILL","",NA,0.83,"Incorrect","NC","WH",5,NA,NA
+575,"default","",2,"Null",2,1,0,"",NA,"","","NC","11","WH","",NA,0.49,"Correct","NC","WH",6,NA,NA
+575,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0.04,"Don't know","NC","WH",7,NA,NA
+575,"default","",2,"Null",3,2,0,"",NA,"","","NC","10","WH","",NA,0.25,"Correct","NC","WH",8,NA,NA
+575,"default","",0,"correct",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.99,"Correct","NC","WH",9,NA,NA
+575,"default","",2,"Null",4,0,0,"",NA,"","","NC","117","FILL","",NA,0.97,"Correct","NC","WH",10,NA,NA
+575,"default","",0,"correct",4,3,3,"",NA,"","","NC","125","UG","",NA,0,"Don't know","NC","WH",11,NA,NA
+575,"default","",2,"Null",4,0,0,"",NA,"","","NC","9","WH","",NA,0.98,"Correct","NC","WH",12,NA,NA
+575,"default","",2,"Null",5,1,0,"",NA,"","","NC","116","FILL","",NA,0.74,"Correct","NC","WH",13,NA,NA
+575,"default","",0,"correct",5,3,3,"",NA,"","","NC","124","UG","",NA,0.02,"Don't know","NC","WH",14,NA,NA
+575,"default","",2,"Null",5,1,1,"",NA,"","","NC","8","WH","",NA,0.95,"Incorrect","NC","WH",15,NA,NA
+575,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0.01,"Don't know","NC","WH",16,NA,NA
+575,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,0.95,"Correct","NC","WH",17,NA,NA
+575,"default","",2,"Null",6,0,1,"",NA,"","","NC","7","WH","",NA,0.95,"Incorrect","NC","WH",18,NA,NA
+575,"default","",2,"Null",7,3,3,"",NA,"","","NC","122","UG","",NA,0.01,"Don't know","NC","WH",19,NA,NA
+575,"default","",2,"Null",7,3,3,"",NA,"","","NC","6","WH","",NA,0.69,"Don't know","NC","WH",20,NA,NA
+575,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.47,"Correct","NC","WH",21,NA,NA
+575,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0.01,"Don't know","NC","WH",22,NA,NA
+575,"default","",2,"Null",8,0,0,"",NA,"","","NC","5","WH","",NA,0.97,"Correct","NC","WH",23,NA,NA
+575,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.87,"Correct","NC","WH",24,NA,NA
+571,"default","",2,"Null",1,3,3,"",NA,"","","SC","128","UG","",NA,0,"Don't know","SC","CNPC",1,NA,NA
+571,"default","",0,"correct",1,0,1,"",NA,"","","SC","12","CNPC","",NA,0.6,"Incorrect","SC","CNPC",2,NA,NA
+571,"default","",2,"Null",1,1,0,"",NA,"","","SC","120","FILL","",NA,0.91,"Correct","SC","CNPC",3,NA,NA
+571,"default","",0,"correct",2,3,3,"",NA,"","","SC","127","UG","",NA,0.01,"Don't know","SC","CNPC",4,NA,NA
+571,"default","",2,"Null",2,0,0,"",NA,"","","SC","119","FILL","",NA,0.79,"Correct","SC","CNPC",5,NA,NA
+571,"default","",2,"Null",2,1,0,"",NA,"","","SC","11","CNPC","",NA,0.25,"Correct","SC","CNPC",6,NA,NA
+571,"default","",2,"Null",3,0,0,"",NA,"","","SC","118","FILL","",NA,0.55,"Correct","SC","CNPC",7,NA,NA
+571,"default","",1,"correct",3,0,0,"",NA,"","","SC","126","UG","",NA,0.04,"Correct","SC","CNPC",8,NA,NA
+571,"default","",2,"Null",3,0,1,"",NA,"","","SC","10","CNPC","",NA,0.69,"Incorrect","SC","CNPC",9,NA,NA
+571,"default","",2,"Null",4,3,3,"",NA,"","","SC","125","UG","",NA,0.17,"Don't know","SC","CNPC",10,NA,NA
+571,"default","",2,"Null",4,0,2,"",NA,"","","SC","9","CNPC","",NA,0.8,"Incorrect","SC","CNPC",11,NA,NA
+571,"default","",2,"Null",4,2,0,"",NA,"","","SC","117","FILL","",NA,0.65,"Correct","SC","CNPC",12,NA,NA
+571,"default","",1,"correct",5,1,0,"",NA,"","","SC","116","FILL","",NA,0.6,"Correct","SC","CNPC",13,NA,NA
+571,"default","",2,"Null",5,2,1,"",NA,"","","SC","8","CNPC","",NA,0.74,"Incorrect","SC","CNPC",14,NA,NA
+571,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0.15,"Don't know","SC","CNPC",15,NA,NA
+571,"default","",2,"Null",6,3,3,"",NA,"","","SC","123","UG","",NA,0.19,"Don't know","SC","CNPC",16,NA,NA
+571,"default","",2,"Null",6,2,0,"",NA,"","","SC","7","CNPC","",NA,0.72,"Correct","SC","CNPC",17,NA,NA
+571,"default","",2,"Null",6,0,0,"",NA,"","","SC","115","FILL","",NA,0.84,"Correct","SC","CNPC",18,NA,NA
+571,"default","",1,"correct",7,1,0,"",NA,"","","SC","122","UG","",NA,0.16,"Correct","SC","CNPC",19,NA,NA
+571,"default","",1,"correct",7,3,3,"",NA,"","","SC","6","CNPC","",NA,0.66,"Don't know","SC","CNPC",20,NA,NA
+571,"default","",2,"Null",7,2,0,"",NA,"","","SC","114","FILL","",NA,0.83,"Correct","SC","CNPC",21,NA,NA
+571,"default","",2,"Null",8,1,0,"",NA,"","","SC","113","FILL","",NA,0.8,"Correct","SC","CNPC",22,NA,NA
+571,"default","",2,"Null",8,3,3,"",NA,"","","SC","121","UG","",NA,0.22,"Don't know","SC","CNPC",23,NA,NA
+571,"default","",2,"Null",8,1,0,"",NA,"","","SC","5","CNPC","",NA,0.78,"Correct","SC","CNPC",24,NA,NA
+600,"default","",0,"correct",1,1,0,"",NA,"","","NC","120","FILL","",NA,1,"Correct","NC","WH",1,NA,NA
+600,"default","",0,"correct",1,3,3,"",NA,"","","NC","12","WH","",NA,0.05,"Don't know","NC","WH",2,NA,NA
+600,"default","",0,"correct",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",3,NA,NA
+600,"default","",0,"correct",2,3,3,"",NA,"","","NC","127","UG","",NA,0,"Don't know","NC","WH",4,NA,NA
+600,"default","",2,"Null",2,0,2,"",NA,"","","NC","11","WH","",NA,0.17,"Incorrect","NC","WH",5,NA,NA
+600,"default","",1,"correct",2,0,0,"",NA,"","","NC","119","FILL","",NA,0.96,"Correct","NC","WH",6,NA,NA
+600,"default","",0,"correct",3,1,0,"",NA,"","","NC","118","FILL","",NA,1,"Correct","NC","WH",7,NA,NA
+600,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0,"Don't know","NC","WH",8,NA,NA
+600,"default","",2,"Null",3,0,0,"",NA,"","","NC","10","WH","",NA,0.67,"Correct","NC","WH",9,NA,NA
+600,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0,"Don't know","NC","WH",10,NA,NA
+600,"default","",2,"Null",4,2,0,"",NA,"","","NC","9","WH","",NA,0.68,"Correct","NC","WH",11,NA,NA
+600,"default","",2,"Null",4,1,0,"",NA,"","","NC","117","FILL","",NA,0.89,"Correct","NC","WH",12,NA,NA
+600,"default","",2,"Null",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.73,"Correct","NC","WH",13,NA,NA
+600,"default","",2,"Null",5,1,0,"",NA,"","","NC","8","WH","",NA,0.67,"Correct","NC","WH",14,NA,NA
+600,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0,"Don't know","NC","WH",15,NA,NA
+600,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0,"Don't know","NC","WH",16,NA,NA
+600,"default","",2,"Null",6,2,0,"",NA,"","","NC","7","WH","",NA,0.82,"Correct","NC","WH",17,NA,NA
+600,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,0.97,"Correct","NC","WH",18,NA,NA
+600,"default","",2,"Null",7,0,0,"",NA,"","","NC","6","WH","",NA,1,"Correct","NC","WH",19,NA,NA
+600,"default","",2,"Null",7,3,3,"",NA,"","","NC","122","UG","",NA,0,"Don't know","NC","WH",20,NA,NA
+600,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.63,"Correct","NC","WH",21,NA,NA
+600,"default","",2,"Null",8,2,0,"",NA,"","","NC","5","WH","",NA,1,"Correct","NC","WH",22,NA,NA
+600,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0,"Don't know","NC","WH",23,NA,NA
+600,"default","",2,"Null",8,2,0,"",NA,"","","NC","113","FILL","",NA,0.86,"Correct","NC","WH",24,NA,NA
+603,"default","",2,"Null",1,3,3,"",NA,"","","SC","128","UG","",NA,0.11,"Don't know","SC","CNPC",1,NA,NA
+603,"default","",0,"correct",1,0,1,"",NA,"","","SC","12","CNPC","",NA,0.27,"Incorrect","SC","CNPC",2,NA,NA
+603,"default","",0,"correct",1,2,0,"",NA,"","","SC","120","FILL","",NA,0.85,"Correct","SC","CNPC",3,NA,NA
+603,"default","",1,"correct",2,1,0,"",NA,"","","SC","119","FILL","",NA,0.8,"Correct","SC","CNPC",4,NA,NA
+603,"default","",2,"Null",2,3,3,"",NA,"","","SC","11","CNPC","",NA,0.58,"Don't know","SC","CNPC",5,NA,NA
+603,"default","",2,"Null",2,2,0,"",NA,"","","SC","127","UG","",NA,0.29,"Correct","SC","CNPC",6,NA,NA
+603,"default","",0,"correct",3,0,0,"",NA,"","","SC","10","CNPC","",NA,0.78,"Correct","SC","CNPC",7,NA,NA
+603,"default","",2,"Null",3,0,0,"",NA,"","","SC","126","UG","",NA,0.26,"Correct","SC","CNPC",8,NA,NA
+603,"default","",2,"Null",3,1,0,"",NA,"","","SC","118","FILL","",NA,0.66,"Correct","SC","CNPC",9,NA,NA
+603,"default","",2,"Null",4,1,0,"",NA,"","","SC","117","FILL","",NA,0.72,"Correct","SC","CNPC",10,NA,NA
+603,"default","",2,"Null",4,1,2,"",NA,"","","SC","9","CNPC","",NA,0.64,"Incorrect","SC","CNPC",11,NA,NA
+603,"default","",2,"Null",4,0,0,"",NA,"","","SC","125","UG","",NA,0.28,"Correct","SC","CNPC",12,NA,NA
+603,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0.23,"Don't know","SC","CNPC",13,NA,NA
+603,"default","",2,"Null",5,2,0,"",NA,"","","SC","116","FILL","",NA,0.6,"Correct","SC","CNPC",14,NA,NA
+603,"default","",2,"Null",5,0,1,"",NA,"","","SC","8","CNPC","",NA,0.66,"Incorrect","SC","CNPC",15,NA,NA
+603,"default","",2,"Null",6,1,0,"",NA,"","","SC","115","FILL","",NA,0.94,"Correct","SC","CNPC",16,NA,NA
+603,"default","",0,"correct",6,3,3,"",NA,"","","SC","123","UG","",NA,0.1,"Don't know","SC","CNPC",17,NA,NA
+603,"default","",2,"Null",6,0,1,"",NA,"","","SC","7","CNPC","",NA,0.9,"Incorrect","SC","CNPC",18,NA,NA
+603,"default","",2,"Null",7,3,3,"",NA,"","","SC","6","CNPC","",NA,0.82,"Don't know","SC","CNPC",19,NA,NA
+603,"default","",2,"Null",7,1,0,"",NA,"","","SC","122","UG","",NA,0.24,"Correct","SC","CNPC",20,NA,NA
+603,"default","",2,"Null",7,2,0,"",NA,"","","SC","114","FILL","",NA,0.76,"Correct","SC","CNPC",21,NA,NA
+603,"default","",2,"Null",8,1,0,"",NA,"","","SC","5","CNPC","",NA,0.78,"Correct","SC","CNPC",22,NA,NA
+603,"default","",2,"Null",8,3,3,"",NA,"","","SC","121","UG","",NA,0.23,"Don't know","SC","CNPC",23,NA,NA
+603,"default","",0,"correct",8,1,0,"",NA,"","","SC","113","FILL","",NA,0.76,"Correct","SC","CNPC",24,NA,NA
+593,"default","",2,"Null",1,0,0,"",NA,"","","NC","120","FILL","",NA,0.74,"Correct","NC","WH",1,NA,NA
+593,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",2,NA,NA
+593,"default","",2,"Null",1,0,1,"",NA,"","","NC","12","WH","",NA,0.4,"Incorrect","NC","WH",3,NA,NA
+593,"default","",2,"Null",2,0,0,"",NA,"","","NC","119","FILL","",NA,0.62,"Correct","NC","WH",4,NA,NA
+593,"default","",0,"correct",2,3,3,"",NA,"","","NC","127","UG","",NA,0,"Don't know","NC","WH",5,NA,NA
+593,"default","",2,"Null",2,0,2,"",NA,"","","NC","11","WH","",NA,0.46,"Incorrect","NC","WH",6,NA,NA
+593,"default","",2,"Null",3,0,0,"",NA,"","","NC","10","WH","",NA,1,"Correct","NC","WH",7,NA,NA
+593,"default","",0,"correct",3,1,0,"",NA,"","","NC","118","FILL","",NA,0.84,"Correct","NC","WH",8,NA,NA
+593,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0,"Don't know","NC","WH",9,NA,NA
+593,"default","",2,"Null",4,2,2,"",NA,"","","NC","9","WH","",NA,0.68,"Incorrect","NC","WH",10,NA,NA
+593,"default","",2,"Null",4,0,0,"",NA,"","","NC","117","FILL","",NA,0.87,"Correct","NC","WH",11,NA,NA
+593,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0.01,"Don't know","NC","WH",12,NA,NA
+593,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0,"Don't know","NC","WH",13,NA,NA
+593,"default","",2,"Null",5,2,1,"",NA,"","","NC","8","WH","",NA,0.65,"Incorrect","NC","WH",14,NA,NA
+593,"default","",1,"correct",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.89,"Correct","NC","WH",15,NA,NA
+593,"default","",2,"Null",6,2,0,"",NA,"","","NC","115","FILL","",NA,0.83,"Correct","NC","WH",16,NA,NA
+593,"default","",1,"correct",6,0,0,"",NA,"","","NC","7","WH","",NA,0.49,"Correct","NC","WH",17,NA,NA
+593,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0,"Don't know","NC","WH",18,NA,NA
+593,"default","",0,"incorrect",7,3,3,"",NA,"","","NC","6","WH","",NA,0.98,"Don't know","NC","WH",19,NA,NA
+593,"default","",1,"correct",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.99,"Correct","NC","WH",20,NA,NA
+593,"default","",2,"Null",7,3,3,"",NA,"","","NC","122","UG","",NA,0,"Don't know","NC","WH",21,NA,NA
+593,"default","",2,"Null",8,1,2,"",NA,"","","NC","5","WH","",NA,0.71,"Incorrect","NC","WH",22,NA,NA
+593,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0,"Don't know","NC","WH",23,NA,NA
+593,"default","",2,"Null",8,2,0,"",NA,"","","NC","113","FILL","",NA,0.92,"Correct","NC","WH",24,NA,NA
+607,"default","",2,"Null",1,3,3,"",NA,"","","NC","12","CNPC","",NA,0.07,"Don't know","NC","CNPC",1,NA,NA
+607,"default","",2,"Null",1,0,0,"",NA,"","","NC","120","FILL","",NA,1,"Correct","NC","CNPC",2,NA,NA
+607,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","CNPC",3,NA,NA
+607,"default","",0,"correct",2,2,0,"",NA,"","","NC","11","CNPC","",NA,0.29,"Correct","NC","CNPC",4,NA,NA
+607,"default","",2,"Null",2,0,0,"",NA,"","","NC","119","FILL","",NA,0.87,"Correct","NC","CNPC",5,NA,NA
+607,"default","",2,"Null",2,2,0,"",NA,"","","NC","127","UG","",NA,0,"Correct","NC","CNPC",6,NA,NA
+607,"default","",2,"Null",3,1,0,"",NA,"","","NC","10","CNPC","",NA,0.12,"Correct","NC","CNPC",7,NA,NA
+607,"default","",0,"correct",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.94,"Correct","NC","CNPC",8,NA,NA
+607,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0,"Don't know","NC","CNPC",9,NA,NA
+607,"default","",2,"Null",4,0,0,"",NA,"","","NC","9","CNPC","",NA,0.15,"Correct","NC","CNPC",10,NA,NA
+607,"default","",1,"correct",4,2,0,"",NA,"","","NC","117","FILL","",NA,0.79,"Correct","NC","CNPC",11,NA,NA
+607,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0,"Don't know","NC","CNPC",12,NA,NA
+607,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0,"Don't know","NC","CNPC",13,NA,NA
+607,"default","",2,"Null",5,1,0,"",NA,"","","NC","116","FILL","",NA,0.61,"Correct","NC","CNPC",14,NA,NA
+607,"default","",2,"Null",5,2,0,"",NA,"","","NC","8","CNPC","",NA,0.37,"Correct","NC","CNPC",15,NA,NA
+607,"default","",1,"correct",6,3,3,"",NA,"","","NC","7","CNPC","",NA,0.18,"Don't know","NC","CNPC",16,NA,NA
+607,"default","",0,"correct",6,3,3,"",NA,"","","NC","123","UG","",NA,0,"Don't know","NC","CNPC",17,NA,NA
+607,"default","",2,"Null",6,0,0,"",NA,"","","NC","115","FILL","",NA,0.81,"Correct","NC","CNPC",18,NA,NA
+607,"default","",2,"Null",7,0,0,"",NA,"","","NC","122","UG","",NA,0,"Correct","NC","CNPC",19,NA,NA
+607,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.75,"Correct","NC","CNPC",20,NA,NA
+607,"default","",2,"Null",7,3,3,"",NA,"","","NC","6","CNPC","",NA,0.11,"Don't know","NC","CNPC",21,NA,NA
+607,"default","",0,"correct",8,2,0,"",NA,"","","NC","113","FILL","",NA,0.88,"Correct","NC","CNPC",22,NA,NA
+607,"default","",2,"Null",8,0,0,"",NA,"","","NC","5","CNPC","",NA,0.31,"Correct","NC","CNPC",23,NA,NA
+607,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0,"Don't know","NC","CNPC",24,NA,NA
+577,"default","",2,"Null",1,1,1,"",NA,"","","SC","12","CNPC","",NA,0.27,"Incorrect","SC","CNPC",1,NA,NA
+577,"default","",2,"Null",1,3,3,"",NA,"","","SC","128","UG","",NA,0,"Don't know","SC","CNPC",2,NA,NA
+577,"default","",2,"Null",1,1,0,"",NA,"","","SC","120","FILL","",NA,0.85,"Correct","SC","CNPC",3,NA,NA
+577,"default","",0,"correct",2,3,3,"",NA,"","","SC","127","UG","",NA,0.19,"Don't know","SC","CNPC",4,NA,NA
+577,"default","",2,"Null",2,3,3,"",NA,"","","SC","11","CNPC","",NA,0.21,"Don't know","SC","CNPC",5,NA,NA
+577,"default","",2,"Null",2,2,0,"",NA,"","","SC","119","FILL","",NA,0.86,"Correct","SC","CNPC",6,NA,NA
+577,"default","",2,"Null",3,1,0,"",NA,"","","SC","126","UG","",NA,0.27,"Correct","SC","CNPC",7,NA,NA
+577,"default","",2,"Null",3,1,1,"",NA,"","","SC","10","CNPC","",NA,0.68,"Incorrect","SC","CNPC",8,NA,NA
+577,"default","",2,"Null",3,0,0,"",NA,"","","SC","118","FILL","",NA,0.98,"Correct","SC","CNPC",9,NA,NA
+577,"default","",2,"Null",4,0,0,"",NA,"","","SC","125","UG","",NA,0.27,"Correct","SC","CNPC",10,NA,NA
+577,"default","",1,"correct",4,1,0,"",NA,"","","SC","117","FILL","",NA,0.99,"Correct","SC","CNPC",11,NA,NA
+577,"default","",0,"correct",4,1,2,"",NA,"","","SC","9","CNPC","",NA,0.97,"Incorrect","SC","CNPC",12,NA,NA
+577,"default","",2,"Null",5,1,0,"",NA,"","","SC","116","FILL","",NA,0.8,"Correct","SC","CNPC",13,NA,NA
+577,"default","",0,"correct",5,2,1,"",NA,"","","SC","8","CNPC","",NA,0.67,"Incorrect","SC","CNPC",14,NA,NA
+577,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0.29,"Don't know","SC","CNPC",15,NA,NA
+577,"default","",2,"Null",6,3,3,"",NA,"","","SC","123","UG","",NA,0.16,"Don't know","SC","CNPC",16,NA,NA
+577,"default","",2,"Null",6,0,0,"",NA,"","","SC","115","FILL","",NA,0.99,"Correct","SC","CNPC",17,NA,NA
+577,"default","",1,"correct",6,0,1,"",NA,"","","SC","7","CNPC","",NA,0.58,"Incorrect","SC","CNPC",18,NA,NA
+577,"default","",2,"Null",7,0,0,"",NA,"","","SC","114","FILL","",NA,0.97,"Correct","SC","CNPC",19,NA,NA
+577,"default","",2,"Null",7,2,0,"",NA,"","","SC","122","UG","",NA,0.02,"Correct","SC","CNPC",20,NA,NA
+577,"default","",1,"correct",7,3,3,"",NA,"","","SC","6","CNPC","",NA,0.84,"Don't know","SC","CNPC",21,NA,NA
+577,"default","",2,"Null",8,0,0,"",NA,"","","SC","113","FILL","",NA,0.98,"Correct","SC","CNPC",22,NA,NA
+577,"default","",2,"Null",8,2,0,"",NA,"","","SC","5","CNPC","",NA,0.82,"Correct","SC","CNPC",23,NA,NA
+577,"default","",2,"Null",8,1,0,"",NA,"","","SC","121","UG","",NA,0.28,"Correct","SC","CNPC",24,NA,NA
+598,"default","",2,"Null",1,1,1,"",NA,"","","SC","12","WH","",NA,0.12,"Incorrect","SC","WH",1,NA,NA
+598,"default","",0,"correct",1,3,3,"",NA,"","","SC","128","UG","",NA,0.01,"Don't know","SC","WH",2,NA,NA
+598,"default","",0,"correct",1,0,0,"",NA,"","","SC","120","FILL","",NA,0.99,"Correct","SC","WH",3,NA,NA
+598,"default","",2,"Null",2,3,3,"",NA,"","","SC","127","UG","",NA,0.05,"Don't know","SC","WH",4,NA,NA
+598,"default","",1,"correct",2,0,0,"",NA,"","","SC","119","FILL","",NA,0.99,"Correct","SC","WH",5,NA,NA
+598,"default","",2,"Null",2,2,2,"",NA,"","","SC","11","WH","",NA,0.16,"Incorrect","SC","WH",6,NA,NA
+598,"default","",2,"Null",3,1,0,"",NA,"","","SC","118","FILL","",NA,1,"Correct","SC","WH",7,NA,NA
+598,"default","",2,"Null",3,1,0,"",NA,"","","SC","10","WH","",NA,0.47,"Correct","SC","WH",8,NA,NA
+598,"default","",2,"Null",3,3,3,"",NA,"","","SC","126","UG","",NA,0.01,"Don't know","SC","WH",9,NA,NA
+598,"default","",2,"Null",4,3,3,"",NA,"","","SC","125","UG","",NA,0.01,"Don't know","SC","WH",10,NA,NA
+598,"default","",2,"Null",4,1,0,"",NA,"","","SC","9","WH","",NA,0.86,"Correct","SC","WH",11,NA,NA
+598,"default","",2,"Null",4,1,0,"",NA,"","","SC","117","FILL","",NA,0.73,"Correct","SC","WH",12,NA,NA
+598,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0.01,"Don't know","SC","WH",13,NA,NA
+598,"default","",0,"correct",5,0,0,"",NA,"","","SC","8","WH","",NA,0.92,"Correct","SC","WH",14,NA,NA
+598,"default","",2,"Null",5,1,0,"",NA,"","","SC","116","FILL","",NA,0.68,"Correct","SC","WH",15,NA,NA
+598,"default","",2,"Null",6,3,3,"",NA,"","","SC","123","UG","",NA,0.01,"Don't know","SC","WH",16,NA,NA
+598,"default","",2,"Null",6,2,0,"",NA,"","","SC","115","FILL","",NA,0.97,"Correct","SC","WH",17,NA,NA
+598,"default","",2,"Null",6,0,0,"",NA,"","","SC","7","WH","",NA,0.99,"Correct","SC","WH",18,NA,NA
+598,"default","",1,"correct",7,2,0,"",NA,"","","SC","114","FILL","",NA,0.99,"Correct","SC","WH",19,NA,NA
+598,"default","",2,"Null",7,3,3,"",NA,"","","SC","122","UG","",NA,0.02,"Don't know","SC","WH",20,NA,NA
+598,"default","",2,"Null",7,3,3,"",NA,"","","SC","6","WH","",NA,0.97,"Don't know","SC","WH",21,NA,NA
+598,"default","",0,"correct",8,1,0,"",NA,"","","SC","113","FILL","",NA,0.98,"Correct","SC","WH",22,NA,NA
+598,"default","",2,"Null",8,3,3,"",NA,"","","SC","121","UG","",NA,0.01,"Don't know","SC","WH",23,NA,NA
+598,"default","",2,"Null",8,1,0,"",NA,"","","SC","5","WH","",NA,0.95,"Correct","SC","WH",24,NA,NA
+578,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",1,NA,NA
+578,"default","",0,"correct",1,1,0,"",NA,"","","NC","12","WH","",NA,0.78,"Correct","NC","WH",2,NA,NA
+578,"default","",2,"Null",1,2,0,"",NA,"","","NC","120","FILL","",NA,0.95,"Correct","NC","WH",3,NA,NA
+578,"default","",2,"Null",2,2,2,"",NA,"","","NC","11","WH","",NA,0.95,"Incorrect","NC","WH",4,NA,NA
+578,"default","",2,"Null",2,3,3,"",NA,"","","NC","127","UG","",NA,0.06,"Don't know","NC","WH",5,NA,NA
+578,"default","",1,"correct",2,1,0,"",NA,"","","NC","119","FILL","",NA,0.9,"Correct","NC","WH",6,NA,NA
+578,"default","",2,"Null",3,1,1,"",NA,"","","NC","126","UG","",NA,0.05,"Incorrect","NC","WH",7,NA,NA
+578,"default","",0,"correct",3,2,0,"",NA,"","","NC","10","WH","",NA,0.71,"Correct","NC","WH",8,NA,NA
+578,"default","",0,"correct",3,1,0,"",NA,"","","NC","118","FILL","",NA,0.85,"Correct","NC","WH",9,NA,NA
+578,"default","",2,"Null",4,1,0,"",NA,"","","NC","117","FILL","",NA,0.95,"Correct","NC","WH",10,NA,NA
+578,"default","",2,"Null",4,1,0,"",NA,"","","NC","125","UG","",NA,0,"Correct","NC","WH",11,NA,NA
+578,"default","",2,"Null",4,1,0,"",NA,"","","NC","9","WH","",NA,0.75,"Correct","NC","WH",12,NA,NA
+578,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0.07,"Don't know","NC","WH",13,NA,NA
+578,"default","",2,"Null",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.79,"Correct","NC","WH",14,NA,NA
+578,"default","",2,"Null",5,2,1,"",NA,"","","NC","8","WH","",NA,0.66,"Incorrect","NC","WH",15,NA,NA
+578,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,0.94,"Correct","NC","WH",16,NA,NA
+578,"default","",2,"Null",6,0,0,"",NA,"","","NC","123","UG","",NA,0.14,"Correct","NC","WH",17,NA,NA
+578,"default","",1,"correct",6,1,0,"",NA,"","","NC","7","WH","",NA,0.72,"Correct","NC","WH",18,NA,NA
+578,"default","",2,"Null",7,1,0,"",NA,"","","NC","6","WH","",NA,0.77,"Correct","NC","WH",19,NA,NA
+578,"default","",2,"Null",7,2,0,"",NA,"","","NC","122","UG","",NA,0.01,"Correct","NC","WH",20,NA,NA
+578,"default","",1,"correct",7,1,0,"",NA,"","","NC","114","FILL","",NA,0.98,"Correct","NC","WH",21,NA,NA
+578,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0.04,"Don't know","NC","WH",22,NA,NA
+578,"default","",2,"Null",8,0,0,"",NA,"","","NC","5","WH","",NA,0.99,"Correct","NC","WH",23,NA,NA
+578,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.68,"Correct","NC","WH",24,NA,NA
+587,"default","",0,"correct",1,0,0,"",NA,"","","SC","12","CNPC","",NA,0,"Correct","SC","CNPC",1,NA,NA
+587,"default","",0,"correct",1,1,0,"",NA,"","","SC","120","FILL","",NA,1,"Correct","SC","CNPC",2,NA,NA
+587,"default","",2,"Null",1,3,3,"",NA,"","","SC","128","UG","",NA,0,"Don't know","SC","CNPC",3,NA,NA
+587,"default","",2,"Null",2,0,0,"",NA,"","","SC","119","FILL","",NA,1,"Correct","SC","CNPC",4,NA,NA
+587,"default","",2,"Null",2,3,3,"",NA,"","","SC","127","UG","",NA,0.02,"Don't know","SC","CNPC",5,NA,NA
+587,"default","",0,"correct",2,3,3,"",NA,"","","SC","11","CNPC","",NA,1,"Don't know","SC","CNPC",6,NA,NA
+587,"default","",2,"Null",3,1,0,"",NA,"","","SC","118","FILL","",NA,0.7,"Correct","SC","CNPC",7,NA,NA
+587,"default","",2,"Null",3,0,0,"",NA,"","","SC","126","UG","",NA,0.07,"Correct","SC","CNPC",8,NA,NA
+587,"default","",2,"Null",3,0,0,"",NA,"","","SC","10","CNPC","",NA,0.88,"Correct","SC","CNPC",9,NA,NA
+587,"default","",2,"Null",4,3,3,"",NA,"","","SC","117","FILL","",NA,0.71,"Don't know","SC","CNPC",10,NA,NA
+587,"default","",2,"Null",4,1,0,"",NA,"","","SC","125","UG","",NA,0.12,"Correct","SC","CNPC",11,NA,NA
+587,"default","",0,"correct",4,3,3,"",NA,"","","SC","9","CNPC","",NA,0.57,"Don't know","SC","CNPC",12,NA,NA
+587,"default","",2,"Null",5,2,0,"",NA,"","","SC","116","FILL","",NA,1,"Correct","SC","CNPC",13,NA,NA
+587,"default","",2,"Null",5,0,1,"",NA,"","","SC","8","CNPC","",NA,1,"Incorrect","SC","CNPC",14,NA,NA
+587,"default","",0,"correct",5,3,3,"",NA,"","","SC","124","UG","",NA,0.53,"Don't know","SC","CNPC",15,NA,NA
+587,"default","",2,"Null",6,2,0,"",NA,"","","SC","123","UG","",NA,0.89,"Correct","SC","CNPC",16,NA,NA
+587,"default","",2,"Null",6,1,0,"",NA,"","","SC","115","FILL","",NA,1,"Correct","SC","CNPC",17,NA,NA
+587,"default","",2,"Null",6,0,0,"",NA,"","","SC","7","CNPC","",NA,0.74,"Correct","SC","CNPC",18,NA,NA
+587,"default","",2,"Null",7,2,0,"",NA,"","","SC","122","UG","",NA,0.64,"Correct","SC","CNPC",19,NA,NA
+587,"default","",2,"Null",7,3,3,"",NA,"","","SC","6","CNPC","",NA,1,"Don't know","SC","CNPC",20,NA,NA
+587,"default","",2,"Null",7,1,0,"",NA,"","","SC","114","FILL","",NA,1,"Correct","SC","CNPC",21,NA,NA
+587,"default","",2,"Null",8,2,0,"",NA,"","","SC","121","UG","",NA,0.3,"Correct","SC","CNPC",22,NA,NA
+587,"default","",2,"Null",8,0,0,"",NA,"","","SC","113","FILL","",NA,1,"Correct","SC","CNPC",23,NA,NA
+587,"default","",0,"correct",8,1,0,"",NA,"","","SC","5","CNPC","",NA,1,"Correct","SC","CNPC",24,NA,NA
+596,"default","",2,"Null",1,2,0,"",NA,"","","NC","120","FILL","",NA,0.74,"Correct","NC","CNPC",1,NA,NA
+596,"default","",2,"Null",1,3,3,"",NA,"","","NC","12","CNPC","",NA,0.39,"Don't know","NC","CNPC",2,NA,NA
+596,"default","",2,"Null",1,1,0,"",NA,"","","NC","128","UG","",NA,0.08,"Correct","NC","CNPC",3,NA,NA
+596,"default","",1,"correct",2,0,2,"",NA,"","","NC","119","FILL","",NA,0.72,"Incorrect","NC","CNPC",4,NA,NA
+596,"default","",0,"correct",2,2,0,"",NA,"","","NC","127","UG","",NA,0.43,"Correct","NC","CNPC",5,NA,NA
+596,"default","",2,"Null",2,0,0,"",NA,"","","NC","11","CNPC","",NA,0.55,"Correct","NC","CNPC",6,NA,NA
+596,"default","",2,"Null",3,3,3,"",NA,"","","NC","10","CNPC","",NA,0.41,"Don't know","NC","CNPC",7,NA,NA
+596,"default","",2,"Null",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.62,"Correct","NC","CNPC",8,NA,NA
+596,"default","",2,"Null",3,1,0,"",NA,"","","NC","126","UG","",NA,0.31,"Correct","NC","CNPC",9,NA,NA
+596,"default","",2,"Null",4,2,0,"",NA,"","","NC","125","UG","",NA,0.24,"Correct","NC","CNPC",10,NA,NA
+596,"default","",0,"correct",4,0,1,"",NA,"","","NC","9","CNPC","",NA,0.39,"Incorrect","NC","CNPC",11,NA,NA
+596,"default","",2,"Null",4,3,3,"",NA,"","","NC","117","FILL","",NA,0.55,"Don't know","NC","CNPC",12,NA,NA
+596,"default","",2,"Null",5,1,0,"",NA,"","","NC","116","FILL","",NA,0.49,"Correct","NC","CNPC",13,NA,NA
+596,"default","",0,"correct",5,3,3,"",NA,"","","NC","8","CNPC","",NA,0.39,"Don't know","NC","CNPC",14,NA,NA
+596,"default","",2,"Null",5,1,0,"",NA,"","","NC","124","UG","",NA,0.18,"Correct","NC","CNPC",15,NA,NA
+596,"default","",1,"correct",6,0,0,"",NA,"","","NC","7","CNPC","",NA,0.51,"Correct","NC","CNPC",16,NA,NA
+596,"default","",2,"Null",6,2,0,"",NA,"","","NC","123","UG","",NA,0.39,"Correct","NC","CNPC",17,NA,NA
+596,"default","",2,"Null",6,0,0,"",NA,"","","NC","115","FILL","",NA,0.56,"Correct","NC","CNPC",18,NA,NA
+596,"default","",2,"Null",7,2,0,"",NA,"","","NC","122","UG","",NA,0.41,"Correct","NC","CNPC",19,NA,NA
+596,"default","",2,"Null",7,1,0,"",NA,"","","NC","114","FILL","",NA,0.68,"Correct","NC","CNPC",20,NA,NA
+596,"default","",2,"Null",7,1,0,"",NA,"","","NC","6","CNPC","",NA,0.69,"Correct","NC","CNPC",21,NA,NA
+596,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.69,"Correct","NC","CNPC",22,NA,NA
+596,"default","",2,"Null",8,3,3,"",NA,"","","NC","5","CNPC","",NA,0.39,"Don't know","NC","CNPC",23,NA,NA
+596,"default","",1,"correct",8,3,3,"",NA,"","","NC","121","UG","",NA,0.32,"Don't know","NC","CNPC",24,NA,NA
+583,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,0.96,"Correct","NC","WH",1,NA,NA
+583,"default","",0,"correct",1,0,1,"",NA,"","","NC","12","WH","",NA,0.16,"Incorrect","NC","WH",2,NA,NA
+583,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0.02,"Don't know","NC","WH",3,NA,NA
+583,"default","",2,"Null",2,0,0,"",NA,"","","NC","127","UG","",NA,0,"Correct","NC","WH",4,NA,NA
+583,"default","",2,"Null",2,3,3,"",NA,"","","NC","11","WH","",NA,0.12,"Don't know","NC","WH",5,NA,NA
+583,"default","",2,"Null",2,2,0,"",NA,"","","NC","119","FILL","",NA,0.83,"Correct","NC","WH",6,NA,NA
+583,"default","",1,"correct",3,0,0,"",NA,"","","NC","126","UG","",NA,0.01,"Correct","NC","WH",7,NA,NA
+583,"default","",2,"Null",3,0,0,"",NA,"","","NC","10","WH","",NA,0.32,"Correct","NC","WH",8,NA,NA
+583,"default","",2,"Null",3,0,0,"",NA,"","","NC","118","FILL","",NA,0.63,"Correct","NC","WH",9,NA,NA
+583,"default","",0,"correct",4,1,0,"",NA,"","","NC","125","UG","",NA,0.03,"Correct","NC","WH",10,NA,NA
+583,"default","",2,"Null",4,0,0,"",NA,"","","NC","9","WH","",NA,0.54,"Correct","NC","WH",11,NA,NA
+583,"default","",2,"Null",4,3,3,"",NA,"","","NC","117","FILL","",NA,0.71,"Don't know","NC","WH",12,NA,NA
+583,"default","",2,"Null",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.3,"Correct","NC","WH",13,NA,NA
+583,"default","",0,"correct",5,1,0,"",NA,"","","NC","8","WH","",NA,0.55,"Correct","NC","WH",14,NA,NA
+583,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0.01,"Don't know","NC","WH",15,NA,NA
+583,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,0.57,"Correct","NC","WH",16,NA,NA
+583,"default","",2,"Null",6,2,0,"",NA,"","","NC","7","WH","",NA,0.52,"Correct","NC","WH",17,NA,NA
+583,"default","",2,"Null",6,1,2,"",NA,"","","NC","123","UG","",NA,0,"Incorrect","NC","WH",18,NA,NA
+583,"default","",2,"Null",7,3,3,"",NA,"","","NC","6","WH","",NA,0.94,"Don't know","NC","WH",19,NA,NA
+583,"default","",2,"Null",7,2,0,"",NA,"","","NC","114","FILL","",NA,0.98,"Correct","NC","WH",20,NA,NA
+583,"default","",1,"correct",7,2,0,"",NA,"","","NC","122","UG","",NA,0.01,"Correct","NC","WH",21,NA,NA
+583,"default","",2,"Null",8,0,0,"",NA,"","","NC","113","FILL","",NA,0.81,"Correct","NC","WH",22,NA,NA
+583,"default","",0,"correct",8,2,0,"",NA,"","","NC","5","WH","",NA,0.96,"Correct","NC","WH",23,NA,NA
+583,"default","",2,"Null",8,1,0,"",NA,"","","NC","121","UG","",NA,0.01,"Correct","NC","WH",24,NA,NA
+588,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",1,NA,NA
+588,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,1,"Correct","NC","WH",2,NA,NA
+588,"default","",2,"Null",1,1,1,"",NA,"","","NC","12","WH","",NA,0.43,"Incorrect","NC","WH",3,NA,NA
+588,"default","",2,"Null",2,2,0,"",NA,"","","NC","11","WH","",NA,0.57,"Correct","NC","WH",4,NA,NA
+588,"default","",2,"Null",2,0,0,"",NA,"","","NC","127","UG","",NA,0,"Correct","NC","WH",5,NA,NA
+588,"default","",2,"Null",2,1,0,"",NA,"","","NC","119","FILL","",NA,1,"Correct","NC","WH",6,NA,NA
+588,"default","",0,"correct",3,2,0,"",NA,"","","NC","10","WH","",NA,1,"Correct","NC","WH",7,NA,NA
+588,"default","",0,"correct",3,0,0,"",NA,"","","NC","118","FILL","",NA,1,"Correct","NC","WH",8,NA,NA
+588,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0,"Don't know","NC","WH",9,NA,NA
+588,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0,"Don't know","NC","WH",10,NA,NA
+588,"default","",2,"Null",4,1,0,"",NA,"","","NC","9","WH","",NA,0.85,"Correct","NC","WH",11,NA,NA
+588,"default","",1,"correct",4,1,0,"",NA,"","","NC","117","FILL","",NA,1,"Correct","NC","WH",12,NA,NA
+588,"default","",2,"Null",5,0,0,"",NA,"","","NC","8","WH","",NA,1,"Correct","NC","WH",13,NA,NA
+588,"default","",1,"correct",5,2,0,"",NA,"","","NC","116","FILL","",NA,1,"Correct","NC","WH",14,NA,NA
+588,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0,"Don't know","NC","WH",15,NA,NA
+588,"default","",2,"Null",6,0,0,"",NA,"","","NC","115","FILL","",NA,1,"Correct","NC","WH",16,NA,NA
+588,"default","",1,"correct",6,2,0,"",NA,"","","NC","7","WH","",NA,0.96,"Correct","NC","WH",17,NA,NA
+588,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0,"Don't know","NC","WH",18,NA,NA
+588,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,1,"Correct","NC","WH",19,NA,NA
+588,"default","",2,"Null",7,3,3,"",NA,"","","NC","122","UG","",NA,0,"Don't know","NC","WH",20,NA,NA
+588,"default","",1,"correct",7,3,3,"",NA,"","","NC","6","WH","",NA,0.9,"Don't know","NC","WH",21,NA,NA
+588,"default","",2,"Null",8,2,0,"",NA,"","","NC","5","WH","",NA,1,"Correct","NC","WH",22,NA,NA
+588,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.96,"Correct","NC","WH",23,NA,NA
+588,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0,"Don't know","NC","WH",24,NA,NA
+621,"default","",0,"correct",1,1,0,"",NA,"","","NC","128","UG","",NA,0.2,"Correct","NC","CNPC",1,NA,NA
+621,"default","",0,"correct",1,1,0,"",NA,"","","NC","12","CNPC","",NA,0.67,"Correct","NC","CNPC",2,NA,NA
+621,"default","",2,"Null",1,2,0,"",NA,"","","NC","120","FILL","",NA,0.86,"Correct","NC","CNPC",3,NA,NA
+621,"default","",1,"incorrect",2,2,2,"",NA,"","","NC","11","CNPC","",NA,0.84,"Incorrect","NC","CNPC",4,NA,NA
+621,"default","",0,"correct",2,2,0,"",NA,"","","NC","127","UG","",NA,0.39,"Correct","NC","CNPC",5,NA,NA
+621,"default","",2,"Null",2,0,1,"",NA,"","","NC","119","FILL","",NA,0.88,"Incorrect","NC","CNPC",6,NA,NA
+621,"default","",2,"Null",3,1,0,"",NA,"","","NC","126","UG","",NA,0.28,"Correct","NC","CNPC",7,NA,NA
+621,"default","",2,"Null",3,2,0,"",NA,"","","NC","10","CNPC","",NA,0.57,"Correct","NC","CNPC",8,NA,NA
+621,"default","",2,"Null",3,0,0,"",NA,"","","NC","118","FILL","",NA,1,"Correct","NC","CNPC",9,NA,NA
+621,"default","",2,"Null",4,1,2,"",NA,"","","NC","9","CNPC","",NA,0.75,"Incorrect","NC","CNPC",10,NA,NA
+621,"default","",2,"Null",4,2,0,"",NA,"","","NC","117","FILL","",NA,0.97,"Correct","NC","CNPC",11,NA,NA
+621,"default","",1,"incorrect",4,0,0,"",NA,"","","NC","125","UG","",NA,0.87,"Correct","NC","CNPC",12,NA,NA
+621,"default","",2,"Null",5,1,2,"",NA,"","","NC","124","UG","",NA,0.23,"Incorrect","NC","CNPC",13,NA,NA
+621,"default","",2,"Null",5,1,1,"",NA,"","","NC","8","CNPC","",NA,0.8,"Incorrect","NC","CNPC",14,NA,NA
+621,"default","",2,"Null",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.76,"Correct","NC","CNPC",15,NA,NA
+621,"default","",2,"Null",6,0,1,"",NA,"","","NC","7","CNPC","",NA,0.67,"Incorrect","NC","CNPC",16,NA,NA
+621,"default","",2,"Null",6,0,1,"",NA,"","","NC","123","UG","",NA,0.72,"Incorrect","NC","CNPC",17,NA,NA
+621,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,0.7,"Correct","NC","CNPC",18,NA,NA
+621,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.76,"Correct","NC","CNPC",19,NA,NA
+621,"default","",1,"correct",7,2,0,"",NA,"","","NC","122","UG","",NA,0.27,"Correct","NC","CNPC",20,NA,NA
+621,"default","",2,"Null",7,0,0,"",NA,"","","NC","6","CNPC","",NA,0.72,"Correct","NC","CNPC",21,NA,NA
+621,"default","",2,"Null",8,0,0,"",NA,"","","NC","5","CNPC","",NA,0.42,"Correct","NC","CNPC",22,NA,NA
+621,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.9,"Correct","NC","CNPC",23,NA,NA
+621,"default","",2,"Null",8,2,0,"",NA,"","","NC","121","UG","",NA,0.4,"Correct","NC","CNPC",24,NA,NA
+629,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",1,NA,NA
+629,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,0.23,"Correct","NC","WH",2,NA,NA
+629,"default","",2,"Null",1,1,1,"",NA,"","","NC","12","WH","",NA,0,"Incorrect","NC","WH",3,NA,NA
+629,"default","",0,"correct",2,3,3,"",NA,"","","NC","127","UG","",NA,0,"Don't know","NC","WH",4,NA,NA
+629,"default","",2,"Null",2,0,0,"",NA,"","","NC","119","FILL","",NA,1,"Correct","NC","WH",5,NA,NA
+629,"default","",0,"correct",2,1,0,"",NA,"","","NC","11","WH","",NA,0.43,"Correct","NC","WH",6,NA,NA
+629,"default","",2,"Null",3,1,0,"",NA,"","","NC","126","UG","",NA,0.02,"Correct","NC","WH",7,NA,NA
+629,"default","",2,"Null",3,3,3,"",NA,"","","NC","10","WH","",NA,0.02,"Don't know","NC","WH",8,NA,NA
+629,"default","",2,"Null",3,0,0,"",NA,"","","NC","118","FILL","",NA,0.99,"Correct","NC","WH",9,NA,NA
+629,"default","",2,"Null",4,0,1,"",NA,"","","NC","9","WH","",NA,0.27,"Incorrect","NC","WH",10,NA,NA
+629,"default","",2,"Null",4,2,0,"",NA,"","","NC","117","FILL","",NA,0.01,"Correct","NC","WH",11,NA,NA
+629,"default","",0,"correct",4,0,0,"",NA,"","","NC","125","UG","",NA,0,"Correct","NC","WH",12,NA,NA
+629,"default","",2,"Null",5,1,0,"",NA,"","","NC","116","FILL","",NA,0.13,"Correct","NC","WH",13,NA,NA
+629,"default","",2,"Null",5,1,0,"",NA,"","","NC","8","WH","",NA,0.75,"Correct","NC","WH",14,NA,NA
+629,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0.01,"Don't know","NC","WH",15,NA,NA
+629,"default","",0,"correct",6,3,3,"",NA,"","","NC","123","UG","",NA,0,"Don't know","NC","WH",16,NA,NA
+629,"default","",2,"Null",6,2,0,"",NA,"","","NC","7","WH","",NA,0.46,"Correct","NC","WH",17,NA,NA
+629,"default","",2,"Null",6,1,0,"",NA,"","","NC","115","FILL","",NA,0.97,"Correct","NC","WH",18,NA,NA
+629,"default","",1,"correct",7,1,0,"",NA,"","","NC","114","FILL","",NA,0.98,"Correct","NC","WH",19,NA,NA
+629,"default","",2,"Null",7,2,0,"",NA,"","","NC","6","WH","",NA,0.74,"Correct","NC","WH",20,NA,NA
+629,"default","",1,"correct",7,3,3,"",NA,"","","NC","122","UG","",NA,0,"Don't know","NC","WH",21,NA,NA
+629,"default","",2,"Null",8,2,0,"",NA,"","","NC","113","FILL","",NA,0.64,"Correct","NC","WH",22,NA,NA
+629,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0,"Don't know","NC","WH",23,NA,NA
+629,"default","",2,"Null",8,1,0,"",NA,"","","NC","5","WH","",NA,0.95,"Correct","NC","WH",24,NA,NA
+585,"default","",0,"correct",1,2,0,"",NA,"","","NC","120","FILL","",NA,0.97,"Correct","NC","WH",1,NA,NA
+585,"default","",2,"Null",1,1,0,"",NA,"","","NC","12","WH","",NA,0.16,"Correct","NC","WH",2,NA,NA
+585,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",3,NA,NA
+585,"default","",0,"correct",2,2,0,"",NA,"","","NC","127","UG","",NA,0,"Correct","NC","WH",4,NA,NA
+585,"default","",2,"Null",2,2,2,"",NA,"","","NC","11","WH","",NA,0.55,"Incorrect","NC","WH",5,NA,NA
+585,"default","",1,"correct",2,0,0,"",NA,"","","NC","119","FILL","",NA,0.77,"Correct","NC","WH",6,NA,NA
+585,"default","",2,"Null",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.95,"Correct","NC","WH",7,NA,NA
+585,"default","",1,"correct",3,3,3,"",NA,"","","NC","126","UG","",NA,0,"Don't know","NC","WH",8,NA,NA
+585,"default","",2,"Null",3,0,0,"",NA,"","","NC","10","WH","",NA,0.44,"Correct","NC","WH",9,NA,NA
+585,"default","",0,"correct",4,2,0,"",NA,"","","NC","125","UG","",NA,0,"Correct","NC","WH",10,NA,NA
+585,"default","",2,"Null",4,0,0,"",NA,"","","NC","117","FILL","",NA,0.96,"Correct","NC","WH",11,NA,NA
+585,"default","",2,"Null",4,2,2,"",NA,"","","NC","9","WH","",NA,0.62,"Incorrect","NC","WH",12,NA,NA
+585,"default","",2,"Null",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.77,"Correct","NC","WH",13,NA,NA
+585,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0,"Don't know","NC","WH",14,NA,NA
+585,"default","",2,"Null",5,0,2,"",NA,"","","NC","8","WH","",NA,0.86,"Incorrect","NC","WH",15,NA,NA
+585,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0,"Don't know","NC","WH",16,NA,NA
+585,"default","",2,"Null",6,2,1,"",NA,"","","NC","7","WH","",NA,0.33,"Incorrect","NC","WH",17,NA,NA
+585,"default","",2,"Null",6,0,0,"",NA,"","","NC","115","FILL","",NA,1,"Correct","NC","WH",18,NA,NA
+585,"default","",2,"Null",7,2,0,"",NA,"","","NC","6","WH","",NA,0.67,"Correct","NC","WH",19,NA,NA
+585,"default","",2,"Null",7,1,0,"",NA,"","","NC","122","UG","",NA,0,"Correct","NC","WH",20,NA,NA
+585,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.97,"Correct","NC","WH",21,NA,NA
+585,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,1,"Correct","NC","WH",22,NA,NA
+585,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0,"Don't know","NC","WH",23,NA,NA
+585,"default","",0,"correct",8,0,0,"",NA,"","","NC","5","WH","",NA,0.85,"Correct","NC","WH",24,NA,NA
+586,"default","",2,"Null",1,3,3,"",NA,"","","SC","128","UG","",NA,0.01,"Don't know","SC","WH",1,NA,NA
+586,"default","",2,"Null",1,2,0,"",NA,"","","SC","120","FILL","",NA,0.82,"Correct","SC","WH",2,NA,NA
+586,"default","",2,"Null",1,1,0,"",NA,"","","SC","12","WH","",NA,0.46,"Correct","SC","WH",3,NA,NA
+586,"default","",2,"Null",2,1,0,"",NA,"","","SC","11","WH","",NA,0.42,"Correct","SC","WH",4,NA,NA
+586,"default","",2,"Null",2,1,0,"",NA,"","","SC","119","FILL","",NA,0.95,"Correct","SC","WH",5,NA,NA
+586,"default","",0,"correct",2,3,3,"",NA,"","","SC","127","UG","",NA,0.01,"Don't know","SC","WH",6,NA,NA
+586,"default","",2,"Null",3,1,0,"",NA,"","","SC","10","WH","",NA,0.81,"Correct","SC","WH",7,NA,NA
+586,"default","",1,"correct",3,2,0,"",NA,"","","SC","126","UG","",NA,0.05,"Correct","SC","WH",8,NA,NA
+586,"default","",2,"Null",3,0,0,"",NA,"","","SC","118","FILL","",NA,0.97,"Correct","SC","WH",9,NA,NA
+586,"default","",1,"correct",4,2,0,"",NA,"","","SC","117","FILL","",NA,0.94,"Correct","SC","WH",10,NA,NA
+586,"default","",0,"correct",4,1,0,"",NA,"","","SC","125","UG","",NA,0.02,"Correct","SC","WH",11,NA,NA
+586,"default","",0,"correct",4,0,0,"",NA,"","","SC","9","WH","",NA,0.93,"Correct","SC","WH",12,NA,NA
+586,"default","",2,"Null",5,1,0,"",NA,"","","SC","8","WH","",NA,0.99,"Correct","SC","WH",13,NA,NA
+586,"default","",0,"correct",5,3,3,"",NA,"","","SC","124","UG","",NA,0.06,"Don't know","SC","WH",14,NA,NA
+586,"default","",2,"Null",5,1,0,"",NA,"","","SC","116","FILL","",NA,0.95,"Correct","SC","WH",15,NA,NA
+586,"default","",2,"Null",6,0,1,"",NA,"","","SC","7","WH","",NA,0.99,"Incorrect","SC","WH",16,NA,NA
+586,"default","",2,"Null",6,3,3,"",NA,"","","SC","123","UG","",NA,0.01,"Don't know","SC","WH",17,NA,NA
+586,"default","",2,"Null",6,1,0,"",NA,"","","SC","115","FILL","",NA,0.98,"Correct","SC","WH",18,NA,NA
+586,"default","",2,"Null",7,2,0,"",NA,"","","SC","114","FILL","",NA,0.48,"Correct","SC","WH",19,NA,NA
+586,"default","",2,"Null",7,1,0,"",NA,"","","SC","6","WH","",NA,0.89,"Correct","SC","WH",20,NA,NA
+586,"default","",2,"Null",7,0,0,"",NA,"","","SC","122","UG","",NA,0.12,"Correct","SC","WH",21,NA,NA
+586,"default","",2,"Null",8,0,0,"",NA,"","","SC","121","UG","",NA,0.04,"Correct","SC","WH",22,NA,NA
+586,"default","",2,"Null",8,0,0,"",NA,"","","SC","113","FILL","",NA,0.99,"Correct","SC","WH",23,NA,NA
+586,"default","",2,"Null",8,2,0,"",NA,"","","SC","5","WH","",NA,0.61,"Correct","SC","WH",24,NA,NA
+570,"default","",2,"Null",1,1,0,"",NA,"","","SC","120","FILL","",NA,0.47,"Correct","SC","WH",1,NA,NA
+570,"default","",0,"correct",1,2,0,"",NA,"","","SC","12","WH","",NA,0.68,"Correct","SC","WH",2,NA,NA
+570,"default","",2,"Null",1,2,0,"",NA,"","","SC","128","UG","",NA,0.13,"Correct","SC","WH",3,NA,NA
+570,"default","",2,"Null",2,0,0,"",NA,"","","SC","119","FILL","",NA,0.87,"Correct","SC","WH",4,NA,NA
+570,"default","",2,"Null",2,1,0,"",NA,"","","SC","11","WH","",NA,0.45,"Correct","SC","WH",5,NA,NA
+570,"default","",2,"Null",2,3,3,"",NA,"","","SC","127","UG","",NA,0.08,"Don't know","SC","WH",6,NA,NA
+570,"default","",2,"Null",3,0,1,"",NA,"","","SC","10","WH","",NA,0.48,"Incorrect","SC","WH",7,NA,NA
+570,"default","",2,"Null",3,0,0,"",NA,"","","SC","118","FILL","",NA,0.58,"Correct","SC","WH",8,NA,NA
+570,"default","",2,"Null",3,2,0,"",NA,"","","SC","126","UG","",NA,0.28,"Correct","SC","WH",9,NA,NA
+570,"default","",0,"correct",4,3,3,"",NA,"","","SC","125","UG","",NA,0.48,"Don't know","SC","WH",10,NA,NA
+570,"default","",2,"Null",4,0,0,"",NA,"","","SC","9","WH","",NA,0.63,"Correct","SC","WH",11,NA,NA
+570,"default","",2,"Null",4,0,0,"",NA,"","","SC","117","FILL","",NA,0.46,"Correct","SC","WH",12,NA,NA
+570,"default","",2,"Null",5,2,2,"",NA,"","","SC","124","UG","",NA,0.29,"Incorrect","SC","WH",13,NA,NA
+570,"default","",2,"Null",5,1,0,"",NA,"","","SC","116","FILL","",NA,0.86,"Correct","SC","WH",14,NA,NA
+570,"default","",0,"correct",5,1,2,"",NA,"","","SC","8","WH","",NA,0.63,"Incorrect","SC","WH",15,NA,NA
+570,"default","",0,"correct",6,3,3,"",NA,"","","SC","123","UG","",NA,0.37,"Don't know","SC","WH",16,NA,NA
+570,"default","",1,"correct",6,2,0,"",NA,"","","SC","7","WH","",NA,0.9,"Correct","SC","WH",17,NA,NA
+570,"default","",1,"incorrect",6,0,0,"",NA,"","","SC","115","FILL","",NA,0.91,"Correct","SC","WH",18,NA,NA
+570,"default","",2,"Null",7,1,0,"",NA,"","","SC","122","UG","",NA,0.33,"Correct","SC","WH",19,NA,NA
+570,"default","",2,"Null",7,3,3,"",NA,"","","SC","6","WH","",NA,0.84,"Don't know","SC","WH",20,NA,NA
+570,"default","",2,"Null",7,1,0,"",NA,"","","SC","114","FILL","",NA,0.44,"Correct","SC","WH",21,NA,NA
+570,"default","",2,"Null",8,3,3,"",NA,"","","SC","121","UG","",NA,0.23,"Don't know","SC","WH",22,NA,NA
+570,"default","",2,"Null",8,0,0,"",NA,"","","SC","5","WH","",NA,0.93,"Correct","SC","WH",23,NA,NA
+570,"default","",2,"Null",8,0,0,"",NA,"","","SC","113","FILL","",NA,0.86,"Correct","SC","WH",24,NA,NA
+584,"default","",0,"correct",1,1,0,"",NA,"","","NC","120","FILL","",NA,0.7,"Correct","NC","WH",1,NA,NA
+584,"default","",0,"correct",1,3,3,"",NA,"","","NC","128","UG","",NA,0,"Don't know","NC","WH",2,NA,NA
+584,"default","",0,"correct",1,1,1,"",NA,"","","NC","12","WH","",NA,0.21,"Incorrect","NC","WH",3,NA,NA
+584,"default","",2,"Null",2,0,0,"",NA,"","","NC","119","FILL","",NA,0.75,"Correct","NC","WH",4,NA,NA
+584,"default","",2,"Null",2,2,2,"",NA,"","","NC","11","WH","",NA,0.29,"Incorrect","NC","WH",5,NA,NA
+584,"default","",2,"Null",2,3,3,"",NA,"","","NC","127","UG","",NA,0,"Don't know","NC","WH",6,NA,NA
+584,"default","",2,"Null",3,1,0,"",NA,"","","NC","118","FILL","",NA,0.79,"Correct","NC","WH",7,NA,NA
+584,"default","",2,"Null",3,1,0,"",NA,"","","NC","126","UG","",NA,0,"Correct","NC","WH",8,NA,NA
+584,"default","",2,"Null",3,1,1,"",NA,"","","NC","10","WH","",NA,0.99,"Incorrect","NC","WH",9,NA,NA
+584,"default","",2,"Null",4,0,0,"",NA,"","","NC","117","FILL","",NA,0.99,"Correct","NC","WH",10,NA,NA
+584,"default","",2,"Null",4,2,1,"",NA,"","","NC","9","WH","",NA,0.81,"Incorrect","NC","WH",11,NA,NA
+584,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0,"Don't know","NC","WH",12,NA,NA
+584,"default","",2,"Null",5,1,0,"",NA,"","","NC","116","FILL","",NA,0.98,"Correct","NC","WH",13,NA,NA
+584,"default","",2,"Null",5,1,0,"",NA,"","","NC","8","WH","",NA,0.98,"Correct","NC","WH",14,NA,NA
+584,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0,"Don't know","NC","WH",15,NA,NA
+584,"default","",2,"Null",6,1,0,"",NA,"","","NC","123","UG","",NA,0,"Correct","NC","WH",16,NA,NA
+584,"default","",0,"incorrect",6,0,1,"",NA,"","","NC","7","WH","",NA,1,"Incorrect","NC","WH",17,NA,NA
+584,"default","",0,"correct",6,0,0,"",NA,"","","NC","115","FILL","",NA,1,"Correct","NC","WH",18,NA,NA
+584,"default","",1,"correct",7,3,3,"",NA,"","","NC","122","UG","",NA,0,"Don't know","NC","WH",19,NA,NA
+584,"default","",2,"Null",7,3,3,"",NA,"","","NC","6","WH","",NA,1,"Don't know","NC","WH",20,NA,NA
+584,"default","",2,"Null",7,0,0,"",NA,"","","NC","114","FILL","",NA,1,"Correct","NC","WH",21,NA,NA
+584,"default","",2,"Null",8,1,0,"",NA,"","","NC","113","FILL","",NA,0.83,"Correct","NC","WH",22,NA,NA
+584,"default","",2,"Null",8,2,0,"",NA,"","","NC","121","UG","",NA,0,"Correct","NC","WH",23,NA,NA
+584,"default","",2,"Null",8,2,0,"",NA,"","","NC","5","WH","",NA,1,"Correct","NC","WH",24,NA,NA
+580,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,0.88,"Correct","NC","WH",1,NA,NA
+580,"default","",2,"Null",1,3,3,"",NA,"","","NC","12","WH","",NA,0.93,"Don't know","NC","WH",2,NA,NA
+580,"default","",0,"correct",1,2,0,"",NA,"","","NC","128","UG","",NA,0.02,"Correct","NC","WH",3,NA,NA
+580,"default","",2,"Null",2,2,0,"",NA,"","","NC","127","UG","",NA,0.94,"Correct","NC","WH",4,NA,NA
+580,"default","",2,"Null",2,1,0,"",NA,"","","NC","119","FILL","",NA,0.87,"Correct","NC","WH",5,NA,NA
+580,"default","",2,"Null",2,2,2,"",NA,"","","NC","11","WH","",NA,0.94,"Incorrect","NC","WH",6,NA,NA
+580,"default","",2,"Null",3,3,3,"",NA,"","","NC","126","UG","",NA,0.73,"Don't know","NC","WH",7,NA,NA
+580,"default","",2,"Null",3,3,3,"",NA,"","","NC","10","WH","",NA,0.96,"Don't know","NC","WH",8,NA,NA
+580,"default","",2,"Null",3,0,0,"",NA,"","","NC","118","FILL","",NA,0.83,"Correct","NC","WH",9,NA,NA
+580,"default","",2,"Null",4,3,3,"",NA,"","","NC","9","WH","",NA,0.92,"Don't know","NC","WH",10,NA,NA
+580,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0.18,"Don't know","NC","WH",11,NA,NA
+580,"default","",2,"Null",4,0,0,"",NA,"","","NC","117","FILL","",NA,0.96,"Correct","NC","WH",12,NA,NA
+580,"default","",2,"Null",5,0,0,"",NA,"","","NC","116","FILL","",NA,0.97,"Correct","NC","WH",13,NA,NA
+580,"default","",2,"Null",5,1,2,"",NA,"","","NC","8","WH","",NA,0.92,"Incorrect","NC","WH",14,NA,NA
+580,"default","",0,"correct",5,3,3,"",NA,"","","NC","124","UG","",NA,0.14,"Don't know","NC","WH",15,NA,NA
+580,"default","",1,"correct",6,1,0,"",NA,"","","NC","7","WH","",NA,0.76,"Correct","NC","WH",16,NA,NA
+580,"default","",2,"Null",6,1,1,"",NA,"","","NC","115","FILL","",NA,0.95,"Incorrect","NC","WH",17,NA,NA
+580,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0.04,"Don't know","NC","WH",18,NA,NA
+580,"default","",2,"Null",7,2,1,"",NA,"","","NC","6","WH","",NA,0.96,"Incorrect","NC","WH",19,NA,NA
+580,"default","",2,"Null",7,2,0,"",NA,"","","NC","114","FILL","",NA,0.97,"Correct","NC","WH",20,NA,NA
+580,"default","",1,"correct",7,1,0,"",NA,"","","NC","122","UG","",NA,0.06,"Correct","NC","WH",21,NA,NA
+580,"default","",2,"Null",8,1,0,"",NA,"","","NC","5","WH","",NA,0.96,"Correct","NC","WH",22,NA,NA
+580,"default","",1,"correct",8,1,0,"",NA,"","","NC","121","UG","",NA,0.07,"Correct","NC","WH",23,NA,NA
+580,"default","",0,"correct",8,2,0,"",NA,"","","NC","113","FILL","",NA,0.94,"Correct","NC","WH",24,NA,NA
+572,"default","",0,"correct",1,3,3,"",NA,"","","SC","128","UG","",NA,0,"Don't know","SC","CNPC",1,NA,NA
+572,"default","",2,"Null",1,2,0,"",NA,"","","SC","120","FILL","",NA,0.91,"Correct","SC","CNPC",2,NA,NA
+572,"default","",0,"correct",1,2,0,"",NA,"","","SC","12","CNPC","",NA,0.33,"Correct","SC","CNPC",3,NA,NA
+572,"default","",2,"Null",2,1,0,"",NA,"","","SC","11","CNPC","",NA,0.39,"Correct","SC","CNPC",4,NA,NA
+572,"default","",2,"Null",2,0,0,"",NA,"","","SC","127","UG","",NA,0,"Correct","SC","CNPC",5,NA,NA
+572,"default","",2,"Null",2,2,0,"",NA,"","","SC","119","FILL","",NA,0.85,"Correct","SC","CNPC",6,NA,NA
+572,"default","",2,"Null",3,1,0,"",NA,"","","SC","118","FILL","",NA,0.94,"Correct","SC","CNPC",7,NA,NA
+572,"default","",2,"Null",3,1,0,"",NA,"","","SC","126","UG","",NA,0.04,"Correct","SC","CNPC",8,NA,NA
+572,"default","",2,"Null",3,0,0,"",NA,"","","SC","10","CNPC","",NA,0.28,"Correct","SC","CNPC",9,NA,NA
+572,"default","",0,"correct",4,3,3,"",NA,"","","SC","125","UG","",NA,0,"Don't know","SC","CNPC",10,NA,NA
+572,"default","",2,"Null",4,2,0,"",NA,"","","SC","117","FILL","",NA,0.66,"Correct","SC","CNPC",11,NA,NA
+572,"default","",0,"correct",4,1,0,"",NA,"","","SC","9","CNPC","",NA,0.6,"Correct","SC","CNPC",12,NA,NA
+572,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0,"Don't know","SC","CNPC",13,NA,NA
+572,"default","",2,"Null",5,1,1,"",NA,"","","SC","8","CNPC","",NA,0.82,"Incorrect","SC","CNPC",14,NA,NA
+572,"default","",2,"Null",5,2,0,"",NA,"","","SC","116","FILL","",NA,0.92,"Correct","SC","CNPC",15,NA,NA
+572,"default","",2,"Null",6,2,0,"",NA,"","","SC","115","FILL","",NA,0.97,"Correct","SC","CNPC",16,NA,NA
+572,"default","",2,"Null",6,1,0,"",NA,"","","SC","7","CNPC","",NA,0.89,"Correct","SC","CNPC",17,NA,NA
+572,"default","",2,"Null",6,3,3,"",NA,"","","SC","123","UG","",NA,0,"Don't know","SC","CNPC",18,NA,NA
+572,"default","",2,"Null",7,0,0,"",NA,"","","SC","114","FILL","",NA,0.97,"Correct","SC","CNPC",19,NA,NA
+572,"default","",2,"Null",7,0,0,"",NA,"","","SC","122","UG","",NA,0,"Correct","SC","CNPC",20,NA,NA
+572,"default","",2,"Null",7,3,3,"",NA,"","","SC","6","CNPC","",NA,0.4,"Don't know","SC","CNPC",21,NA,NA
+572,"default","",2,"Null",8,0,0,"",NA,"","","SC","5","CNPC","",NA,0.96,"Correct","SC","CNPC",22,NA,NA
+572,"default","",0,"correct",8,2,0,"",NA,"","","SC","113","FILL","",NA,0.66,"Correct","SC","CNPC",23,NA,NA
+572,"default","",1,"correct",8,3,3,"",NA,"","","SC","121","UG","",NA,0.2,"Don't know","SC","CNPC",24,NA,NA
+617,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0.35,"Don't know","NC","CNPC",1,NA,NA
+617,"default","",2,"Null",1,2,0,"",NA,"","","NC","12","CNPC","",NA,0.77,"Correct","NC","CNPC",2,NA,NA
+617,"default","",2,"Null",1,2,0,"",NA,"","","NC","120","FILL","",NA,0.78,"Correct","NC","CNPC",3,NA,NA
+617,"default","",2,"Null",2,2,0,"",NA,"","","NC","119","FILL","",NA,0.63,"Correct","NC","CNPC",4,NA,NA
+617,"default","",0,"correct",2,3,3,"",NA,"","","NC","127","UG","",NA,0.25,"Don't know","NC","CNPC",5,NA,NA
+617,"default","",2,"Null",2,1,2,"",NA,"","","NC","11","CNPC","",NA,0.82,"Incorrect","NC","CNPC",6,NA,NA
+617,"default","",1,"correct",3,3,3,"",NA,"","","NC","126","UG","",NA,0.2,"Don't know","NC","CNPC",7,NA,NA
+617,"default","",2,"Null",3,1,0,"",NA,"","","NC","118","FILL","",NA,0.64,"Correct","NC","CNPC",8,NA,NA
+617,"default","",2,"Null",3,0,0,"",NA,"","","NC","10","CNPC","",NA,0.75,"Correct","NC","CNPC",9,NA,NA
+617,"default","",2,"Null",4,1,0,"",NA,"","","NC","117","FILL","",NA,0.65,"Correct","NC","CNPC",10,NA,NA
+617,"default","",2,"Null",4,3,3,"",NA,"","","NC","125","UG","",NA,0.22,"Don't know","NC","CNPC",11,NA,NA
+617,"default","",2,"Null",4,0,1,"",NA,"","","NC","9","CNPC","",NA,0.49,"Incorrect","NC","CNPC",12,NA,NA
+617,"default","",0,"correct",5,3,3,"",NA,"","","NC","124","UG","",NA,0.23,"Don't know","NC","CNPC",13,NA,NA
+617,"default","",2,"Null",5,1,1,"",NA,"","","NC","8","CNPC","",NA,0.53,"Incorrect","NC","CNPC",14,NA,NA
+617,"default","",1,"correct",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.7,"Correct","NC","CNPC",15,NA,NA
+617,"default","",2,"Null",6,2,0,"",NA,"","","NC","7","CNPC","",NA,0.5,"Correct","NC","CNPC",16,NA,NA
+617,"default","",2,"Null",6,3,3,"",NA,"","","NC","123","UG","",NA,0.24,"Don't know","NC","CNPC",17,NA,NA
+617,"default","",2,"Null",6,0,0,"",NA,"","","NC","115","FILL","",NA,0.65,"Correct","NC","CNPC",18,NA,NA
+617,"default","",1,"correct",7,0,0,"",NA,"","","NC","114","FILL","",NA,0.71,"Correct","NC","CNPC",19,NA,NA
+617,"default","",2,"Null",7,3,3,"",NA,"","","NC","122","UG","",NA,0.31,"Don't know","NC","CNPC",20,NA,NA
+617,"default","",2,"Null",7,2,0,"",NA,"","","NC","6","CNPC","",NA,0.71,"Correct","NC","CNPC",21,NA,NA
+617,"default","",2,"Null",8,2,2,"",NA,"","","NC","113","FILL","",NA,0.77,"Incorrect","NC","CNPC",22,NA,NA
+617,"default","",0,"correct",8,1,0,"",NA,"","","NC","5","CNPC","",NA,0.69,"Correct","NC","CNPC",23,NA,NA
+617,"default","",2,"Null",8,2,0,"",NA,"","","NC","121","UG","",NA,0.77,"Correct","NC","CNPC",24,NA,NA
+574,"default","",2,"Null",1,0,0,"",NA,"","","SC","128","UG","",NA,0,"Correct","SC","WH",1,NA,NA
+574,"default","",0,"correct",1,0,0,"",NA,"","","SC","120","FILL","",NA,1,"Correct","SC","WH",2,NA,NA
+574,"default","",2,"Null",1,1,0,"",NA,"","","SC","12","WH","",NA,0.07,"Correct","SC","WH",3,NA,NA
+574,"default","",2,"Null",2,0,1,"",NA,"","","SC","127","UG","",NA,0.05,"Incorrect","SC","WH",4,NA,NA
+574,"default","",2,"Null",2,2,0,"",NA,"","","SC","11","WH","",NA,0.19,"Correct","SC","WH",5,NA,NA
+574,"default","",1,"correct",2,2,0,"",NA,"","","SC","119","FILL","",NA,0.53,"Correct","SC","WH",6,NA,NA
+574,"default","",2,"Null",3,1,0,"",NA,"","","SC","126","UG","",NA,0,"Correct","SC","WH",7,NA,NA
+574,"default","",2,"Null",3,1,1,"",NA,"","","SC","10","WH","",NA,0.79,"Incorrect","SC","WH",8,NA,NA
+574,"default","",2,"Null",3,2,0,"",NA,"","","SC","118","FILL","",NA,1,"Correct","SC","WH",9,NA,NA
+574,"default","",2,"Null",4,1,1,"",NA,"","","SC","117","FILL","",NA,0.93,"Incorrect","SC","WH",10,NA,NA
+574,"default","",2,"Null",4,1,0,"",NA,"","","SC","125","UG","",NA,0.05,"Correct","SC","WH",11,NA,NA
+574,"default","",2,"Null",4,2,2,"",NA,"","","SC","9","WH","",NA,0.17,"Incorrect","SC","WH",12,NA,NA
+574,"default","",2,"Null",5,1,1,"",NA,"","","SC","8","WH","",NA,0.91,"Incorrect","SC","WH",13,NA,NA
+574,"default","",2,"Null",5,0,0,"",NA,"","","SC","116","FILL","",NA,0.48,"Correct","SC","WH",14,NA,NA
+574,"default","",2,"Null",5,0,2,"",NA,"","","SC","124","UG","",NA,0.01,"Incorrect","SC","WH",15,NA,NA
+574,"default","",2,"Null",6,2,2,"",NA,"","","SC","123","UG","",NA,0,"Incorrect","SC","WH",16,NA,NA
+574,"default","",2,"Null",6,0,1,"",NA,"","","SC","7","WH","",NA,0.8,"Incorrect","SC","WH",17,NA,NA
+574,"default","",1,"incorrect",6,2,0,"",NA,"","","SC","115","FILL","",NA,0.11,"Correct","SC","WH",18,NA,NA
+574,"default","",2,"Null",7,2,0,"",NA,"","","SC","122","UG","",NA,0,"Correct","SC","WH",19,NA,NA
+574,"default","",1,"correct",7,0,0,"",NA,"","","SC","114","FILL","",NA,0.83,"Correct","SC","WH",20,NA,NA
+574,"default","",0,"incorrect",7,0,0,"",NA,"","","SC","6","WH","",NA,0.55,"Correct","SC","WH",21,NA,NA
+574,"default","",0,"correct",8,0,0,"",NA,"","","SC","5","WH","",NA,0.62,"Correct","SC","WH",22,NA,NA
+574,"default","",2,"Null",8,2,0,"",NA,"","","SC","113","FILL","",NA,0.99,"Correct","SC","WH",23,NA,NA
+574,"default","",2,"Null",8,0,0,"",NA,"","","SC","121","UG","",NA,0,"Correct","SC","WH",24,NA,NA
+620,"default","",0,"correct",1,2,1,"",NA,"","","NC","12","WH","",NA,0.25,"Incorrect","NC","WH",1,NA,NA
+620,"default","",2,"Null",1,1,0,"",NA,"","","NC","120","FILL","",NA,1,"Correct","NC","WH",2,NA,NA
+620,"default","",2,"Null",1,3,3,"",NA,"","","NC","128","UG","",NA,0.01,"Don't know","NC","WH",3,NA,NA
+620,"default","",2,"Null",2,2,2,"",NA,"","","NC","11","WH","",NA,0.35,"Incorrect","NC","WH",4,NA,NA
+620,"default","",2,"Null",2,1,1,"",NA,"","","NC","119","FILL","",NA,0.67,"Incorrect","NC","WH",5,NA,NA
+620,"default","",2,"Null",2,3,3,"",NA,"","","NC","127","UG","",NA,0.01,"Don't know","NC","WH",6,NA,NA
+620,"default","",2,"Null",3,2,0,"",NA,"","","NC","126","UG","",NA,0,"Correct","NC","WH",7,NA,NA
+620,"default","",0,"correct",3,2,0,"",NA,"","","NC","118","FILL","",NA,0.97,"Correct","NC","WH",8,NA,NA
+620,"default","",2,"Null",3,1,0,"",NA,"","","NC","10","WH","",NA,0.76,"Correct","NC","WH",9,NA,NA
+620,"default","",2,"Null",4,1,2,"",NA,"","","NC","9","WH","",NA,0.63,"Incorrect","NC","WH",10,NA,NA
+620,"default","",0,"correct",4,3,3,"",NA,"","","NC","125","UG","",NA,0.01,"Don't know","NC","WH",11,NA,NA
+620,"default","",1,"correct",4,1,0,"",NA,"","","NC","117","FILL","",NA,0.99,"Correct","NC","WH",12,NA,NA
+620,"default","",1,"correct",5,2,0,"",NA,"","","NC","116","FILL","",NA,0.65,"Correct","NC","WH",13,NA,NA
+620,"default","",2,"Null",5,2,0,"",NA,"","","NC","8","WH","",NA,0.86,"Correct","NC","WH",14,NA,NA
+620,"default","",2,"Null",5,3,3,"",NA,"","","NC","124","UG","",NA,0.01,"Don't know","NC","WH",15,NA,NA
+620,"default","",2,"Null",6,0,0,"",NA,"","","NC","123","UG","",NA,0.14,"Correct","NC","WH",16,NA,NA
+620,"default","",2,"Null",6,0,0,"",NA,"","","NC","115","FILL","",NA,0.97,"Correct","NC","WH",17,NA,NA
+620,"default","",2,"Null",6,2,0,"",NA,"","","NC","7","WH","",NA,0.78,"Correct","NC","WH",18,NA,NA
+620,"default","",2,"Null",7,2,0,"",NA,"","","NC","122","UG","",NA,0.25,"Correct","NC","WH",19,NA,NA
+620,"default","",1,"correct",7,1,0,"",NA,"","","NC","6","WH","",NA,0.98,"Correct","NC","WH",20,NA,NA
+620,"default","",2,"Null",7,2,0,"",NA,"","","NC","114","FILL","",NA,0.75,"Correct","NC","WH",21,NA,NA
+620,"default","",2,"Null",8,0,0,"",NA,"","","NC","113","FILL","",NA,0.99,"Correct","NC","WH",22,NA,NA
+620,"default","",2,"Null",8,3,3,"",NA,"","","NC","121","UG","",NA,0.02,"Don't know","NC","WH",23,NA,NA
+620,"default","",2,"Null",8,2,0,"",NA,"","","NC","5","WH","",NA,0.97,"Correct","NC","WH",24,NA,NA
+614,"default","",0,"correct",1,3,3,"",NA,"","","SC","128","UG","",NA,0.12,"Don't know","SC","WH",1,NA,NA
+614,"default","",0,"correct",1,2,0,"",NA,"","","SC","120","FILL","",NA,0.61,"Correct","SC","WH",2,NA,NA
+614,"default","",2,"Null",1,1,1,"",NA,"","","SC","12","WH","",NA,0.68,"Incorrect","SC","WH",3,NA,NA
+614,"default","",1,"correct",2,1,0,"",NA,"","","SC","119","FILL","",NA,0.72,"Correct","SC","WH",4,NA,NA
+614,"default","",0,"correct",2,1,0,"",NA,"","","SC","127","UG","",NA,0.28,"Correct","SC","WH",5,NA,NA
+614,"default","",1,"incorrect",2,3,3,"",NA,"","","SC","11","WH","",NA,0.42,"Don't know","SC","WH",6,NA,NA
+614,"default","",2,"Null",3,3,3,"",NA,"","","SC","126","UG","",NA,0.11,"Don't know","SC","WH",7,NA,NA
+614,"default","",0,"correct",3,1,0,"",NA,"","","SC","118","FILL","",NA,0.67,"Correct","SC","WH",8,NA,NA
+614,"default","",2,"Null",3,3,3,"",NA,"","","SC","10","WH","",NA,0.33,"Don't know","SC","WH",9,NA,NA
+614,"default","",2,"Null",4,3,3,"",NA,"","","SC","125","UG","",NA,0.27,"Don't know","SC","WH",10,NA,NA
+614,"default","",2,"Null",4,0,0,"",NA,"","","SC","117","FILL","",NA,0.67,"Correct","SC","WH",11,NA,NA
+614,"default","",2,"Null",4,1,1,"",NA,"","","SC","9","WH","",NA,0.77,"Incorrect","SC","WH",12,NA,NA
+614,"default","",2,"Null",5,0,0,"",NA,"","","SC","116","FILL","",NA,0.69,"Correct","SC","WH",13,NA,NA
+614,"default","",2,"Null",5,0,0,"",NA,"","","SC","8","WH","",NA,0.48,"Correct","SC","WH",14,NA,NA
+614,"default","",2,"Null",5,3,3,"",NA,"","","SC","124","UG","",NA,0.32,"Don't know","SC","WH",15,NA,NA
+614,"default","",2,"Null",6,3,3,"",NA,"","","SC","123","UG","",NA,0.23,"Don't know","SC","WH",16,NA,NA
+614,"default","",2,"Null",6,2,0,"",NA,"","","SC","115","FILL","",NA,0.72,"Correct","SC","WH",17,NA,NA
+614,"default","",2,"Null",6,2,0,"",NA,"","","SC","7","WH","",NA,0.71,"Correct","SC","WH",18,NA,NA
+614,"default","",2,"Null",7,0,0,"",NA,"","","SC","114","FILL","",NA,0.77,"Correct","SC","WH",19,NA,NA
+614,"default","",2,"Null",7,3,3,"",NA,"","","SC","122","UG","",NA,0.33,"Don't know","SC","WH",20,NA,NA
+614,"default","",2,"Null",7,2,0,"",NA,"","","SC","6","WH","",NA,0.75,"Correct","SC","WH",21,NA,NA
+614,"default","",2,"Null",8,0,0,"",NA,"","","SC","113","FILL","",NA,0.79,"Correct","SC","WH",22,NA,NA
+614,"default","",2,"Null",8,0,0,"",NA,"","","SC","5","WH","",NA,0.79,"Correct","SC","WH",23,NA,NA
+614,"default","",2,"Null",8,3,3,"",NA,"","","SC","121","UG","",NA,0.24,"Don't know","SC","WH",24,NA,NA
